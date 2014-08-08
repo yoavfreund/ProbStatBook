@@ -1,0 +1,162 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: spicy.fig
+%%Creator: fig2dev Version 3.2 Patchlevel 5-alpha7
+%%CreationDate: Mon Jan 11 11:21:34 2010
+%%For: dasgupta@notebook (Sanjoy,,,)
+%%BoundingBox: 0 0 115 115
+%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 115 moveto 0 0 lineto 115 0 lineto 115 115 lineto closepath clip newpath
+-84.3 170.8 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+0 slj 0 slc
+ 0.06299 0.06299 sc
+%
+% Fig objects follow
+%
+% 
+% here starts figure with depth 50
+% Polyline
+0 slj
+0 slc
+7.500 slw
+n 1350 900 m 3150 900 l 3150 2700 l 1350 2700 l
+ cp gs col0 s gr 
+% Polyline
+2 slj
+n 1748 2003 m 1759 2024 l 1773 2045 l 1788 2066 l 1804 2087 l 1822 2108 l
+ 1842 2129 l 1863 2149 l 1886 2169 l 1910 2189 l 1936 2209 l
+ 1963 2228 l 1991 2247 l 2020 2265 l 2050 2281 l 2081 2298 l
+ 2112 2313 l 2144 2327 l 2176 2339 l 2208 2351 l 2240 2361 l
+ 2272 2370 l 2304 2377 l 2335 2382 l 2366 2387 l 2395 2389 l
+ 2424 2390 l 2453 2390 l 2480 2388 l 2506 2384 l 2532 2378 l
+ 2556 2371 l 2580 2363 l 2603 2352 l 2625 2340 l 2646 2326 l
+ 2667 2310 l 2687 2292 l 2706 2273 l 2725 2252 l 2743 2230 l
+ 2760 2205 l 2777 2180 l 2793 2153 l 2808 2124 l 2822 2095 l
+ 2836 2064 l 2848 2033 l 2860 2001 l 2871 1969 l 2880 1936 l
+ 2889 1902 l 2897 1869 l 2904 1836 l 2909 1804 l 2914 1771 l
+ 2918 1740 l 2921 1709 l 2923 1678 l 2924 1649 l 2924 1620 l
+ 2924 1593 l 2922 1566 l 2920 1540 l 2918 1515 l 2913 1488 l
+ 2908 1461 l 2902 1435 l 2895 1411 l 2887 1387 l 2878 1363 l
+ 2867 1341 l 2856 1319 l 2844 1298 l 2831 1278 l 2817 1258 l
+ 2802 1240 l 2786 1223 l 2770 1206 l 2753 1191 l 2736 1177 l
+ 2719 1164 l 2701 1152 l 2682 1141 l 2664 1131 l 2646 1122 l
+ 2628 1115 l 2609 1108 l 2591 1102 l 2573 1097 l 2555 1093 l
+ 2538 1090 l 2520 1088 l 2499 1085 l 2479 1084 l 2457 1084 l
+ 2436 1085 l 2414 1086 l 2392 1089 l 2369 1093 l 2346 1098 l
+ 2322 1104 l 2298 1112 l 2274 1120 l 2250 1130 l 2226 1140 l
+ 2202 1152 l 2178 1164 l 2154 1178 l 2131 1192 l 2108 1207 l
+ 2086 1223 l 2064 1240 l 2043 1257 l 2021 1275 l 2001 1293 l
+ 1980 1313 l 1962 1330 l 1945 1348 l 1927 1367 l 1909 1386 l
+ 1892 1407 l 1874 1429 l 1857 1451 l 1840 1474 l 1824 1499 l
+ 1808 1524 l 1792 1550 l 1778 1576 l 1765 1603 l 1753 1630 l
+ 1742 1658 l 1732 1686 l 1724 1714 l 1717 1742 l 1712 1769 l
+ 1709 1797 l 1707 1824 l 1708 1851 l 1709 1877 l 1713 1903 l
+ 1719 1928 l 1727 1953 l 1736 1978 l
+ cp gs col0 s gr 
+% Polyline
+n 2400 2010 m 2407 2025 l 2411 2042 l 2415 2059 l 2416 2077 l 2416 2096 l
+ 2414 2116 l 2411 2137 l 2406 2158 l 2400 2180 l 2392 2201 l
+ 2383 2223 l 2372 2245 l 2361 2266 l 2349 2287 l 2336 2307 l
+ 2322 2326 l 2308 2344 l 2294 2360 l 2279 2376 l 2265 2390 l
+ 2250 2403 l 2235 2415 l 2218 2427 l 2201 2437 l 2184 2446 l
+ 2166 2454 l 2147 2461 l 2128 2466 l 2108 2470 l 2088 2473 l
+ 2068 2475 l 2047 2475 l 2027 2473 l 2007 2471 l 1987 2467 l
+ 1967 2463 l 1948 2457 l 1929 2450 l 1911 2442 l 1894 2434 l
+ 1877 2425 l 1860 2415 l 1844 2404 l 1827 2393 l 1811 2380 l
+ 1795 2367 l 1779 2352 l 1763 2337 l 1748 2320 l 1733 2303 l
+ 1719 2285 l 1705 2267 l 1693 2249 l 1682 2230 l 1672 2212 l
+ 1663 2193 l 1656 2175 l 1650 2158 l 1646 2141 l 1643 2124 l
+ 1642 2108 l 1643 2093 l 1644 2079 l 1647 2065 l 1651 2051 l
+ 1656 2037 l 1663 2024 l 1672 2010 l 1681 1997 l 1692 1984 l
+ 1704 1972 l 1718 1959 l 1733 1947 l 1749 1936 l 1766 1926 l
+ 1783 1916 l 1802 1907 l 1820 1899 l 1840 1891 l 1860 1885 l
+ 1880 1879 l 1900 1875 l 1921 1871 l 1943 1868 l 1964 1865 l
+ 1987 1863 l 2010 1862 l 2034 1862 l 2059 1863 l 2084 1865 l
+ 2110 1867 l 2135 1871 l 2161 1875 l 2187 1881 l 2212 1887 l
+ 2236 1895 l 2260 1903 l 2282 1912 l 2303 1922 l 2322 1932 l
+ 2340 1944 l 2355 1956 l 2369 1968 l 2381 1982 l 2392 1995 l
+
+ cp gs col0 s gr 
+% here ends figure;
+$F2psEnd
+rs
+showpage
+%%Trailer
+%EOF

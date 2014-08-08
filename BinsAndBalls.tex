@@ -1,0 +1,115 @@
+\section{Balls in bins, or urn problems}
+
+You have $m$ indistinguishable balls and in front of you is a row of
+$n$ bins. You place each ball into a bin chosen at random.
+
+Let's write the sample space as $\Omega = \{1,2,\ldots, m\}^n$; in
+each outcome $\omega = (\omega_1, \ldots, \omega_n)$, the value
+$\omega_i$ represents the number of balls in the $i$th bin.
+
+Here are some interesting questions one can ask.
+\begin{enumerate}
+\item What is the chance that the $i$th bin is empty? (What is $\pr(\omega_i = 0)$?)
+
+Well, there are $m$ balls, and we want every single one of them to
+miss the $i$th bin. The probability that the first ball misses this
+bin is $(n-1)/n = 1 - 1/n$. The probability that the second ball
+misses is also $1- 1/n$, as with the third, and fourth, and so
+on. Therefore,
+$$ \pr(\mbox{$i$th bin empty}) 
+\ = \ 
+\left( 1 - \frac{1}{n} \right)^m
+\ \leq \ 
+(e^{-1/n})^m 
+\ = \ 
+e^{-m/n},
+$$
+where we've used the formula $e^x \geq 1+x$ that we discussed earlier.
+
+\item What is the chance that there is an empty bin if $m = n$?
+
+Intuitively, one would expect this to be pretty close to 1 (that is,
+pretty much certain), because the complementary event -- no empty bins
+-- would occur only if every single bin received exactly one
+ball. Let's analyze this latter probability.
+$$
+\pr(\mbox{every bin gets a ball}) 
+\ = \ 
+\left(1 - \frac{1}{n}\right) \left( 1- \frac{2}{n}\right) \cdots \frac{1}{n} 
+\ = \ 
+\frac{n!}{n^n}.
+$$
+This is miniscule; for instance, it is less than $1/2^{n/2}$.
+
+\item What is the chance that there is an empty bin if $m = 2n\ln n$?
+
+When $m$ is increased from $n$ to $2n \ln n$, the chance of an empty bin drops from $\approx 1$ to $\approx 0$. To see this, let $A_i$ be the event that the $i$th bin is empty. We proved above that $\pr(A_i) \leq \exp(-m/n) = \exp(-2\ln n) = 1/n^2$. Therefore
+$$
+\pr(\mbox{some bin is empty}) 
+\ = \ 
+\pr(A_1 \cup \cdots \cup A_n) 
+\ \leq \ 
+\pr(A_1) + \cdots + \pr(A_n)
+\ \leq \ 
+n \cdot \frac{1}{n^2}
+\ = \ 
+\frac{1}{n}
+$$
+(the first inequality is the union bound). Thus with high probability (at least $1-1/n$), every bin gets at least one ball.
+
+\item {\it The coupon collector problem.} Many probability questions turn out to be thinly disguised balls-and-bins problems. Here's an example. Suppose that each cereal box contains one of $k$ action figures (chosen uniformly at random). How many cereal boxes should you buy in order to collect all $k$ figures?
+
+If you make the following associations:
+\begin{eqnarray*}
+\mbox{bin} & \equiv & \mbox{action figure} \\
+\mbox{throw a ball} & = & \mbox{buy a box of cereal} \\
+\mbox{every bin gets a ball} & = & \mbox{you collect all the figures},
+\end{eqnarray*}
+then you see that what we are really asking is, how many balls do you need to throw into $n = k$ bins in order to hit all of them? And we've already seen that $m = 2k\ln k$ balls (cereal boxes) will suffice.
+
+\item What is the probability that some bin gets two or more balls?
+
+This is another situation in which it is easier to study the complementary event, that every bin gets at most one ball.
+$$
+\pr(\mbox{every bin gets $0$ or $1$ ball})
+\ = \ 
+\left(1 - \frac{1}{n}\right) \left( 1- \frac{2}{n} \right)\cdots \left( 1- \frac{m-1}{n} \right)
+\ = \ 
+\frac{n!}{(n-m)! n^m}.
+$$
+Although this is exact, it is a little difficult to fathom, and so let's try an approximation instead, using $1-i/n \leq e^{-i/n}$:
+\begin{eqnarray*}
+\pr(\mbox{every bin gets $0$ or $1$ ball})
+& = & 
+\left(1 - \frac{1}{n}\right) \left( 1 - \frac{2}{n} \right) \cdots \left( 1- \frac{m-1}{n} \right) \\
+& \leq & \exp(-1/n) \exp(-2/n) \cdots \exp(-(m-1)/n)  \\
+& = & 
+\exp\left(-\frac{1}{n} \left(1 + \cdots + (m-1) \right) \right) \\
+& = &  
+\exp\left(-\frac{m(m-1)}{2n} \right).
+\end{eqnarray*}
+This is an excellent approximation when $m \ll n$. It tells us that if $m \geq c \sqrt{n}$ (for some small constant $c$), then this probability is at most $1/2$. That is, if you throw (roughly) $\sqrt{n}$ (or more) balls into $n$ bins, then chances are that some bin will get two or more balls.
+
+\item {\it Birthday paradox.} We saw earlier than in a room with 23 people, chances are two of them will share the same birthday.
+
+This is yet another balls-and-bins problem:
+\begin{eqnarray*}
+\mbox{bin} & \equiv & \mbox{day of the year} \\
+\mbox{throw a ball} & \equiv & \mbox{select birthday of a person in the room} \\
+\mbox{bin with $2$ balls} & \equiv & \mbox{two people with the same birthday} .
+\end{eqnarray*}
+The number of bins is $n = 365$ and the number of balls is $m=23$. Using the formula we just obtained,
+\begin{eqnarray*}
+\pr(\mbox{two people share the same birthday})
+& = & 
+1 - \pr(\mbox{every bin has at most one ball}) \\
+& \geq & 
+1 - \exp \left(-\frac{m(m-1)}{2n} \right)
+\ \ \geq \ \ 
+\frac{1}{2} .
+\end{eqnarray*}
+
+\item {\it Coin tossing.}
+
+Even the tossing of a fair coin, $m$ times, can be modeled using balls and bins. Imagine there are just $n=2$ bins (call one bin $H$ and the other bin $T$).
+\end{enumerate}

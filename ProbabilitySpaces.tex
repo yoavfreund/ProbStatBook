@@ -1,0 +1,288 @@
+\chapter{Probability spaces}
+
+\section{Definition}
+
+In order to properly understand a statement like
+\begin{quote}
+``the chance of getting a flush in five-card poker is about 0.2\%
+(flush = all five cards are from the same suit)'',
+\end{quote}
+we need to specify the underlying {\it probability space}. This has two components:
+\begin{enumerate}
+\item A {\it sample space} or {\it space of outcomes}.
+
+This is $\Omega = \{\mbox{all possible five-card hands}\}$.
+\item The {\it probabilities of outcomes} Each outcome is assigned a
+  probability, which is a non-negative real number, such that the sum
+  of the probabilities over all of the outcomes is 1:
+$$ \sum_{\omega \in \Omega} \pr(\omega) = 1 .$$
+\end{enumerate}
+
+In our example, assuming the cards are dealt fairly, all outcomes are equally probable, so
+$$\pr(\omega) = 1/|\Omega| \mbox{\ \ \ \ \ for all $\omega \in \Omega$.} $$.
+
+{\bf Events} are subsets of $\Omega$, in our example, the event of
+interest is $A = \{\omega: \mbox{$\omega$ is a flush}\}$. This is a
+subset of $\Omega$; that is, $A \subset \Omega$. Pictorially we can
+represent the situation thus:
+
+\begin{center}
+%%\resizebox{1.5in}{!}{\input{figs/1.1.pstex_t}}
+\end{center}
+
+\noindent
+The outer box is $\Omega$; every point in it is a particular five-card hand $\omega$. The inner set is $A$, and the probability that it occurs is
+$$ \pr(A) = \sum_{\omega \in A} \pr(\omega) .$$
+In general, if $\Omega$ is finite, the probability of events is the
+sum of the probabilities of the outcomes in that event.\footnote{If
+  $\Omega$ is continuous then this relationship does not hold and we
+  need to define event probabilities differently. We will get to this
+  a bit later. Till then we will only discuss finite outcome spaces,
+  also referred to as ``discrete probability spaces''.}
+
+In our example, since all outcomes are equally likely, $\pr(A) =
+|A|/|\Omega|$. We now calculate this ratio.
+
+The size of $\Omega$ is the number of 5 card hands is 
+$$ |\Omega| = {52 \choose 5} = 2,598,960$$
+The number of hands that are flush is the
+number of suits (4) times the number of hands that can be chosen from
+a single suit: 
+$$|A|= 4\times {13 \choose 5} = 5,148$$ 
+Thus the probability of a flush is
+$$\frac{5,148}{2,598,960} \approx 0.00198$$
+Which, as promised, is approximately 0.2\%.
+
+\section{A first set of canonical examples}
+
+\begin{enumerate}
+\item {\it Roll a die.} What is the chance of getting a number $> 3$?
+
+Probability space: sample space $\Omega = \{1,2,3,4,5,6\}$; probabilities $\pr(\omega) = 1/6$.
+
+Event of interest: $A = \{4,5,6\}$; $\pr(A) = 1/2$.
+
+\item {\it Roll three dice.} What is the chance their sum is 3?
+
+The sample space is 
+\begin{eqnarray*}
+\Omega 
+& = & \{(1,1,1), (1,1,2), \ldots, (6,6,6)\} \\
+& = & \{(d_1, d_2, d_3): 1 \leq d_1, d_2, d_3 \leq 6\} \\
+& = & \Omega_o \times \Omega_o \times \Omega_o 
+\ \ \ = \ \ \ \Omega_o^3 \mbox{\ \ \ \ where\ } \Omega_o = \{1,2,3,4,5,6\}.
+\end{eqnarray*}
+The probabilities of outcomes $\omega \in \Omega$ are $\pr(\omega) = 1/6^3 = 1/216$.
+
+The event of interest is $A = \{(1,1,1)\}$ whose probability is $\pr(A) = 1/216$.
+
+\item {\it Roll $n$ dice.}
+
+Sample space $\Omega = \Omega_o^n$, where $\Omega_o = \{1,2,3,4,5,6\}$. Each outcome $\omega \in \Omega$ has probability $1/|\Omega| = 1/6^n$.
+
+\item {\it Socks in a drawer.} A drawer contains three blue socks and three red socks. You put your hand in and pick out a random sock. Then you put your hand in again and pick out another random sock. What's the chance the two of them match?
+
+There are several ways to set up the sample space, but one possibility is to have a tuple whose first coordinate is the color of the first sock and whose second coordinate is the color of the second sock. $\Omega = \{B,R\} \times \{B,R\}$. The probabilities of outcomes are
+\begin{eqnarray*}
+\pr((B,B)) & = & \frac{3}{6} \cdot \frac{2}{5} \ \ = \ \ \frac{1}{5} \\
+\pr((B,R)) & = & \frac{3}{6} \cdot \frac{3}{5} \ \ = \ \ \frac{3}{10} \\
+\pr((R,B)) & = & \frac{3}{6} \cdot \frac{3}{5} \ \ = \ \ \frac{3}{10} \\
+\pr((R,R)) & = & \frac{3}{6} \cdot \frac{2}{5} \ \ = \ \ \frac{1}{5}
+\end{eqnarray*}
+(Notice that they add up to 1.)
+
+The event of interest is $A = \{(B,B), (R,R)\}$, which has probability $2/5$.
+
+\item {\it Socks in a drawer, again.} This time the drawer has three blue socks and four red socks.
+
+The sample space $\Omega$ is the same, but the probabilities of outcomes are different:
+\begin{eqnarray*}
+\pr((B,B)) & = & \frac{3}{7} \cdot \frac{2}{6} \ \ = \ \ \frac{1}{7} \\
+\pr((B,R)) & = & \frac{3}{7} \cdot \frac{4}{6} \ \ = \ \ \frac{2}{7} \\
+\pr((R,B)) & = & \frac{4}{7} \cdot \frac{3}{6} \ \ = \ \ \frac{2}{7} \\
+\pr((R,R)) & = & \frac{4}{7} \cdot \frac{3}{6} \ \ = \ \ \frac{2}{7}
+\end{eqnarray*}
+The event of interest is $A = \{(B,B), (R,R)\}$, which has probability $3/7$.
+
+\item {\it Shuffling a deck of cards.} You randomly shuffle a deck of $52$ cards and lay them out before you.
+
+Here $\Omega = \{\mbox{all possible orderings of 52 cards}\}$. One way to compute $|\Omega|$ is to reason that there are 52 choices for what the first card in the sequence will be, 51 choices for the second card, 50 choices for the third card, and so on. Therefore
+$$ |\Omega| = 52 \cdot 51 \cdot 50 \cdots 2 \cdot 1 .$$
+This expression is called 52! (``52 factorial''). It is the number of {\it permutations} of 52 elements.
+
+\end{enumerate}
+
+\section{Tossing a fair coin}
+
+Suppose you toss a fair coin. The sample space is $\Omega_o = \{H,T\}$ (heads or tails), and each of the two outcomes has probability exactly $1/2$. What is more interesting is to toss the coin multiple times, independently. 
+
+\subsection{Toss a fair coin 10 times}
+
+Now the sample space is $\Omega = \Omega_o^{10}$; it includes, for instance, the sequence $(H,T,H,T,H,T,H,T,H,T)$. Since $|\Omega| = 2^{10} = 1024$, each element in $\Omega$ has probability exactly $1/1024$.
+
+\begin{enumerate} 
+
+\item What is the chance that {\it none} of the coin tosses are heads?
+
+The event of interest is $\{(T,T,T,T,T,T,T,T,T,T)\}$, whose probability is $1/1024$.
+
+\item What is the chance of exactly {\it one} head?
+
+Now the event is 
+$$A = \{(H,T,T,T,T,T,T,T,T,T), (T,H,T,T,T,T,T,T,T,T), \ldots, (T,T,T,T,T,T,T,T,T,H)\} .$$
+Each sequence in $A$ is completely determined by the location of the $H$ within it. There are 10 possible locations; therefore $|A| = 10$, whereupon $\pr(A) = |A|/|\Omega| = 10/1024$.
+
+\item What is the chance of exactly {\it nine} heads?
+
+Equivalently, what is the chance of exactly one tail? This is the same calculation as before, $10/1024$.
+
+\item What is the chance of exactly {\it two} heads?
+
+The sequences of interest are $A = \{\omega \in \Omega: \mbox{$\omega$ has exactly 2 heads}\}$. Each such sequence is specified by the locations of its two heads; write these as a pair $(i,j)$, where $1 \leq i,j \leq 10$ and $i \neq j$. For instance, $(7,5)$ refers to $(T,T,T,T,H,T,H,T,T,T)$. 
+
+The number of such pairs is $10 \cdot 9 = 90$ (10 choices for $i$, and thereafter just 9 choices for $j$). But this ends up double-counting sequences, because for instance, the pair $(5,7)$ also refers to $(T,T,T,T,H,T,H,T,T,T)$. Each sequence in $A$ is counted twice -- it corresponds to two pairs -- and therefore $|A| = 45$.
+
+Finally, $\pr(A) = |A|/|\Omega| = 45/1024$.
+
+\item What is the chance of exactly {\it four} heads?
+
+This time, any sequence in $A = \{\omega: \mbox{has four heads}\}$ can be written as a 4-tuple $(i,j,k,l)$, where $1 \leq i,j,k,l \leq 10$ and $i \neq j \neq k \neq l$. For instance,
+$(7,2,4,9)$ denotes $(T,H,T,H,T,T,H,T,H,T)$. The number of such 4-tuples is $10 \cdot 9 \cdot 8 \cdot 7 = 10!/6!$.
+
+But once again, there is overcounting. $(7,2,4,9)$ refers to the same sequence as $(2,4,7,9)$ and $(2,7,9,4)$ and $(9,7,2,4)$ and many other 4-tuples. How many of them? The number of permutations of the four elements $2,4,7,9$, namely $4!$.
+
+Therefore
+$$ |A| = \frac{10!}{4!6!} = 210$$
+and $\pr(A) = 210/1024$.
+
+\item What is the chance of exactly {\it six} heads?
+
+This is the same as the chance of four tails, which is identical to the previous calculation.
+
+\end{enumerate}
+
+In the last few calculations, we had to find the number of ways of choosing $k$ positions out of $n$ available slots (for instance, choosing 4 positions out of 10 slots where a $H$ might occur). Generalizing the argument above, the number of ways to do this is
+$$ \frac{n!}{k!(n-k)!}, \mbox{\ which we write as\ } {n \choose k} $$
+(pronounced ``$n$ choose $k$''). This is also called a {\it binomial coefficient}.
+
+\subsection{Toss a fair coin $n$ times}
+
+Now the sample space is $\Omega = \{H,T\}^n$, with each sequence of $n$ outcomes having probability exactly $1/2^n$. Let $A_k$ denote the event that the sequence has $k$ heads.
+
+Notice that the events $A_0, A_1, \ldots, A_n$ are {\it disjoint} (if $A_i$ occurs then $A_j$ cannot occur for $j \neq i$). Moreover,
+$$ \Omega = A_0 \cup A_1 \cup \cdots \cup A_n .$$
+Therefore,
+$$ \sum_{k=0}^n \pr(A_k) \ \ = \ \ \pr(A_0) + \pr(A_1) + \cdots + \pr(A_n) \ \ = \ \ 1 ,$$
+or equivalently,
+$$ \sum_{k=0}^n |A_k| \ \ = \ \ |A_0| + |A_1| + \cdots + |A_n| \ \ = \ \ |\Omega| .$$
+
+In general, $|A_k|$ is the number of ways of placing $k$ heads in a sequence of size $n$; we've seen that this is ${n \choose k}$. And since $|\Omega| = 2^n$, the last equality tells us that
+$$ \sum_{k=0}^n {n \choose k} \ \ = \ \ {n \choose 0} + {n \choose 1} + {n \choose 2} + \cdots + {n \choose n} \ \ = \ \ 2^n.$$
+
+For example, take $n = 5$. Then
+$$
+|A_0| = {5 \choose 0} = 1, \  
+|A_1| = {5 \choose 1} = 5, \ 
+|A_2| = {5 \choose 2} = 10, \ 
+|A_3| = {5 \choose 3} = 10, \ 
+|A_4| = {5 \choose 4} = 5, \ 
+|A_5| = {5 \choose 5} = 1
+$$
+and these add up to $2^5 = 32$.
+
+
+\section{A second set of canonical examples}
+
+\begin{enumerate}
+\item {\it Rooks on a chessboard.} You place 8 rooks at random on a chessboard. What is the chance that they are non-attacking (that is, no rook is attacking another)?
+
+To describe the sample space, number the squares in the chessboard as 1 through 64, and let the configuration of 8 rooks be given by a {\it set} of eight positions, $\omega \subset \{1,2,\ldots,64\}$. Thus:
+$$\Omega = \{\omega \subset \{1,2,\ldots,64\}: |\omega| = 8 \} .$$
+You should check that 
+$$ |\Omega| \ \ = \ \ {64 \choose 8} $$
+and that of these, only 8! configurations are non-attacking. 
+
+Therefore
+$$ \pr(\mbox{non-attacking configuration}) \ \ = \ \ \frac{8!8!56!}{64!} .$$
+
+\item {\it Five-card poker.} You are dealt five cards at random from a deck of 52 cards. What is the chance of a flush? Of a straight flush? Of exactly one pair?
+
+Let $\Omega = \{\mbox{all possible 5-card hands}\}$. Then $|\Omega| = {52 \choose 5}$ and each $\omega \in \Omega$ occurs with probability $1/|\Omega|$. 
+
+Define three events of interest: 
+\begin{eqnarray*}
+F & = & \mbox{flush (all five cards of the same suit)} \\
+S & = & \mbox{straight flush (same suit and consecutive)} \\
+P & = & \mbox{the cards contain a single pair (eg. two 7s)}
+\end{eqnarray*}
+
+Then $|F| = 4 \cdot {13 \choose 5}$ (first choose a suit, then pick 5 cards from that suit), $|S| = 4 \cdot 10$ (first choose a suit, then choose the starting card in the sequence), and $|P| = 13 \cdot {4 \choose 2} \cdot 4^3 \cdot {12 \choose 3}$ (first choose which card occurs in the pair, then choose the two suits for that pair, then choose the suits of the remaining three cards, then choose their values).
+
+\item {\it Throw a dart at a dartboard.} Suppose for convenience that your dartboard has radius 1, and is centered at the origin. Its bullseye has radius 0.1. You throw a dart at it, which lands at a random location (all positions on the board are equally likely). What is the chance that it lands exactly at the origin? What is the chance that it lands in the bullseye?
+
+This differs from earlier examples in that the sample space is infinite and continuous. It is the set of all possible locations of the dart: any point in the circle. We can represent any such point by its $(x,y)$ coordinates: $\Omega = \{(x,y): x^2 + y^2 \leq 1\}$.
+
+The chance of landing exactly at the origin is 0, since there are infinitely many places the dart could land. It makes more sense to talk about landing in {\it regions} $A \subset \Omega$ rather than specific points $\omega \in \Omega$. In general
+$$ \pr(A) = \frac{\mbox{area of $A$}}{\mbox{area of $\Omega$}} $$
+and therefore $\pr(\mbox{bullseye}) = (0.1)^2 = 0.01$.
+
+\item {\it Birthday paradox.} A room contains $n$ people. What is the chance that two of them have the same birthday?
+
+The probability space is not properly specified, so we need to make some assumptions. First, we'll assume that the $n$ birthdays are independent (that is, a person's birthday is not influenced by anyone else's birthday). Second, we'll assume that all days are equally likely -- that is, the chance of a birthday falling on any particular day is exactly $1/365$ (we're also ignoring the issue of leap years).
+
+Number the people $1,2,\ldots, n$, and number the days of the year $1,2,\ldots, 365$. We will represent the birthdays of the people in the room by an $n$-tuple $(\omega_1, \ldots, \omega_n)$, where $\omega_i \in \{1,2,\ldots,365\}$ is the birthday of the $i$th person. Thus $\Omega = \{1,2,\ldots, 365\}^n$ and each $\omega \in \Omega$ has probability exactly $1/365^n$.
+
+The event of interest is
+$$ A  \ \ = \ \ \{\omega: \mbox{$\omega_i = \omega_j$ for some $i \neq j$} \}.$$
+This is a typical situation in which it is easier to analyze the {\it complement} of $A$ than $A$ itself (that is, it is easier to compute the probability that $A$ {\it doesn't} occur than the probability that it occurs).
+$$ A^c \ \ = \ \ \Omega - A \ \ = \ \ \{\omega: \omega_1 \neq \omega_2 \neq \cdots \neq \omega_n\}.$$
+In other words, $A^c$ is the event that everyone's birthday is different. What is the size of $A^c$? There are 365 choices for $\omega_1$, 364 for $\omega_2$, and so on, whereupon
+$$ |A^c| \ \ = \ \ 365 \cdot 364 \cdot 363 \cdots (365-n+1) \ \ = \ \ \frac{365!}{(365-n)!}.$$Therefore
+$$ \pr(A) \ \ = \ \ 1 - \pr(A^c) \ \ = \ \ 1 - \frac{365!}{(365-n)!365^n} .$$
+This is exactly correct, but it is a little hard to understand intuitively. So let's do the calculation a different way, using an approximation.
+
+A very useful fact is that for small $x$ (positive or negative), $e^x \approx 1+x$. And in fact, $e^x \geq 1+x$ no matter what $x$ is. Now let's return to the event $A^c$.
+\begin{eqnarray*}
+\pr(A^c) & = & \pr(\omega_2 \neq \omega_1) \cdot \pr(\omega_3 \neq \omega_1, \omega_2) \cdots \pr(\omega_n \neq \omega_1, \ldots, \omega_{n-1}) \\
+& = & \left(1 - \frac{1}{365} \right) \left(1 - \frac{2}{365} \right) \cdots \left(1 - \frac{n-1}{365} \right) \\
+& \leq & \exp(-1/365) \cdot \exp(-2/365) \cdots \exp(-(n-1)/365) \mbox{\ \ \ where $\exp(x)$ means $e^x$} \\
+& = & \exp \left( - \frac{1}{365} \left(1 + 2 + \cdots + (n-1) \right) \right) \\
+& = & \exp \left( - \frac{n(n-1)}{730} \right). 
+\end{eqnarray*}
+This upper bound is a very good approximation when $n$ is much smaller than $365$. 
+
+Interestingly, when $n = 23$, we find that $\pr(A^c) \leq 0.5$, so $\pr(A) \geq 0.5$. That is, if there are 23 people in the room, chances are that two of them have the same birthday!
+
+\item {\it Balls in bins.} You have $m$ indistinguishable balls and in front of you is a row of $n$ bins. You place each ball into a bin chosen at random.
+
+Let's write the sample space as $\Omega = \{1,2,\ldots, m\}^n$; in each outcome $\omega = (\omega_1, \ldots, \omega_n)$, the value $\omega_i$ represents the number of balls in the $i$th bin.
+
+Here are some interesting tidbits to prove.
+\begin{itemize}
+\item The chance that any particular bin is empty is at most $e^{-m/n}$.
+\item If $m = 2n \ln n$, the chance that there exists an empty bin is at most $1/n$. To show this, it helps to use the {\it union bound}: for any events $A_1, \ldots, A_k$,
+$$ \pr(A_1 \cup A_2 \cup \cdots \cup A_k) \ \ \leq \ \ \pr(A_1) + \pr(A_2) + \cdots + \pr(A_k).$$
+\item The chance that no bin has 2 (or more) balls is at most $\exp(-m(m-1)/n)$. How is this related to the birthday paradox?
+\end{itemize}
+A lot of different probability spaces are simple cases of balls and bins. For instance, tossing a fair coin $m$ times is like throwing $m$ balls into $n=2$ bins (call one bin $H$ and the other bin $T$).
+ 
+\end{enumerate}
+
+\section{Tossing a biased coin}
+
+Suppose that instead of a fair coin, you have a coin whose probability of coming up heads is $p \in [0,1]$. The sample space for a single coin toss is $\Omega_o = \{H,T\}$ and the probabilities of the possible outcomes are
+$$ \pr(H) = p, \ \ \pr(T) = 1-p.$$
+
+If you toss this coin $n$ times (sample space $\Omega = \{H,T\}^n$), what is the chance of getting exactly $k$ heads? Well, pick any sequence $\omega \in \Omega$ with $k$ heads. The probability of getting precisely the outcome $\omega$ is
+$$ \pr(\omega) = p^k (1-p)^{n-k} .$$
+Thus the probability of $k$ heads is
+$$ \mbox{(number of sequences with $k$ heads)} \cdot p^k (1-p)^{n-k} 
+\ \ = \ \ 
+{n \choose k} p^k (1-p)^{n-k} .$$
+
+Sometimes we encode heads and tails numerically:
+$$ \mbox{heads} \rightarrow 1, \ \ \ \mbox{tails} \rightarrow 0 .$$
+
+In this case, a single coin flip with bias $p$ has sample space $\{0,1\}$ and is called a Bernoulli($p$) distribution. Suppose $n$ such coins are flipped, and $X_i \in \{0,1\}$ is the outcome for the $i$th coin. Then the number of heads is simply 
+$$ X = X_1 + X_2 + \cdots + X_n. $$
+$X$ has sample space $\{0,1,\ldots,n\}$ and is said to have a Binomial($n,p$) distribution.

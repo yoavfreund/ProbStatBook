@@ -1,0 +1,226 @@
+\documentclass{report}
+
+\usepackage[headings]{fullpage}
+\usepackage{scribe}
+
+% Packages
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{array}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+%\usepackage{pstricks-add}
+\usepackage{multirow}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}[lemma]{Claim}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{prop}[lemma]{Property}
+\newtheorem{fact}[lemma]{Fact}
+
+\theoremstyle{definition}
+\newtheorem{define}[lemma]{Definition}
+\newtheorem{example}[lemma]{Example}
+
+\newtheorem{problem}{Problem}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\var}{\mbox{\rm var}}
+\newcommand{\pr}{\mbox{\rm Pr}}
+
+\def\X{{\cal X}}
+\def\cost{{\mbox{\rm cost}}}
+\def\U{{\cal U}}
+
+\begin{document}
+
+\course{CSE 103}
+\coursetitle{Probability and statistics}
+\semester{Fall 2011}
+\lecturer{}
+\scribe{}
+\lecturenumber{4}
+\lecturetopic{Randomized algorithms / Percentiles}
+
+\maketitle
+
+\section{Finding percentiles}
+
+\subsection{The mean as a summary statistic}
+
+Suppose UCSD tracks this year's graduating class in computer science and finds out everyone's 
+salary ten years down the line. What might these numbers look like? Well, if there are (say)
+100 students, the spread might be roughly:
+\begin{itemize}
+\item A few people with zero salary (unemployed)
+\item A few grad students with salary around 20K
+\item A few part-timers with salary around 50K
+\item A whole lot of software engineers with salaries between 100K and 200K
+\end{itemize}
+The {\it mean} salary would then be something like 100K, which UCSD could report with
+pride in its brochure for prospective students.
+
+Now suppose that one student managed to strike it rich and become a billionaire. 
+Accordingly, take the spread of salaries above and convert one of the 200K salaries 
+to 1000000K. What would be the new mean salary? Answer: at least 10 million dollars! 
+(Do you see why?) If UCSD were to report this number, nobody would take it seriously,
+despite its being perfectly truthful.
+
+The problem is that the mean is extremely sensitive to {\it outliers} -- it is very 
+easily thrown off by a single number that is unusually small or unusually large. In
+many circumstances, therefore, the preferred summary statistic is the {\it median}, 
+or 50th percentile. For the salary data, for instance, the median would remain 
+unchanged (at around 100K) even if a few people were to become billionaires, or if 
+a few more people were to lose their jobs.
+
+We're also interested in other percentiles -- the 25th, 75th, and so on. How can
+we compute these for a {\it very large} data set (for instance, a data set giving 
+the salary of everyone in the US)?
+
+\subsection{Selection}
+
+Here the problem, formally.
+
+\begin{quote}
+{\sc Selection}
+
+{\it Input:} An array $S[1\cdots n]$ of $n$ numbers; an integer $k$ between 1 and $n$
+
+{\it Output:} The $k$th smallest number in the array.
+\end{quote}
+The median corresponds to $k= \lceil n/2 \rceil$, while $k=1$ retrieves the very 
+smallest element. The $p$th percentile ($0 \leq p \leq 100$) can be obtained with 
+$k = \lceil pn/100 \rceil$.
+
+The most natural algorithm for this problem is:
+\begin{quote}
+Sort $S$ and return $S[k]$
+\end{quote}
+The running time here is dominated by that of sorting, which is $O(n \log n)$. This
+is pretty good, but we'd like something faster since we often need to compute
+percentiles of enormous data sets.
+
+\subsection{A randomized algorithm}
+
+Here's a randomized (and recursive) procedure for selection.
+
+For any number $v$, imagine splitting array $S$ into three categories: 
+elements smaller than $v$, those equal to $v$ (there might be duplicates), 
+and those greater than $v$. Call these $S_L$, $S_v$, and $S_R$ respectively. 
+For instance, if the array
+$$ S :\ \ \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|} \hline
+2 & 36 & 5 & 21 & 8 & 13 & 11 & 20 & 5 & 4 & 1\\ \hline
+\end{tabular}$$
+is split on $v = 5$, the three subarrays generated are
+$$ 
+S_L :\ \  \begin{tabular}{|c|c|c|} \hline 2 & 4 & 1 \\ \hline \end{tabular} 
+\hskip.4in 
+S_{v} :\ \ \begin{tabular}{|c|c|} \hline 5 & 5 \\ \hline \end{tabular} 
+\hskip.4in 
+S_{R} :\ \ \begin{tabular}{|c|c|c|c|c|c|} \hline 36 & 21 & 8 & 13 & 11 & 20 \\ \hline
+\end{tabular} 
+$$
+The search can instantly be narrowed down to one of these sublists. If we want, say, 
+the {\it eighth}-smallest element of $S$, we know it must be the {\it third}-smallest 
+element of $S_R$ since $|S_L| + |S_v| = 5$.
+That is, $\mbox{\sc selection}(S, 8) = \mbox{\sc selection}(S_R,3)$.
+More generally, by checking $k$ against the sizes of the subarrays, 
+we can quickly determine which of them holds the desired element:
+$$ 
+\mbox{\sc selection}(S,k) 
+\ = \ 
+\left\{ \begin{array}{ll}
+\mbox{\sc selection}(S_{L},k) & \mbox{if $k \leq |S_{L}|$} \\ 
+v                             & \mbox{if $|S_{L}| < k \leq |S_{L}| + |S_{v}|$} \\
+\mbox{\sc selection}(S_{R}, k - |S_{L}| - |S_{v}|) & \mbox{if $k > |S_{L}| + |S_{v}|$} .
+\end{array} \right.
+$$
+The three sublists $S_{L}, S_{v}, S_{R}$ can be computed from $S$ in {\it linear} 
+time, scanning left-to-right. We then recurse on the appropriate sublist. 
+
+The effect of the split is thus to shrink the number of elements from $|S|$ to 
+at most $\max\{|S_{L}|, |S_{R}|\}$. How much of an improvement is this, and 
+what is the final running time?
+
+\subsection{Running time analysis}
+
+By how much does a single split reduce the size of the array? Well, this depends
+on the choice of $v$.
+
+\begin{enumerate}
+\item {\it Worst case.} When $v$ is either the smallest or largest element in the
+array, the array shrinks by just one element. If we keep getting unlucky in
+this way, then
+$$
+\mbox{(time to process array of $n$ elements)}
+\ = \ 
+\mbox{(time to split)} + \mbox{(time to process array of $n-1$ elements)}.
+$$
+Since the time to split is linear, $O(n)$, this works out to a total running
+time of $n + (n-1) + (n-2) + \cdots = O(n^2)$, which is really bad.
+
+Fortunately, this case is unlikely to occur. The probability of consistently
+picking an element $v$ which is the smallest or largest, is miniscule:
+$$ \frac{2}{n} \cdot \frac{2}{n-1} \cdot \frac{2}{n-2} \cdots \frac{2}{3}
+\ \approx \ 
+\frac{2^n}{n!}
+$$
+(do you see where this expression comes from?).
+
+\item {\it Best case.} The best possible case is that $v$ just happens to be 
+the element we are looking for, that is, the $k$th smallest element in the array. 
+In this case, the running time is $O(n)$, the time for a single split.
+
+This case is also unlikely, but it is certainly a lot more likely than the worst
+case. In fact, the probability of it occurring is at least $1/n$. (Why? When
+might it be more than $1/n$?)
+
+\end{enumerate}
+
+Neither the best case nor worst case is a particularly good way to quantify the 
+running time of this algorithm. A more sensible measure is the {\it expected} 
+running time. Let $T(n)$ be (an upper bound on) the expected time to 
+process an array of $n$ (or fewer) elements. We will now derive an expression
+for it.
+
+Call a split {\it lucky} if the resulting $S_L$ and $S_R$ both have size less 
+than $3n/4$; call it {\it unlucky} otherwise. A split is lucky if $v$ lies 
+somewhere between the 25th and 75th percentile of $S$, which happens with
+probability exactly $1/2$.
+
+Therefore,
+\begin{eqnarray*}
+T(n) 
+& \leq &
+\mbox{(time to split)} + \mbox{(expected time taken to process the larger of $S_L, S_R$)} \\
+& \leq &
+n + \pr{\mbox{(lucky split)}} \mbox{(time for array of size $\leq 3n/4$)}
+ + \pr{\mbox{(unlucky split)}} \mbox{(time for array of size $n$)} \\
+& \leq &
+n + \frac{1}{2} T(3n/4) + \frac{1}{2} T(n)
+\end{eqnarray*}
+Rearranging, we get $T(n) \leq 2n + T(3n/4)$. Expanding it out, and using the formula
+for the sum of a geometric series, we get
+$$
+T(n) 
+\ \leq \ 
+2n + 2 \cdot \frac{3n}{4} + 2 \cdot \frac{9n}{16} + \cdots 
+\ \leq \ 
+2n \left( 1 + \frac{3}{4} + \frac{9}{16} + \cdots \right) 
+\ = \  
+8n.
+$$
+Our randomized algorithm for selection has an expected {\it linear} running time!
+
+\end{document}
+
+
+

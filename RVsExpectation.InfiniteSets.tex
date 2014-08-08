@@ -1,0 +1,354 @@
+\documentclass{report}
+
+\usepackage[headings]{fullpage}
+\usepackage{graphicx}
+\usepackage{scribe}
+
+% Packages
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{color}
+\usepackage{array}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+%\usepackage{pstricks-add}
+\usepackage{multirow}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}[lemma]{Claim}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{prop}[lemma]{Property}
+
+\theoremstyle{definition}
+\newtheorem{define}[lemma]{Definition}
+\newtheorem{example}[lemma]{Example}
+
+\newtheorem{problem}{Problem}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\var}{\mbox{\rm var}}
+\newcommand{\pr}{\mbox{\rm Pr}}
+
+\def\X{{\cal X}}
+\def\cost{{\mbox{\rm cost}}}
+
+\begin{document}
+
+\course{CSE 103}
+\coursetitle{Probability and statistics}
+\semester{Fall 2013}
+\lecturer{Yoav Freund}
+\scribe{}
+\lecturenumber{5}
+\lecturetopic{Random variables, Expected value, Infinite Spaces}
+
+\maketitle
+
+\section{Random variables}
+
+A {\it random variable} (r.v.) is defined on a probability space $(\Omega, \pr)$ and 
+is a mapping from $\Omega$ to $\R$. 
+
+The value of the random variable is fully determined by the outcome $\omega \in \Omega$.
+Thus the underlying probability space (probabilities $\pr(\omega)$) induces a probability
+distribution over the random variable. Let's look at some examples.
+
+Suppose you roll a fair die. The sample space is $\Omega = \{1,2,3,4,5,6\}$, all outcomes 
+being equally likely. On this space we can then define a random variable
+$$ X = \left\{ \begin{array}{ll}
+               1 & \mbox{if die is $\geq 3$} \\
+               0 & \mbox{otherwise}
+               \end{array} \right.$$
+In other words, the outcomes $\omega = 1,2$ map to $X = 0$, while the outcomes 
+$\omega = 3,4,5,6$ map to $X = 1$. The r.v. $X$ takes on values $\{0,1\}$, with 
+probabilities $\pr(X = 0) = 1/3$ and $\pr(X=1) = 2/3$.
+
+Or say you roll this same die $n$ times, so that the sample space is 
+$\Omega = \{1,2,3,4,5,6\}^n$. Examples of random variables on this larger space are
+\begin{eqnarray*}
+X & = & \mbox{the number of 6's rolled,} \\
+Y & = & \mbox{the number of 1's seen before the first 6.}
+\end{eqnarray*}
+The sample point $\omega = (1,1,1,1,\ldots,1,6)$, for instance, would map to 
+$X = 1, Y = n-1$. The variable $X$ takes values in $\{0,1,2,\ldots,n\}$,
+with
+$$ \pr(X = k) 
+\ = \ 
+{n \choose k} \left(\frac{1}{6} \right)^k \left( \frac{5}{6} \right)^{n-k} $$
+(do you see why?).
+
+As a third example, suppose you throw a dart at a dartboard of radius $1$, and that it
+lands at a random location on the board. Define random variable $X$ to be the distance
+of the dart from the center of the board. Now $X$ takes values in $[0,1]$, and for 
+any $x$ in this range, $\pr(X \leq x) = x^2$.
+
+Henceforth, we'll follow the convention of using capital letters for r.v.'s.
+
+\section{The mean, or expected value}
+
+For a random variable $X$ that takes on a finite set of possible values, the 
+{\it mean}, or {\it expected value}, is
+$$ \E(X) \ = \ \sum_{x} x \, \pr(X = x) $$
+(where the summation is over all the possible values $x$ that $X$ can have). This
+is a direct generalization of the notion of {\it average} (which is typically
+defined in situations where the outcomes are equally likely). If $X$ is a continuous 
+random variable, then this summation needs to be replaced by an equivalent integral; 
+but we'll get to that later in the course.
+
+Here are some examples.
+\begin{enumerate}
+\item {\it Coin with bias (heads probability) $p$.}
+
+Define $X$ to be $1$ if the outcome is heads, or $0$ if it is tails. Then 
+$$ \E(X) 
+\ = \ 
+0 \cdot \pr(X = 0) + 1 \cdot \pr(X = 1)  
+\ = \ 
+0 \cdot (1-p) + 1 \cdot p
+\ = \ 
+p .
+$$
+
+Another random variable on this space is $X^2$, which also takes on values in $\{0,1\}$.
+Notice that $X^2 = X$, and in fact $X^k = X$ for all $k = 1,2,3,\ldots$! Thus, 
+$\E(X^2) = p$ as well. This simple case shows that in general, $\E(X^2) \neq \E(X)^2$.
+
+\item {\it Fair die.}
+
+Define $X$ to be the outcome of the roll, so $X \in \{1,2,3,4,5,6\}$. Then
+$$ \E(X) 
+\ = \ 
+1 \cdot \frac{1}{6} + 2 \cdot \frac{1}{6} + 3 \cdot \frac{1}{6} + 4 \cdot \frac{1}{6}
++ 5 \cdot \frac{1}{6} + 6 \cdot \frac{1}{6} 
+\ = \ 
+3.5.$$
+
+\item {\it Two dice.}
+
+Let $X$ be their sum, so that $X \in \{2,3,4,\ldots, 12\}$. We can calculate the probabilities
+of each possible value of $X$ and tabulate them as follows:
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
+$x$          & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\ \hline
+$\pr(X = x)$ & $\frac{1}{36}$ & $\frac{2}{36}$ & $\frac{3}{36}$ & $\frac{4}{36}$ & $\frac{5}{36}$ & $\frac{6}{36}$ & $\frac{5}{36}$ & $\frac{4}{36}$ & $\frac{3}{36}$ & $\frac{2}{36}$ & $\frac{1}{36}$  
+\end{tabular}
+\end{center}
+
+This gives $\E(X) = 7$.
+
+\item {\it Roll n die; how many sixes appear?}
+
+Let $X$ be the number of $6$'s. We've already analyzed the distribution of $X$, so
+$$ E(X) 
+\ = \ 
+\sum_{k = 0}^n k \, \pr(X = k)
+\ = \ 
+\sum_{k = 0}^n k {n \choose k} \left(\frac{1}{6} \right)^k \left( \frac{5}{6} \right)^{n-k}
+\ = \ 
+\frac{n}{6}.
+$$
+The last step is somewhat mysterious; just take our word for it, and we'll get back to it later!
+\end{enumerate}
+
+\section{Countably infinite sets}
+
+Our discussion up to this point was restricted to finite probability
+spaces. In many applications of probability theory there is an
+infinite number of possible outcomes. In fact there are two types of
+infinite sets that are often used: {\em countably infinite sets} and 
+{\em uncountably infinite sets}. We start with the countably infinite sets.
+
+The prototypical countably infinite set is the set of natural numbers:
+\[
+1,2,3,\ldots
+\]
+We say that a set is countable if we can place all of the elements of
+the sets in a sequence.
+
+Another example of a countably infinite set is the set of all {\em
+  rational} numbers. Rational numbers are fractions of the form $n/m$
+where both n and m are natural numbers. 
+
+Unlike the integers, the rational numbers are {\em dense} in the real
+line. By this we mean that for any real number $x>0$ and any small range
+$\epsilon>0$ there is a rational number $n/m$ such that 
+$|n/m -x|<\epsilon$. See if you can prove that, it isn't hard. 
+
+So in the sense of density, there are many more rational numbers than
+integer numbers on the real line, for example, the segment $[1,2]$
+(which contains all $x$ such that $1 \leq x \leq 2$) contains only $2$
+integers: $1,2$ but an infinite number of rational numbers.
+
+However, the set of rationals are countable. To show that this is the
+case, we need to demonstrate a way of placing all of the rational
+numbers in a sequence. This is done by grouping the rationals into
+groups according to the sum of the enumerator and denominator $n+m$
+and then ordering the elements of each group according to $n$. The
+begining of the sequence we get follows, the semi-colons indicate the
+boundaries between the sets:
+\[
+1/1;1/2,2/1;1/3,2/2,3/1;1/4,2/3,3/2,4/1;1/5,2/4,3/3,4/2,5/1;1/6,2/5,\ldots
+\]
+Note that the same number can appear many times. For example, the
+number 1 appears as $1/1,2/2,3/3,\ldots$. That is ok, all that is
+needed for a set to be countable is that there is a sequence in which
+each element of the set appears {\em at least} once.
+
+\section{Sums of infinite Series}
+In order to compute probabilities of subsets of countably infinite
+sets we need to understand countably infinite sums.
+
+Suppose that $a_1,a_2,a_3,\ldots$ is a sequence of non-negative real
+numbers. Then the sum $\sum_{i=1}^\infty a_i$ is defined to be the
+limit
+\[
+\lim_{n \to \infty} \sum_{i=1}^n a_i
+\]
+In other words, we consider the sequence:
+$a_1,a_1+a_2,a_1+a_2+a_3,\ldots$ and see if it converges to a limit.
+
+As $a_i \geq 0$ for all $i$, this sequence is non-decreasing. There
+are two possibilities, either the sequence increases to infinity or it
+converges to some finite number. We will show examples of both finite
+and infinite sums.
+
+First, suppose that $a_i \geq \epsilon>0$ for all $i$. In that case
+the limit is $\infty$, because it increases by at least $\epsilon$
+with each new term. It is also not hard to show that the limit is
+infinity unless $\lim_{i \to \infty} a_i =0$.
+
+The natural next question is whether $\lim_{i \to \infty} a_i =0$ is
+sufficient to guarantee that the sum is finite. The answer is {\em
+  no}. The cannonical example is the sequence $a_i=1/i$. We will now
+show that $\sum_{i=1}^\infty (1/i) = \infty$.
+
+Partition the sequence into groups of doubling length as follows:
+\newcommand{\paren}[1]{\left( #1 \right)}
+\[
+\paren{\frac{1}{1}},
+\paren{\frac{1}{2}},
+\paren{\frac{1}{3},\frac{1}{4}},
+\paren{\frac{1}{5},\frac{1}{6},\frac{1}{7},\frac{1}{8}},\ldots
+\]
+It is not hard to see that the $j$th group has $2^{j-1}$ elements and
+each of these elements is larger or equal to $(1/2)^j$. Therefor the
+sum of the elements in each group is at least $1/2$. Following the
+same argument as before this implies that the series sum is $\infty$.
+
+It is also not hard to see that the number of groups formed by
+$i=1,\ldots n$ is about $\log_2 n$, as the sum of each group is
+between $1/2$ and $1$, it would come as no surprise that 
+\[
+\sum_{i=1}^n \frac{1}{i} \approx \ln n
+\]
+
+\subsection{Some finite sums}
+However, there exist infinite series whose sum is finite, for example
+\[
+\sum_{i=1}^{\infty} \frac{1}{i^2} = \frac{\pi^2}{6} \approx 1.6449\ldots
+\]
+
+Therefor we can define a distribution over the positive integers as
+follows:
+\[
+P(X=i) = \frac{6}{\pi^2 i^2}
+\]
+Summing the probabilities over all of the $i=1,2,\ldots$ we get that
+the probability of the set that contains all of the natural numbers is
+$1$, as it should be.
+
+In general, if the sum is finite, we call this sum the {\em
+  normalization factor} and dividing the probability of each element
+by this factor we get a well-defined probability distribution over the
+natural numbers.
+
+Some other converging series:
+\begin{itemize}
+\item {\bf P-series}
+\[
+\sum_{i=1}^{\infty} \frac{1}{i^3} = \zeta(3) \approx 1.2020569\ldots
+\]
+\[
+\sum_{i=1}^{\infty} \frac{1}{i^4} = \frac{\pi^4}{90} \approx 1.082323\ldots
+\]
+In general, if $\alpha>1$ 
+\[
+\sum_{i=1}^{\infty} \frac{1}{i^{\alpha}} < \infty
+\]
+
+\item{\bf Geometric Series}:
+Let $r$ be a number in the range $[0,1]$, i.e. $0 \leq r \leq 1$. Then:
+\[
+\sum_{i=0}^\infty r^i = \frac{1}{1-r}
+\]
+\[
+\sum_{i=1}^\infty r^i = \frac{r}{1-r}
+\]
+and
+\begin{equation} \label{eqn:geometricExpectation}
+\sum_{i=1}^\infty ir^i = \frac{r}{(1-r)^2}
+\end{equation}
+\end{itemize}
+
+
+\section{Tossing a coin, what is the expected time until the first head?}
+
+A frequently occuring question is: suppose we flip a coin repeately
+until we see heads. What is the expected number of coin flips?
+
+\subsection{Fair coin}
+We start with a fair coin, such that the probability of heads (and
+tails) is $1/2$.
+
+Let $X \in \{1,2,\ldots\}$ be the random variable which is the 
+number of tosses until you first see heads. Then
+$$ \pr(X = k)
+\ = \ 
+\pr((T,T,T,\ldots,T,H))
+\ = \ 
+\frac{1}{2^k}.
+$$
+It follows from Equation~(\ref{eqn:geometricExpectation}) with $r=1/2$ that
+$$ \E(X) 
+\ = \ 
+\sum_{k=1}^\infty \frac{k}{2^k} 
+\ = \ 
+2.
+$$
+
+\subsection{Biased Coin}
+
+Once again, $X \in \{1,2,\ldots\}$, but this time the distribution is different:
+$$ \pr(X = k)
+\ = \ 
+\pr((T,T,T,\ldots,T,H))
+\ = \ 
+(1-p)^{k-1}p.
+$$
+Using the same technique as before, we get $\E(X) = 1/p$.
+
+There's another way to derive this expectation. We always need at
+least one coin toss.  If we're lucky (with probability $p$), we're
+done; otherwise (with probability $1-p$), we start again from
+scratch. Therefore $\E(X) = 1 + (1-p) \E(X)$, solving this equation
+we get $\E(X) = 1/p$.
+
+\end{document}
+
+
+\section{there is no uniform distribution over the natural numbers}
+
+\section{The real numbers are not countable}
+
+\section{The uniform distribution over the segment $[0,1]$}
+
+\section{Density distributions and point mass distributions}
+
+

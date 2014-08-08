@@ -1,0 +1,74 @@
+\documentclass{report}
+
+\usepackage[headings]{fullpage}
+\usepackage{scribe}
+
+% Packages
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{array}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+%\usepackage{pstricks-add}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}[lemma]{Claim}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{prop}[lemma]{Property}
+
+\theoremstyle{definition}
+\newtheorem{define}[lemma]{Definition}
+\newtheorem{example}[lemma]{Example}
+
+\newtheorem{problem}{Problem}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\var}{\mbox{\rm var}}
+\newcommand{\pr}{\mbox{\rm Pr}}
+
+\def\X{{\cal X}}
+\def\cost{{\mbox{\rm cost}}}
+
+\begin{document}
+
+\course{CSE 103}
+\coursetitle{Probability and statistics}
+\semester{Fall 2010}
+\lecturer{}
+\scribe{}
+\lecturenumber{0}
+\lecturetopic{Background Quiz}
+
+\maketitle
+
+\begin{enumerate}
+\item Let $A$ be the set of integers $\{i | 20 \leq i \leq 30\}$ and
+  $B$ be the set of all positive integers divisible by 2. What is the
+  size of $A$? What is the size of $B$? What is the size of the
+  intersection $A \cap B$ ?
+\item Suppose you flip a fair coin three times, what is the
+  probability that the majority of coin flips turn up heads?
+\item Suppose a distribution over the numbers 1 to 6 assigns
+  probability 1/12 to 1,2 and 3 and probability 1/4 to 4,5 and 6. What
+  is the mean of the distribution?
+\item How many ways are there to order 52 cards?
+\item How many different subsets of size 3 are there in the set
+  $\{1,\ldots,10\}$.
+\item What is the value of the sum $\sum_{i=1}^n i$?
+\item What is the value of the sum $\sum_{i=0}^{\infty} \frac{1}{2^i}$
+  ?
+\item Give an expression for $\int_0^a x^2 dx$
+\end{enumerate}
+
+
+\end{document}
+
+

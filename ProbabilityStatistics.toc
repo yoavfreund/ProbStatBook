@@ -1,0 +1,107 @@
+\contentsline {chapter}{\numberline {1}Introduction}{7}
+\contentsline {section}{\numberline {1.1}Statistics}{7}
+\contentsline {section}{\numberline {1.2}Probability Theory}{8}
+\contentsline {section}{\numberline {1.3}Low probability vs. certainty}{8}
+\contentsline {section}{\numberline {1.4}Average and Mean}{9}
+\contentsline {section}{\numberline {1.5}Monte-carlo simulations}{9}
+\contentsline {section}{\numberline {1.6}Summary}{11}
+\contentsline {chapter}{\numberline {2}Mathematical preliminaries}{13}
+\contentsline {section}{\numberline {2.1}Sets}{13}
+\contentsline {subsection}{\numberline {2.1.1}Spaces and complements}{14}
+\contentsline {subsection}{\numberline {2.1.2}Tuples, and products of sets}{14}
+\contentsline {subsection}{\numberline {2.1.3}The size of a set}{14}
+\contentsline {section}{\numberline {2.2}Permutations and combinations}{14}
+\contentsline {subsection}{\numberline {2.2.1}Sampling with and without replacement when the order matters}{14}
+\contentsline {subsection}{\numberline {2.2.2}When the order doesn't matter}{15}
+\contentsline {section}{\numberline {2.3}Arithmetic and geometric series}{16}
+\contentsline {chapter}{\numberline {3}Probability spaces}{17}
+\contentsline {section}{\numberline {3.1}Definition}{17}
+\contentsline {section}{\numberline {3.2}A first set of canonical examples}{18}
+\contentsline {section}{\numberline {3.3}Tossing a fair coin}{19}
+\contentsline {subsection}{\numberline {3.3.1}Toss a fair coin 10 times}{19}
+\contentsline {subsection}{\numberline {3.3.2}Toss a fair coin $n$ times}{20}
+\contentsline {section}{\numberline {3.4}A second set of canonical examples}{21}
+\contentsline {section}{\numberline {3.5}Tossing a biased coin}{23}
+\contentsline {chapter}{\numberline {4}Multiple events, conditioning, and independence}{25}
+\contentsline {section}{\numberline {4.1}Two or more events on the same sample space}{25}
+\contentsline {subsection}{\numberline {4.1.1}Human intuition about combined event probabilities is fallible}{25}
+\contentsline {subsection}{\numberline {4.1.2}Joint probability tables}{25}
+\contentsline {subsection}{\numberline {4.1.3}The union bound}{26}
+\contentsline {section}{\numberline {4.2}Conditional probability}{26}
+\contentsline {subsection}{\numberline {4.2.1}A few examples}{27}
+\contentsline {subsection}{\numberline {4.2.2}The summation rule}{28}
+\contentsline {section}{\numberline {4.3}Tossing a biased coin}{28}
+\contentsline {section}{\numberline {4.4}Conditional probability, continued}{29}
+\contentsline {subsection}{\numberline {4.4.1}Another summation rule}{29}
+\contentsline {subsection}{\numberline {4.4.2}Sex bias in graduate admissions}{29}
+\contentsline {section}{\numberline {4.5}Bayes' rule}{30}
+\contentsline {section}{\numberline {4.6}Independence}{31}
+\contentsline {subsection}{\numberline {4.6.1}The Monty Hall problem}{31}
+\contentsline {chapter}{\numberline {5}Random variables, expectation, and variance, I}{33}
+\contentsline {section}{\numberline {5.1}Random variables}{33}
+\contentsline {section}{\numberline {5.2}The mean, or expected value}{34}
+\contentsline {section}{\numberline {5.3}Tossing a biased coin}{35}
+\contentsline {subsection}{\numberline {5.3.1}An application to sampling}{36}
+\contentsline {section}{\numberline {5.4}Linearity of expectation}{36}
+\contentsline {subsection}{\numberline {5.4.1}Fixed points of a permutation}{37}
+\contentsline {subsection}{\numberline {5.4.2}Coupon collector, again}{37}
+\contentsline {subsection}{\numberline {5.4.3}Balls in bins, again}{38}
+\contentsline {section}{\numberline {5.5}Independent random variables}{38}
+\contentsline {section}{\numberline {5.6}Variance}{39}
+\contentsline {subsection}{\numberline {5.6.1}Properties of the variance}{39}
+\contentsline {subsection}{\numberline {5.6.2}Examples}{40}
+\contentsline {subsection}{\numberline {5.6.3}Another property of the variance}{41}
+\contentsline {subsection}{\numberline {5.6.4}Linearity of variance}{42}
+\contentsline {chapter}{\numberline {6}Sampling, hypothesis testing, and the central limit theorem}{43}
+\contentsline {section}{\numberline {6.1}The binomial distribution}{43}
+\contentsline {section}{\numberline {6.2}Hypothesis testing}{44}
+\contentsline {subsection}{\numberline {6.2.1}Testing a vaccine}{44}
+\contentsline {subsection}{\numberline {6.2.2}A blood pressure drug}{44}
+\contentsline {section}{\numberline {6.3}Sampling}{45}
+\contentsline {section}{\numberline {6.4}The normal distribution}{46}
+\contentsline {subsection}{\numberline {6.4.1}Sums of independent random variables}{47}
+\contentsline {subsection}{\numberline {6.4.2}Tails of the normal}{47}
+\contentsline {section}{\numberline {6.5}Sampling revisited}{47}
+\contentsline {subsection}{\numberline {6.5.1}Polls with yes/no answers}{47}
+\contentsline {subsection}{\numberline {6.5.2}Polls with numeric answers}{48}
+\contentsline {chapter}{\numberline {7}Multiple Hypothesis testing, Covariance, Correlation}{51}
+\contentsline {section}{\numberline {7.1}The Bonferroni correction}{51}
+\contentsline {section}{\numberline {7.2}Catch, mark and release}{51}
+\contentsline {section}{\numberline {7.3}Covariance}{52}
+\contentsline {chapter}{\numberline {8}Pseudo-randomness}{55}
+\contentsline {section}{\numberline {8.1}Randomness and predictability}{55}
+\contentsline {section}{\numberline {8.2}Pseudo-Randomness}{55}
+\contentsline {subsection}{\numberline {8.2.1}Predicting a pseudo-random generator}{56}
+\contentsline {subsection}{\numberline {8.2.2}Computationally bounded randomness}{56}
+\contentsline {subsection}{\numberline {8.2.3}Using pseudo-random number generators inside a random algorithm}{57}
+\contentsline {chapter}{\numberline {9}Randomized algorithms}{59}
+\contentsline {section}{\numberline {9.1}Finding percentiles}{59}
+\contentsline {subsection}{\numberline {9.1.1}The mean as a summary statistic}{59}
+\contentsline {subsection}{\numberline {9.1.2}Selection}{60}
+\contentsline {subsection}{\numberline {9.1.3}A randomized algorithm}{60}
+\contentsline {subsection}{\numberline {9.1.4}Running time analysis}{61}
+\contentsline {subsection}{\numberline {9.1.5}A randomized sorting algorithm}{61}
+\contentsline {subsection}{\numberline {9.1.6}Two types of randomized algorithms}{62}
+\contentsline {section}{\numberline {9.2}Cumulative distributions and sorting in expected linear time}{62}
+\contentsline {subsection}{\numberline {9.2.1}Cumulative Distribution Functions}{62}
+\contentsline {subsection}{\numberline {9.2.2}Examples of distributions on the real line}{63}
+\contentsline {subsection}{\numberline {9.2.3}Worst-case lower bound on sorting}{63}
+\contentsline {subsection}{\numberline {9.2.4}Sorting in expected linear time}{65}
+\contentsline {subsection}{\numberline {9.2.5}Sorting in linear time when the distribution is known}{66}
+\contentsline {section}{\numberline {9.3}Karger's minimum cut algorithm}{67}
+\contentsline {subsection}{\numberline {9.3.1}Clustering via graph cuts}{67}
+\contentsline {subsection}{\numberline {9.3.2}Karger's algorithm}{67}
+\contentsline {subsection}{\numberline {9.3.3}Analysis}{67}
+\contentsline {section}{\numberline {9.4}Hashing}{69}
+\contentsline {subsection}{\numberline {9.4.1}The hashing framework}{69}
+\contentsline {subsection}{\numberline {9.4.2}A simple solution using randomization}{69}
+\contentsline {subsection}{\numberline {9.4.3}Average query time}{69}
+\contentsline {subsection}{\numberline {9.4.4}Worst case query time, and a balls-in-bins problem}{70}
+\contentsline {subsection}{\numberline {9.4.5}The power of two choices}{70}
+\contentsline {section}{\numberline {9.5}Information retrieval}{71}
+\contentsline {subsection}{\numberline {9.5.1}Preprocessing}{71}
+\contentsline {subsection}{\numberline {9.5.2}Answering a query}{72}
+\contentsline {section}{\numberline {9.6}Detecting near-duplicates}{73}
+\contentsline {subsection}{\numberline {9.6.1}The similarity between two documents}{73}
+\contentsline {subsection}{\numberline {9.6.2}An algorithm based on random permutations}{74}
+\contentsline {section}{\numberline {9.7}Bloom Filters}{75}
