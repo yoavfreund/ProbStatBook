@@ -1,0 +1,357 @@
+\chapter{Random generation}
+
+\section{Simulating simple discrete distributions with a fair coin}
+
+The simplest of all distributions is the fair coin. Let's code its two outcomes, heads 
+and tails, by 1 and 0 respectively.
+$$ \begin{array}{ll}
+    0 & \mbox{with probability $1/2$} \\
+    1 & \mbox{with probability $1/2$}
+\end{array}$$
+We call this the Bernoulli($1/2$) or $B(1/2)$ distribution.
+
+With just the ability to flip fair coins (or equivalently, to sample from the 
+$B(1/2)$ distribution), we can generate random samples from any discrete distribution
+with a finite sample space. We will get to this result in several steps.
+
+\subsection{Uniform distribution over $b$-bit integers}
+
+The uniform distribution over $b$-bit integers has the following probability space:
+\begin{eqnarray*}
+\Omega & = & \{0,1\}^b \\
+\pr(\omega) & = & 1/2^b \mbox{\ \ for all $\omega \in \Omega$}
+\end{eqnarray*}
+Call this distribution $\mbox{Unif}(\{0,1\}^b)$. To sample from it, simply flip a fair 
+coin for each of the $b$ bits.
+
+\begin{tt}
+\begin{tabbing}
+For $i = 1$ to $b$: \\
+\ \ \ \= Draw $X_i$ from $B(1/2)$ \\
+Output $X_1 X_2 \cdots X_b$
+\end{tabbing}
+\end{tt}
+
+\subsection{Uniform distribution over $\{1,2,\ldots, n\}$}
+
+Now consider a very similar distribution with probability space
+\begin{eqnarray*}
+\Omega & = & \{1,2,3,\ldots,n\} \\
+\pr(\omega) & = & 1/n \mbox{\ \ for all $\omega \in \Omega$}
+\end{eqnarray*}
+Call this distribution $\mbox{Unif}(\{1,\ldots,n\})$. If $n$ is of the form $2^b$, 
+then the previous algorithm, called with $b = \log_2 n$, gives us a uniform distribution
+over $\{0,1,\ldots, n-1\}$. So we can just add 1 to that value and we're done.
+
+More generally, here's a sampling algorithm.
+
+\begin{tt}
+\begin{tabbing}
+Let $b = \lceil \log_2 n \rceil$ \\
+Repeat: \\
+\ \ \ \= Generate a sample $X$ from $\mbox{Unif}(\{1,2,\ldots, 2^b\})$, as described above \\
+      \> If $X \leq n$: output $X$ and halt 
+\end{tabbing}
+\end{tt}
+
+First, let's check that this indeed outputs the right distribution, that each of the values 
+$1,2,\ldots, n$ gets output with probability exactly $1/n$. Specifically, we need to show
+that if $X$ is a sample from $\mbox{Unif}(\{1,2,\ldots, 2^b\})$, then for any 
+$i \in \{1,2,\ldots, n\}$, we have $\pr(X = i | X \leq n) = 1/n$. This follows from
+the formula for conditional probability:
+$$
+\pr(X = i | X \leq n) 
+\ = \ \frac{\pr(X = i \mbox{\sc \ and } X \leq n)}{\pr(X \leq n)}
+\ = \ \frac{\pr(X=i)}{\pr(X\leq n)} 
+\ = \ \frac{1/2^b}{n/2^b}
+\ = \ \frac{1}{n} .$$
+
+How many coin flips does this algorithm use? Each time we go through the repeat loop, we
+use $b$ flips to generate $X$; but how many times do we loop? First notice that 
+$b = \lceil \log_2 n \rceil$, which means that $b$ is the smallest integer that is
+greater than or equal to $\log_2 n$. Therefore
+$$ b-1 < \log_2 n \leq b 
+\ \ \Rightarrow \ \  \frac{1}{2} 2^b < n \leq 2^b 
+\ \ \Rightarrow \ \  \pr(X \leq n) = \frac{n}{2^b} > \frac{1}{2} .
+$$
+Therefore, on each iteration of the repeat loop, the probability of halting, $\pr(X \leq n)$, 
+is at least $1/2$. So the expected number of iterations is at most 2, which means that the 
+expected number of coin flips needed is at most $2b$.
+
+\subsection{Uniform distribution over $[0,1]$}
+
+This time, we want a uniform distribution over real numbers in the interval $[0,1]$.
+However, the size of this sample space is uncountably infinite, and for a variety
+of practical reasons, we will typically want only a finite amount of precision.
+
+Recall the binary representation of fractional values: $0.z_1z_2z_3 \cdots$. Here
+$z_1$ is the position for $1/2$, $z_2$ is the position for $1/4$, $z_3$ is the 
+position for $1/8$, and so on. For instance, $0.101 = 1/2 + 1/8 = 5/8$ whereas 
+$0.0011 = 1/8 + 1/16 = 3/16$.
+
+Let's say that we want $b$ bits of precision.
+\begin{eqnarray*}
+\Omega & = & \{0.z_1z_2\cdots z_b: z_1, \ldots, z_b \in \{0,1\}\} \\
+\pr(\omega) & = & 1/2^b \mbox{\ \ for all $\omega \in \Omega$}
+\end{eqnarray*}
+This is exactly like generating a random $b$-bit integer: just stick a ``$0.$'' in front.
+
+\subsection{A biased coin}
+
+The next distribution we want is a coin with bias $p$, where the outcome is once again coded
+as $0/1$:
+$$ \begin{array}{ll}
+    0 & \mbox{with probability $1-p$} \\
+    1 & \mbox{with probability $p$}
+\end{array}$$
+We call this the Bernoulli($p$) or $B(p)$ distribution. Can we simulate $B(p)$ using
+$B(1/2)$? 
+
+Here's an easy way to do so.
+
+\begin{tt}
+\begin{tabbing}
+Generate $X$ from $\mbox{Unif}[0,1]$ \\
+If $X \leq p$: \= output 1 \\
+else:          \> output 0
+\end{tabbing}
+\end{tt}
+
+\noindent
+Since $\pr(X \leq p) = p$, this generates the right distribution. But how many
+fair coin flips does it use? As stated here, it seems to require that $X$ is
+infinite precision. The way around this is to notice that we can just generate
+$X$ one bit at a time, until it is clear whether $X$ is less than $p$ or more 
+than $p$.
+
+For instance, suppose $p = 3/8$. In binary, this is $0.011$. Writing 
+$X = 0.X_1X_2X_3\cdots$, we first flip a coin to get $X_1$, then another
+coin to get $X_2$, and so on. Suppose $X_1 = 1$. Then we can stop at once, because
+we know that $X$ is at least $1/2$ and therefore $X \geq p$, no matter what 
+$X_2, X_3, \ldots$ turn out to be. On the other hand, if $X_1 = 0$, then all we 
+know is that $X \leq 1/2$, so we can't be sure whether it is bigger or smaller
+than $p$, and we have to continue. Here's the modified algorithm:
+
+\begin{tt}
+\begin{tabbing}
+Let $0.p_1p_2p_3 \cdots$ be the binary representation of $p$ \\
+Repeat for $i = 1, 2, 3, \ldots$ :  \\
+\ \ \ \= Draw $X_i$ from $B(1/2)$  \\
+      \> If $p_i = 1$ and $X_i = 0$: halt and output $1$ \\
+      \> If $p_i = 0$ and $X_i = 1$: halt and output $0$ 
+\end{tabbing}
+\end{tt}
+
+\noindent
+How many bits are needed? That is, how many times does the algorithm loop?
+Notice that on each iteration, the algorithm halts if $X_i \neq p_i$. This
+happens with probability exactly $1/2$. Therefore, the expected number of
+iterations is exactly 2.
+
+So we can simulate a biased coin using, on average, two fair coins.
+
+\subsection{Arbitrary discrete distribution with finite sample space}
+
+Let's move to a much more general distribution.
+\begin{eqnarray*}
+\Omega & = & \{\omega_1, \ldots, \omega_k\}\\
+\pr(\omega_i) & = & p_i 
+\end{eqnarray*}
+where the $p_i$ are nonnegative and sum to 1. An example is the roll of a die, 
+which has $k=6$ and $p_1 = \cdots = p_k = 1/6$.
+
+To sample from this distribution, we use the same ideas as for a biased coin. Let's
+start with the infinite precision version.
+
+\begin{tt}
+\begin{tabbing}
+Generate $X$ from $\mbox{Unif}[0,1]$ \\
+For all $i = 1$ to $k$: \\
+\ \ \ If $p_1 + \cdots + p_{i-1} < X \leq p_1 + \cdots + p_i$: \= output $\omega_i$
+\end{tabbing}
+\end{tt}
+
+
+
+\noindent
+In effect, we divide the interval $[0,1]$ into $k$ bins, where the $i$th bin stretches
+from $p_1 + \cdots + p_{i-1}$ to $p_1 + \cdots + p_i$, and therefore has length 
+exactly $p_i$. We generate $X$ uniformly from $[0,1]$ and then output the index of
+the bin that it falls into. The chance of falling into the $i$th bin (that is, of 
+outputting $\omega_i$) is therefore exactly $p_i$.
+
+As before, we can run this process by generating $X$ one bit at a time, and stopping
+as soon as it is clear which bin $X$ will fall into. It is possible to show that the
+expected number of bits (coin flips) needed is at most $1 + \log_2 k$.
+
+
+\section{From biased coin to fair coin}
+
+The previous section shows how to generate arbitrary discrete distributions if we
+have a fair coin at our disposal. But what if all we have is a biased coin -- and
+we don't even know what the bias is? Can we use it to simulate a fair coin?
+
+Here's how:
+\begin{tt}
+\begin{tabbing}
+Repeat:  \\
+\ \ \ \= Flip (biased) coin twice \\
+      \> If outcome is $HT$: halt and output 0 \\
+      \> If outcome is $TH$: halt and output 1 
+\end{tabbing}
+\end{tt}
+
+\noindent
+Let's say the coin has some bias $p$. Then in any iteration of the loop,
+\begin{eqnarray*}
+\pr(\mbox{output 0})  & = & \pr(\mbox{biased coin yields $HT$}) \ \ = \ \ p(1-p) \\
+\pr(\mbox{output 1})  & = & \pr(\mbox{biased coin yields $TH$}) \ \ = \ \ p(1-p)
+\end{eqnarray*}
+The two probabilities are equal! Thus we really do get a sample from $B(1/2)$.
+
+How many times do we need to flip the biased coin? On each iteration, we flip it
+twice, and the chance of halting is $2p(1-p)$. Therefore the expected number of
+iterations before halting is $1/(2p(1-p))$, and the expected number of coin 
+flips is $1/(p(1-p))$.
+
+
+\section{Random permutations}
+
+How can we pick a random permutation of $(1,2,\ldots, n)$? Here's a natural algorithm:
+
+\begin{tt}
+\begin{tabbing}
+$A = \{1,2,\ldots, n\}$ \\
+For $i = 1$ to $n$:  \\
+\ \ \ \= Pick an element $x \in A$ at random \\
+      \> Place $x$ in the $i$th position of the permutation \\
+      \> $A = A - \{x\}$ \\
+Output the permutation
+\end{tabbing}
+\end{tt}
+
+\noindent
+We need to show that every permutation has exactly a $1/n!$ probability of being generated. 
+To this end, fix any permutation $(a_1, a_2, \ldots, a_n)$ and let $E_i$ be the event that
+the algorithm places $a_i$ in position $i$ of its output. Then
+\begin{eqnarray*}
+\pr(\mbox{algorithm outputs $(a_1,a_2,\ldots,a_n)$})
+& = &
+\pr(E_1 \cap E_2 \cap \cdots \cap E_n) \\
+& = & 
+\pr(E_1) \pr(E_2 \cap \cdots \cap E_n | E_1) \\
+& = & 
+\pr(E_1) \pr(E_2 | E_1) \pr(E_3 \cap \cdots \cap E_n | E_1, E_2) \\
+& = &
+\pr(E_1) \pr(E_2 | E_1) \pr(E_3 | E_1, E_2) \cdots \pr(E_n | E_1, E_2, \ldots, E_{n-1}) \\
+& = & 
+\frac{1}{n} \cdot \frac{1}{n-1} \cdot \frac{1}{n-2} \cdots \frac{1}{1} 
+\ \ = \ \ \frac{1}{n!},
+\end{eqnarray*}
+just as we wanted.
+
+In picking a random permutation, we can picture $n$ slots that need to be filled. Our 
+algorithm picks an element for the first slot, then one for the second slot, then the
+third slot, and so on. What if we went through the slots in a different order, say
+right-to-left instead of left-to-right? What if we started with the third slot, then
+the tenth, and so on, in some arbitrary order? It doesn't make a difference: we still
+get a random permutation.
+
+Let $(\sigma_1, \ldots, \sigma_n)$ be any permutation: this is the order in which
+we will fill in the slots. Here's an alternative algorithm for generating a random
+permutation.
+
+\begin{tt}
+\begin{tabbing}
+$A = \{1,2,\ldots, n\}$ \\
+For $i = 1$ to $n$:  \\
+\ \ \ \= Pick an element $x \in A$ at random \\
+      \> Place $x$ in the $\sigma_i$th position of the permutation \\
+      \> $A = A - \{x\}$ \\
+Output the permutation
+\end{tabbing}
+\end{tt}
+
+\noindent
+To check that this is correct, once again pick any permutation $(a_1, \ldots, a_n)$
+and let $E_i$ be the event that the algorithm puts $a_{\sigma_i}$ in location $\sigma_i$.
+Then the previous derivation holds verbatim.
+
+\subsection{Implications}
+
+The second algorithm for generating random permutations has many interesting implications.
+Here are some examples.
+
+\begin{enumerate}
+\item Randomly permute a standard deck of cards.
+
+What's the chance that the first card is a heart? This is easy: there are 52 possible cards, and 13 of them are hearts. So the answer is $13/52 = 1/4$.
+
+What's the chance that the {\it tenth} card is a heart? At first, this seems more complicated, because the first nine cards may or may not be hearts. But remember that we can generate a random permutation by first choosing the card in the tenth position, and then moving on to the remaining positions! When we are choosing this first card, we again have 52 choices, of which 13 are hearts. So the answer is still $1/4$.
+
+\item Deal a ten-card hand from a standard deck of cards.
+
+What's the chance that the third card is a 7? Well, one way to deal a ten-card hand is to randomly permute the entire deck of cards, and then pick the first ten elements in the permutation. And we can generate the random permutation by first choosing the third position. The chance that it is a 7 is therefore $4/52 = 13$.
+
+What's the chance that the third card is a 7 {\it given that the tenth card is a 7}? This time, pick the random permutation by first choosing the tenth position, then the third position, and then all the other positions. So when the third position is being chosen, there are 51 cards remaining, of which three are 7s. Therefore the conditional probability is $3/51 = 1/17$.
+
+\end{enumerate}
+
+\section{Tossing a biased coin}
+
+Suppose that instead of a fair coin, you have a coin whose probability of coming up heads is $p \in [0,1]$. The sample space for a single coin toss is $\Omega_o = \{H,T\}$ and the probabilities of the possible outcomes are
+$$ \pr(H) = p, \ \ \pr(T) = 1-p.$$
+
+If you toss this coin $n$ times (sample space $\Omega = \{H,T\}^n$), what is the chance of getting exactly $k$ heads? Well, pick any sequence $\omega \in \Omega$ with $k$ heads. The probability of getting precisely the outcome $\omega$ is
+$$ \pr(\omega) = p^k (1-p)^{n-k} .$$
+Thus the probability of $k$ heads is
+$$ \mbox{(number of sequences with $k$ heads)} \cdot p^k (1-p)^{n-k} 
+\ \ = \ \ 
+{n \choose k} p^k (1-p)^{n-k} .$$
+
+Sometimes we encode heads and tails numerically:
+$$ \mbox{heads} \rightarrow 1, \ \ \ \mbox{tails} \rightarrow 0 .$$
+
+In this case, a single coin flip with bias $p$ has sample space $\{0,1\}$ and is called a Bernoulli($p$) distribution. Suppose $n$ such coins are flipped, and $X_i \in \{0,1\}$ is the outcome for the $i$th coin. Then the number of heads is simply 
+$$ X = X_1 + X_2 + \cdots + X_n. $$
+$X$ has sample space $\{0,1,\ldots,n\}$ and is said to have a Binomial($n,p$) distribution.
+
+If $X$ and $Y$ are independent random variables, then $\var(X+Y) = \var(X) + \var(Y)$.
+More generally, if $X_1, \ldots, X_n$ are independent, then
+$$ \var(X_1 + \cdots + X_n)
+\ = \ 
+\var(X_1) + \cdots + \var(X_n).
+$$
+
+
+\subsection{An application to sampling}
+
+Suppose you are interested in finding out the fraction of Americans who like sushi. 
+This is some unknown value $p \in [0,1]$ that you decide to estimate by sampling.
+To this end, you pick $n$ random people and poll them. Let $X_i$ be $1$ if the $i$th
+person you ask likes sushi, and $0$ if not. Your estimate of $p$ is then
+$$ Y \ = \ \frac{X_1 + \cdots + X_n}{n}.$$
+
+Since $\E(X_i) = p$, it follows by linearity of expectation that
+$$
+\E(Y)
+\ = \ 
+\frac{1}{n} \left( \E(X_1) + \cdots + \E(X_n) \right)
+\ = \ 
+p.
+$$
+So $Y$ certainly has the right expected value. But how far does it typically
+deviate from this expectation? Since the $X_i$ are independent, and since
+each $\var(X_i) = p(1-p)$ (recall our earlier coin flip example), 
+$$ 
+\var(Y) 
+\ = \ 
+\frac{\var(X_1 + \cdots + X_n)}{n^2}
+\ = \ 
+\frac{\var(X_1) + \cdots + \var(X_n)}{n^2}  
+\ = \ 
+\frac{p(1-p)}{n}.
+$$
+So the standard deviation of $Y$ is $\sqrt{p(1-p)/n}$: the larger $n$ is,
+the closer $Y$ stays to the desired value $p$.
+

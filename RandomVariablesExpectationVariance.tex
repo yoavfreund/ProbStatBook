@@ -1,4 +1,4 @@
-\chapter{Random variables, expectation, and variance, I}
+\chapter{Random variables, expectation, and variance}
 
 \section{Random variables}
 
@@ -39,6 +39,52 @@ of the dart from the center of the board. Now $X$ takes values in $[0,1]$, and f
 any $x$ in this range, $\pr(X \leq x) = x^2$.
 
 Henceforth, we'll follow the convention of using capital letters for r.v.'s.
+
+\section{Arithmetic and geometric series}
+
+The simplest {\it arithmetic series} is $1,2,3,\ldots$. The sum of the first 
+$n$ elements of this series is
+$$ 1 + 2 + \cdots + n \ = \ \frac{n(n+1)}{2} .$$
+
+Why? suppose that write the sum twice, first going up from $1$ to $n$
+and then and then going down from $n$ down to $1$:
+$$ \left(1 + 2 + \cdots + (n-1) + n\right) + 
+\left(n + (n-1) + \cdots + 2 + 1\right) $$
+We can rearrange the sum into a sum of $n$ pairs, the first of which
+sums the first element in each list, the second sums the second
+elements in each list etc:
+$$ (1+n) + (2+(n-1)) + (3+(n-2)) + \cdots + (n+1) $$
+It is easy to see that each pair sums to $n+1$ and that there are $n$
+pairs, which gives a total of $n(n+1)$. Recalling that we summed two
+copies of the original sum we get $n(n+1)/2$.
+
+A more general arithmetic series is $a, a+s, a+2s, \ldots$
+(where $a,s$ are some numbers). The sum of the first $n$ elements of this series is
+$$ a + (a+s) + \cdots + (a + (n-1)s)
+\ = \ 
+an + s(1 + \cdots + (n-1))
+\ = \ 
+an + \frac{sn(n-1)}{2}.
+$$
+\\
+
+One of the most common {\it geometric series} is $1, 2, 4, 8, \ldots$; the sum
+of the first $n$ elements of this series is
+$$ 1 + 2 + \cdots + 2^{n-1} \ = \ 2^n - 1 .$$
+Another common series is $1, \frac{1}{2}, \frac{1}{4}, \ldots$,
+in which the first $n$ terms sum to $2 - (1/2^{n-1})$.
+
+More generally, a geometric series is of the form $a, ar, ar^2, ar^3, \ldots$
+(where $a,r$ are some numbers), and its first $n$ terms sum to
+$$ a + ar + \cdots + ar^{n-1} 
+\ = \ 
+\frac{a(r^n-1)}{r-1}
+\ = \ 
+\frac{a(1-r^n)}{1-r}.$$
+The first form is more useful when $r > 1$, while the second is more useful when $r< 1$.
+
+In the case where $|r| < 1$, we can sum the entire series (with infinitely many terms) 
+to get $a/(1-r)$.
 
 \section{The mean, or expected value}
 

@@ -1,67 +1,83 @@
 \chapter{Introduction}
 
-The goal of these notes is to give you a high-level preview of some of
-the main concepts that you will learn in this course. We will
-explain these concepts verbally, with very little
-math. Later on we will give each concept a precise mathematical
-definition and show you how to use these definitions to solve
-practical problems. It is my experience that having a rough intuition
-about concepts makes it easier to absorb the formal math.
+What is ``probability''? What is ``statistics''? Why are they
+important?
 
-\section{Statistics}
-One of the fundamental concepts in probability and statistics is that
-of {\em sampling}.
+This introductory chapter is a gentle introduction to these concepts,
+in later chapters we will go deeper and provide you with specific
+tools for solving specific problems.
 
-Suppose we own a web site and that we make money by placing
-advertisements on the pages we host. The way web advertisement works,
-we get paid if a visitor to the page clicks on the advertisement,
-indicating that she is interested in the product or service that is
-advertised (or maybe simply that they are bored... ). Such an event is
-called a ``click-through'' or CT.
+This chapter provides a high level panorama for the rest of the book,
+sit back and enjoy!
+
+\section{AB tests of online ads}
+
+Suppose you own a web site and that you make money by placing
+advertisements on the pages of our site. The way advertisers pay the web
+site is based on ``click through'' events (CT)\footnote{Actually, CTs are
+  only part of the payment contract, there are many other factors that effect
+  the payment. For simplicity we concentrate here on CTs.} 
+A CT is the event that a particular ad is displayed on a
+web page (also called an {\em impression}) and the user clicks on the
+ad to go to the advertiser's site. That click is an indication of some
+interest on the part of the visitor. You, the wbsite owner, get
+payed when whenever a CT occurs.
 
 For simplicity, let's consider a single static page, with a single
 location on the page for presenting the advertisement and just two
 alternative ads to place in this location, which we will call ad A and
-ad B. Suppose we don't have any additional information about the
-specific visitor.
+ad B. 
 
 How can we figure out which is the best advertisement to put on the
 page?
 
 One thing we can do is this: each time the web page is presented,
 choose one of the possible ads in an alternating manner
-(B,A,B,A,B,... ) and present the page to the visitor. This is referred
-to as producing an {\em impression} of the ad.  We then see if the
-visitor clicks on the advertisement, producnig a CT. The fraction of visits to a page
-that a random visitor clicks on the ad is called the ``click through rate''
-or CTR. If the paymnent for all ads are equal then the ad with the
-highest CTR is the best one to put on the page.
+(B,A,B,A,B,... ) and present the page to the visitor. We then see if
+the visitor clicks on the advertisement, producing a CT. Suppose that
+the number of visitors to the page is very large. The {\em law of
+  large numbers} tells us that the fraction of CTs among all the
+impressions of A (or B) converges to a particular limit.  This number
+is called the ``click through rate'' or CTR for the ad. If the
+paymnent for all ads are equal then the ad with the highest CTR is the
+best one to place on the page.
 
-This is an example of using {\em Statistics}. A single page-visit,
-together with a flag indicating whether or not the ad was clicked is
-called an {\em observation} or an {\em outcome} and the sequence of
-$n$ independent observations is called a {\em sample}. Statistics is a
-set of methods for drawing conclusions from random samples. The
-process that is generating the observations is called a {\em
-  Stochastic Process}. The conclusions we draw are stated as
-properties of this stochastic process. In our case, we conclude that
-one ad has a higher CTR than the other.
+The law of large numbers is a fundamental law of probability and
+statistics, we will come back to it later.
 
-Suppose we have 10,000 impressions for each of the two ads, and
-suppose we got 200 CTs for ad A 200 and 150 CTs for ad B. It seems
-reasonable to conclude that ad A is better. However, how confident are
-we of this conclusions? Are we confident enough to never present ad B
-again? Or do we need to collect more outcomes for both A and B?
+\iffalse
+This is an example of {\em Statistical inference}. Statistical
+inference is a set of methods for analyzing collected data and drawing
+conclusions about the real world from that data. 
+\fi
 
-Suppose instead that we collected 1,000,000 impressions and got the 20,000
-CTs for A and 10,000 CTs for B. The ratios are the same:
-\[
-\frac{200}{10,000} = \frac{20,000}{1,000,000} = 0.02,\;\;
-\frac{150}{10,000} = \frac{15,000}{1,000,000} = 0.015
-\]
-However, intuitively, when the size of the sample is one million, we
-are more confident that ad A is indeed the better one. How can we
-justify this intuition?
+A single page-visit, together with a flag indicating whether or not
+the ad was clicked is called an {\em observation} or an {\em outcome}
+and the sequence of $n$ independent observations is called a {\em
+  sample}. Statistics is a set of methods for drawing conclusions from
+random samples. The process that is generating the observations is
+called a {\em Stochastic Process}. The conclusions we draw are stated
+as properties of this stochastic process. In our case, we conclude
+that one ad has a higher CTR than the other.
+
+Suppose first we have 10,000 impressions for each of the two ads, and
+suppose we got 200 CTs for ad A and 150 CTs for ad B. All other things
+being equal, we can conclude the the CTR for ad A is about \%$2$ and for
+ad B is about \%$1.5$ and our preference should be to present
+ad A rather than ad B. However, it is intuitively clear that this
+conclusion is not a very confident one, as it rests on a difference of
+one in the number of CTs.
+
+As we cannot make a confident conclusions, we continue placing the ads
+in an alternating order (A,B,A,B,...) until we have 1,000,000
+impressions of each type. Suppose at that point that we have 200,000
+CTs for A and 150,000 CT's for B. The CTR's are the same as before:
+\%$1.6$ for A and  \%$1.5$  for B. Again, we conclude that A is a
+better ad than B. In this case the difference in
+the number of CTs is 50,000 rather than 50 and our intuition tells us
+that we can be confident that A is the ad with the higher CTR.
+
+How can we justify this intuition?
 
 To explain and quantify this intuition we use probability theory.
 
@@ -72,11 +88,11 @@ for statistics. This is similar to the way in which discrete math and
 the theory of computation are the foundation for writing correct and
 efficient computer programs.
 
-The theory of computation does not partain to a specific programming
-language or computer hardware. Similarly, probability theory does {\em
-  not} deal with observations of real-world events, that is the job of
-Statistics. Instead, probability theory uses simplified mathematical
-models of the underlying stochastic process.
+The input for statistical inference is data collected from the real
+world, the output is a {\em model} of the real world. Probability
+theory works in the opposite direction. The input is a {\em stochastic
+  process} or a {\em model}, and the output are probabilities of {\em
+  events}.
 
 Specifically, in our case, we can model the process generating the
 click-through observation using two biased coins. An {\em unbiased
@@ -296,10 +312,11 @@ applications in mind will help you develop an intuition for what to
 expect from stochastic processes.
 
 Here is a list of the probability and statistics terms that we touched
-upon are:
+on in this chapter:
 \begin{enumerate}
 \item Probability Theory
 \item Coin flip, biased and unbiased coins.
+\item Law Of Large Numbers.
 \item Statistics
 \item Outcome, Sample, sample size.
 \item Observational, Empirical.
