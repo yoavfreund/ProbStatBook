@@ -7,16 +7,16 @@ is to introduce you to some central concepts in an intuitive way and
 motivate the more rigorous definitions that will come later. It is
 therefor important that you understand the concepts and examples of
 this chapter. If you are having trouble with anything, discuss it with
-you peers, post on Piazza, or ask a question in class. If the examples
+your peers, post on Piazza, or ask a question in class. If the examples
 in this chapter confuse you, you are likely to have a hard time with
-the remained of the class.
+the remainder of the class.
 
 \section{Probability and fair bets}
 
 One intuitive way of thinking about probability problems is in terms
 of the {\em fair price of a bet}.
 
-Lets start with a very simple example. Suppose I flip a fair coin.
+Let's start with a very simple example. Suppose I flip a fair coin.
 If the coin falls ``heads'' I give you a dollar, if it falls ``tails''
 I give you two dollars. What is the fair price for taking part in the
 game?
@@ -42,7 +42,7 @@ of the game is
 The {\bf expected value} or {\bf expectation} is the {\em long term
   average of a large number of independent experiments.} Here an
 ``experiment'' is a single coin toss. The fact that the expectation is
-$1.5$ is equivalent to the fact that in a very long seqnece of coin
+$1.5$ is equivalent to the fact that in a very long sequence of coin
 flips we expect the number of ``Heads'' to be close to the number of
 ``Tails''. This is called the ``law of large numbers''
 
@@ -58,7 +58,7 @@ of the difference between the numbers of H's and T's?
 Hopefully, you find this example trivial. Indeed, if all of the
 problems we encountered in this course were as simple, there would be
 no need for formal math. However, as you'll see in the following
-sections. Even seemingly simple problems can have unintuitive answers.
+sections, even seemingly simple problems can have unintuitive answers.
 
 The examples we will go through share a common theme; we will describe
 a game of chance between the ``player'' and the ``house'' of the following form:
@@ -115,21 +115,20 @@ We consider different payment rules.
 
 \subsection{Specific outcome}
 
-The house pays one dollar if the outcome is HHH, nothing otherwise, what
+The house pays one dollar if the outcome is HHH, nothing otherwise. What
 is the fair price?
 
 A single toss of a coin corresponds to two outcomes: H and T, each of
-which has probability the same probability: $1/2$. A sequence of three
-tosses generates a sequence of three letters, of which there are
-eight: TTT, TTH, THT, THH, HTT, HTH, HHT, HHH. As each coin toss has
-probabilities (1/2,1/2) and as they are {\em independent}~\footnote{We
-  will define independence precisely later in the book. For now, it
-  suffices to use the intuition that the outcome of each of the three
-  coin tosses does not effect the other two.} we have that the
-probability of each of the eight outcomes is $1/8$. We call the eight
-possible outcomes the {\em outcome space}. As all eight outcomes have
-equal probability we say that the distribution over the outcomes is
-{\bf uniform}.
+which has the same probability: $1/2$. A sequence of three tosses
+generates a sequence of three letters, of which there are eight: TTT,
+TTH, THT, THH, HTT, HTH, HHT, HHH. As each coin toss has probabilities
+(1/2,1/2) and as they are {\em independent}~\footnote{We will define
+  independence precisely later in the book. For now, it suffices to
+  use the intuition that the outcome of each of the three coin tosses
+  does not effect the other two.} we have that the probability of each
+of the eight outcomes is $1/8$. We call the eight possible outcomes
+the {\em outcome space}. As all eight outcomes have equal probability
+we say that the distribution over the outcomes is {\bf uniform}.
 
 As the player gets 1\$ when the outcome is HHH and nothing otherwise,
 the expected gain, which is the fair ticket price, is 
@@ -141,7 +140,7 @@ outcomes. For example for HHT.
 \subsection{Specified number of tails}
 
 Suppose that instead of specifying the sequence we specify the number
-of times that Tails occured. Is that different form specifying the
+of times that Tails occured. Is that different from specifying the
 sequence of outcomes? This depends on the specified number.
 
 Suppose first that the number of tails is zero. There is only one
@@ -171,10 +170,10 @@ mathematical foundation and not relaying solely on intuition.
 
 Consider the betting game. The house has three cards: one card is red
 on both sides, one card is black on both sides and one card is black
-on one side and red on the other side. We deonte the three cards by
+on one side and red on the other side. We denote the three cards by
 the letter pairs: BB,BR,RB.
 
-The house choses one of the cards at random an puts it down on the
+The house choses one of the cards at random and puts it down on the
 table with a randomly chosen side facing up.
 
 Suppose the face up side is black. The house makes the following
@@ -198,7 +197,7 @@ gains a third of a dollar in expectation for each game!
 
 How do we arrive at this answer? We need to carefully define the event
 tree and the outcome space. To aid the explanation, study the event
-tree in Figure~\ref{fig:3cards}. The event tree has to levels, the
+tree in Figure~\ref{fig:3cards}. The event tree has two levels, the
 first corresponding to the choice of card, the second to the choice of
 card side. As a result, we get {\bf six} possible outcomes, each with
 probability $1/6$. Note that there are {\bf two} outcomes
@@ -211,7 +210,7 @@ of each card using invisible ink.
 
 The rest of the argument is simple. Consider Figure~\ref{fig:3cards}
 again. Suppose the face up side of the chosen card is red. There are
-three outcomes that correspond to this event. Restricting out
+three outcomes that correspond to this event. Restricting our
 attention to these three outcomes, we see that two correspond to the
 card RR and one corresponds to the card RB. Thus the probability that
 the bottom side is red {\bf ``conditioned''} on the fact that the
@@ -231,7 +230,7 @@ important role in following chapters.
 
 \section{Chapter Summary}
 In this chapter we have discussed the following concepts. The
-discussion was intuitive. In later chapter we will define the concepts
+discussion was intuitive. In later chapters we will define the concepts
 more precisely and use them to solve more complex problems.
 \begin{itemize}
 \item Outcomes.
@@ -239,6 +238,6 @@ more precisely and use them to solve more complex problems.
 \item Event tree.
 \item Probabilities, probability distribution.
 \item Uniform distribution.
-\item Expected value, expectation, fair price. 
+\item Expected value, expectation, fair price.
 \item Conditional probability.
 \end{itemize}
