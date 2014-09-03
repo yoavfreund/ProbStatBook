@@ -20,15 +20,15 @@ enjoyable, so I hope you will read this chapter!
 \section{AB tests of online ads}
 
 Suppose you own a web site and that you make money by placing
-advertisements on the pages of our site. The way advertisers pay the web
+advertisements on the pages of your site. The way advertisers pay the web
 site is based on ``click through'' events (CT)\footnote{Actually, CTs are
   only part of the payment contract, there are many other factors that effect
   the payment. For simplicity we concentrate here on CTs.} 
 A CT is the event that a particular ad is displayed on a
 web page (also called an {\em impression}) and the user clicks on the
 ad to go to the advertiser's site. That click is an indication of some
-interest on the part of the visitor. You, the wbsite owner, get
-payed when whenever a CT occurs.
+interest on the part of the visitor. You, the website owner, get
+paid whenever a CT occurs.
 
 For simplicity, let's consider a single static page, with a single
 location on the page for presenting the advertisement and just two
@@ -73,13 +73,13 @@ being equal, we can conclude the the CTR for ad A is about \%$2$ and for
 ad B is about \%$1.5$ and our preference should be to present
 ad A rather than ad B. However, it is intuitively clear that this
 conclusion is not a very confident one, as it rests on a difference of
-one in the number of CTs.
+$50$ in the number of CTs.
 
 As we cannot make a confident conclusions, we continue placing the ads
 in an alternating order (A,B,A,B,...) until we have 1,000,000
 impressions of each type. Suppose at that point that we have 200,000
 CTs for A and 150,000 CT's for B. The CTR's are the same as before:
-\%$1.6$ for A and  \%$1.5$  for B. Again, we conclude that A is a
+\%$2$ for A and  \%$1.5$  for B. Again, we conclude that A is a
 better ad than B. In this case the difference in
 the number of CTs is 50,000 rather than 50 and our intuition tells us
 that we can be confident that A is the ad with the higher CTR.
@@ -96,9 +96,9 @@ the theory of computation are the foundation for writing correct and
 efficient computer programs.
 
 The input for statistical inference is data collected from the real
-world, the output is a {\em model} of the real world. Probability
+world, and the output is a {\em model} of the real world. Probability
 theory works in the opposite direction. The input is a {\em stochastic
-  process} or a {\em model}, and the output are probabilities of {\em
+  process} or a {\em model}, and the outputs are probabilities of {\em
   events}.
 
 Specifically, in our case, we can model the process generating the
@@ -106,12 +106,12 @@ click-through observation using two biased coins. An {\em unbiased
   coin} is a symmetric coin for which the probability of landing
 ``heads'' is equal to the probability of landing ``tails''.  A {\em
   biased} coin is one where these probabilities are different.  In our
-case the coin for ad A has probability $p_A$ of landing ``heads''
+case the coin for ad A has probability $P_A$ of landing ``heads''
 which is equal to the probability that a random visitor will click on
-the ad. Similarly $p_B$ corresponds to the probability that the coin B
+the ad. Similarly $P_B$ corresponds to the probability that the coin B
 lands ``heads'' which is equal to the probability that a random
 visitor will click on the ad B. More succinctly, $P_A$ is the CTR of
-ad A and $P_B$ is the CTR is ad B.
+ad A and $P_B$ is the CTR of ad B.
 
 The question that we want to answer is which probability is larger, is
 $P_A>P_B$ or is the reverse true: $P_B \leq P_B$ ?
@@ -150,8 +150,8 @@ case we cannot conclude which ad is better with any degree of
 confidence, while in the second case we can be pretty sure that the
 first ad is better.
 
-Note how dramatic is the improvement in confidence, increasing the
-sample size from 10,000 to 1,000,000 transforms a relative gap of 5\%
+Note how dramatic is the improvement in confidence: increasing the
+sample size from 10,000 to 1,000,000 transforms a relative gap of 0.5\%
 from an insignificant gap to one from which can conclude something
 almost surely. Keep this very small number $10^{-16}$ in mind, we will
 get back to it later in the course.
@@ -168,7 +168,7 @@ reconstructed, explained, or corrected. The more realistic goal is
 becoming to have computer systems that minimize the number of errors
 without necessarily correcting all of the bugs.
 
-Certainty is golden, however, in the real world, having a guarantee
+Certainty is golden; however, in the real world, having a guarantee
 that some error will occur no more than once every $10^{16}$ attempts
 is a very strong guarantee. Increasing $n$ from $1,000,000$ to
 $100,000,000$ will reduce the probability to 1 in $10^{64}$.
@@ -267,8 +267,8 @@ and the blue lines cross each other many times.
 
 What does this mean for drawing conclusions about whether $P_A>P_B$ ?
 The one experiment that we did corresponds to two sequences of length
-$10,000$ one for each ad. In this figure are focusing on the sequence
-for ad A. We know that this sequence ended up at $k=200$ when
+$10,000$, one for each ad. In this figure we are focusing on the
+sequence for ad A. We know that this sequence ended up at $k=200$ when
 $n=10,000$. We want to compare the probability that this sequence was
 generated by a coin with bias $P_A=0.02$ to the probability that it
 was generated by a coin with bias $P_A=0.0175$. What we see from the
@@ -277,9 +277,9 @@ what is the ratio of the probabilities, but if instead of generating
 10 trajectories we generated 10,000 trajectories we could probably
 give an accurate estimate of the ratio.
 
-Compare that situatin to the one when $n=1,000,000$ and you see that
-now the separation between the two sets of trajectory is perfect. This
-means that the probability of a blue trajectories having $k=20,000$ is
+Compare that situation to the one when $n=1,000,000$ and you see that
+now the separation between the two sets of trajectories is perfect. This
+means that the probability of a blue trajectory having $k=20,000$ is
 miniscule.
 
 These graphs give us a useful intuition for the behaviour of running
@@ -288,7 +288,7 @@ large numbers.
 
 What's more, probability theory tells us that the rate at which the
 running averages converge to the mean is $O(1/\sqrt{n})$. We
-demonstrate this in the figures by drawing arround the horizontal line
+demonstrate this in the figures by drawing around the horizontal line
 representing the means the envelope which represents the rate at which
 a random sequence is expected to converge to the mean. You can see
 that there is a nice fit between the random trajectories and the
@@ -299,10 +299,10 @@ probability theory? In fact, in many practical problems monte carlo
 simulations play an important role. However, recall that probability
 theory tells you that when $n=1,000,000$ the probability of the
 hypothesis $P_A=P_B=0.0175$ is smaller than $10^{-16}$. If you wanted
-to prove this using monte-carlo, you had to generate at least
-$10^{16}$ sequences of lengh $1,000,000$, that is a pretty large
+to prove this using monte-carlo, you would have to generate at least
+$10^{16}$ sequences of length $1,000,000$. That is a pretty large
 computer job! Then consider $n=100,000,000$ which gives rise to a
-probability of $10^{-64}$, and how much resources will is take to do
+probability of $10^{-64}$, and how much resources it will take to do
 this monte-carlo simulation. On the other hand, using probability
 theory and a statistical table you can compute these probabilities
 quite precisely with no computer at all!
@@ -321,10 +321,10 @@ expect from stochastic processes.
 Here is a list of the probability and statistics terms that we touched
 on in this chapter:
 \begin{enumerate}
-\item Probability Theory
+\item Probability Theory.
 \item Coin flip, biased and unbiased coins.
 \item Law Of Large Numbers.
-\item Statistics
+\item Statistics.
 \item Outcome, Sample, sample size.
 \item Observational, Empirical.
 \item Confidence.
