@@ -40,7 +40,11 @@ any $x$ in this range, $\pr(X \leq x) = x^2$.
 
 Henceforth, we'll follow the convention of using capital letters for r.v.'s.
 
-\section{Arithmetic and geometric series}
+\section{Finite, infinite and Undefined expectatioons}
+
+{\bf Akshay, please put here an explanation of summable and absolutly
+summable series (not necessarily using these terms).}
+
 
 The simplest {\it arithmetic series} is $1,2,3,\ldots$. The sum of the first 
 $n$ elements of this series is
@@ -209,31 +213,6 @@ So: to minimize your expected suffering, behave as if God exists!
 
 \end{enumerate}
 
-\section{Tossing a biased coin}
-
-Suppose that instead of a fair coin, you have a coin whose probability of coming up heads is $p \in [0,1]$. The sample space for a single coin toss is $\Omega_o = \{H,T\}$ and the probabilities of the possible outcomes are
-$$ \pr(H) = p, \ \ \pr(T) = 1-p.$$
-
-If you toss this coin $n$ times (sample space $\Omega = \{H,T\}^n$), what is the chance of getting exactly $k$ heads? Well, pick any sequence $\omega \in \Omega$ with $k$ heads. The probability of getting precisely the outcome $\omega$ is
-$$ \pr(\omega) = p^k (1-p)^{n-k} .$$
-Thus the probability of $k$ heads is
-$$ \mbox{(number of sequences with $k$ heads)} \cdot p^k (1-p)^{n-k} 
-\ \ = \ \ 
-{n \choose k} p^k (1-p)^{n-k} .$$
-
-Sometimes we encode heads and tails numerically:
-$$ \mbox{heads} \rightarrow 1, \ \ \ \mbox{tails} \rightarrow 0 .$$
-
-In this case, a single coin flip with bias $p$ has sample space $\{0,1\}$ and is called a Bernoulli($p$) distribution. Suppose $n$ such coins are flipped, and $X_i \in \{0,1\}$ is the outcome for the $i$th coin. Then the number of heads is simply 
-$$ X = X_1 + X_2 + \cdots + X_n. $$
-$X$ has sample space $\{0,1,\ldots,n\}$ and is said to have a Binomial($n,p$) distribution.
-
-If $X$ and $Y$ are independent random variables, then $\var(X+Y) = \var(X) + \var(Y)$.
-More generally, if $X_1, \ldots, X_n$ are independent, then
-$$ \var(X_1 + \cdots + X_n)
-\ = \ 
-\var(X_1) + \cdots + \var(X_n).
-$$
 
 \subsection{An application to sampling}
 

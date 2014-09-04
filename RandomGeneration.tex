@@ -96,7 +96,7 @@ Let's say that we want $b$ bits of precision.
 \end{eqnarray*}
 This is exactly like generating a random $b$-bit integer: just stick a ``$0.$'' in front.
 
-\subsection{A biased coin}
+\subsection{Generating flips of a biased coin}
 
 The next distribution we want is a coin with bias $p$, where the outcome is once again coded
 as $0/1$:
@@ -296,62 +296,4 @@ What's the chance that the third card is a 7? Well, one way to deal a ten-card h
 What's the chance that the third card is a 7 {\it given that the tenth card is a 7}? This time, pick the random permutation by first choosing the tenth position, then the third position, and then all the other positions. So when the third position is being chosen, there are 51 cards remaining, of which three are 7s. Therefore the conditional probability is $3/51 = 1/17$.
 
 \end{enumerate}
-
-\section{Tossing a biased coin}
-
-Suppose that instead of a fair coin, you have a coin whose probability of coming up heads is $p \in [0,1]$. The sample space for a single coin toss is $\Omega_o = \{H,T\}$ and the probabilities of the possible outcomes are
-$$ \pr(H) = p, \ \ \pr(T) = 1-p.$$
-
-If you toss this coin $n$ times (sample space $\Omega = \{H,T\}^n$), what is the chance of getting exactly $k$ heads? Well, pick any sequence $\omega \in \Omega$ with $k$ heads. The probability of getting precisely the outcome $\omega$ is
-$$ \pr(\omega) = p^k (1-p)^{n-k} .$$
-Thus the probability of $k$ heads is
-$$ \mbox{(number of sequences with $k$ heads)} \cdot p^k (1-p)^{n-k} 
-\ \ = \ \ 
-{n \choose k} p^k (1-p)^{n-k} .$$
-
-Sometimes we encode heads and tails numerically:
-$$ \mbox{heads} \rightarrow 1, \ \ \ \mbox{tails} \rightarrow 0 .$$
-
-In this case, a single coin flip with bias $p$ has sample space $\{0,1\}$ and is called a Bernoulli($p$) distribution. Suppose $n$ such coins are flipped, and $X_i \in \{0,1\}$ is the outcome for the $i$th coin. Then the number of heads is simply 
-$$ X = X_1 + X_2 + \cdots + X_n. $$
-$X$ has sample space $\{0,1,\ldots,n\}$ and is said to have a Binomial($n,p$) distribution.
-
-If $X$ and $Y$ are independent random variables, then $\var(X+Y) = \var(X) + \var(Y)$.
-More generally, if $X_1, \ldots, X_n$ are independent, then
-$$ \var(X_1 + \cdots + X_n)
-\ = \ 
-\var(X_1) + \cdots + \var(X_n).
-$$
-
-
-\subsection{An application to sampling}
-
-Suppose you are interested in finding out the fraction of Americans who like sushi. 
-This is some unknown value $p \in [0,1]$ that you decide to estimate by sampling.
-To this end, you pick $n$ random people and poll them. Let $X_i$ be $1$ if the $i$th
-person you ask likes sushi, and $0$ if not. Your estimate of $p$ is then
-$$ Y \ = \ \frac{X_1 + \cdots + X_n}{n}.$$
-
-Since $\E(X_i) = p$, it follows by linearity of expectation that
-$$
-\E(Y)
-\ = \ 
-\frac{1}{n} \left( \E(X_1) + \cdots + \E(X_n) \right)
-\ = \ 
-p.
-$$
-So $Y$ certainly has the right expected value. But how far does it typically
-deviate from this expectation? Since the $X_i$ are independent, and since
-each $\var(X_i) = p(1-p)$ (recall our earlier coin flip example), 
-$$ 
-\var(Y) 
-\ = \ 
-\frac{\var(X_1 + \cdots + X_n)}{n^2}
-\ = \ 
-\frac{\var(X_1) + \cdots + \var(X_n)}{n^2}  
-\ = \ 
-\frac{p(1-p)}{n}.
-$$
-So the standard deviation of $Y$ is $\sqrt{p(1-p)/n}$: the larger $n$ is,
-the closer $Y$ stays to the desired value $p$.
 

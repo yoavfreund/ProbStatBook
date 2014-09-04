@@ -314,3 +314,72 @@ of years of schooling of San Diegans is
 $$ 11.6 \pm \frac{2 \times 4.1}{\sqrt{400}} \ \ = \ \ 11.6 \pm 0.41 .$$
 
  
+\section{The Bonferroni correction}
+When performing statistical test, we often want to use the same data
+set to test many different alternative hypotheses. For example, when
+studying high blood pressure we might want to support or refute
+the following hypotheses
+\begin{enumerate}
+\item Blood pressure is elevated in patients with high cholesterol.
+\item Blood pressure is elevated in older patients.
+\item High blood pressure is caused by stress.
+\item Blood pressure is elevated in patients that eat too many
+  vegetables.
+\item and so on.
+\end{enumerate}
+Suppose we run a test whose significance is $\alpha$ for each of these
+hypotheses and find that one of the tests rejects the null
+hypothesis. Can we say that the significance of this rejection is
+$\alpha$? Clearly, as the number of tests increases, the significance
+of each test decreases. How can we account for that? It is tempting to
+think of passing each test as an independent event and calculate the
+overall significance based on that. However, we don't know whether the
+tests are independent or not. In fact, the opposite is probably true:
+older patients tend to also have high cholesterol.
+
+We therefor do the safe thing and use the union bound. Let $T_i$,
+$i=1,\ldots,n$ be the event corresponding to test $i$ rejecting the
+null hypothesis when the null hypothesis is in fact true. Suppose that
+the $p$ value of each of the $n$ tests is at most $\alpha$,
+i.e. $P(T_i) \leq \alpha$.
+ 
+The union bound tells us that 
+\[
+P\left( \bigcup_{i=1}^n T_i \right) \leq \sum_{i=1}^n P(T_i) \leq n \alpha
+\]
+
+\section{Estimating the size of large populations}
+Statistical techniques are useful for estimating the size of a large
+population. Suppose for example that we want to count the number of
+fish in a lake. How would we do that? Instead of trying to catch all
+the fish, which is both impossible and damaging to the fish
+population, we perform the following two phase test:
+\begin{enumerate}
+\item We catch fish, mark them with some non-intrusive marker, and
+  release them back to the lake. Suppose we mark $m$ of them with a
+  mark that sticks to the fish but does not hurt it.
+\item After we marked the $m$ fish, we wait for them to mix with the
+  other fish and then catch $l$ fish and count how many of these
+  have been marked. We denote the number of marked fish by the random
+  variable $Y$.
+\end{enumerate}
+The probability that each that each fish caught in the second batch is
+marked is equal to the fraction of all of the fish in the lake that
+are marked, which is $m/n$. This means that the random variable $Y$ is
+a sum of $l$ independent binary random variables each with mean $m/n$.
+Therefor the mean of $Y$ is $(lm)/n$. The standard deviation of each
+of the binary variables is at most $1/2$ (which happens when
+$m/n=1/2$). Thus the standard deviation of $Y$ is $\sqrt{l}/2$.
+Therefor the 95\% significance interval for $(lm)/n$ is
+$[Y-\sqrt{l},Y+\sqrt{l}]$.
+
+We are interested in estimating $n$, therefor our estimate is the range.
+\[
+\left[\frac{lm}{Y+\sqrt{l}}, \frac{lm}{Y-\sqrt{l}} \right]
+\]
+
+Note that if the number of fish in the lake $n$ is large, so that $m/n
+\approx 1/l$ then there is a good chance we will see no marked fish in
+the second batch. We might need to mark more and more fish until the
+chance of catching a marked fish becomes reasonably high.
+
