@@ -248,11 +248,120 @@ A lot of different probability spaces are simple cases of balls and bins. For in
 
 \section{Poker}
 
-{\bf A general description of Texas Hold'm poker}
+Poker is a family of card games wherein players make bets based on the
+values of combinations of cards they possess or are shared among the
+players. The eventual winner is determined by the player who survives
+the betting and can form a hand with the highest value. Since making
+bets requires an understanding of the potential value of a player's
+hand, probability concepts can be used to make informed bets and
+attempt to profit in the long run. Texas Hold'em is one of the most
+popular variants of poker, and usually is the variant meant when
+people say poker without specifying a particular game.
 
-{\bf Ibrahim: please put here an explanation of the rules of texas
-  Hold'm. Include a figure with the definition of the different
-  hands. You can find such images easily using google images.}
+\subsection{Rules of Texas Hold'em}
+In Texas Hold'em, there are five shared (or \emph{community} cards) and
+two private (also known as \emph{hole} or \emph{pocket}) cards per
+player. A hand consists of 5 cards in total, so at the end of the game
+the value of a player's hand is determined by the highest possible
+combination the player can make from the two \emph{hole} cards and the
+\emph{community} cards. Each player is first dealt two cards, face
+down. These cards are kept hidden until the end of the game.
+
+Players then make bets in a clockwise circle, based on the potential
+perceived value of their hand at the end of the game. When making
+bets, players must \emph{call} in order to continue playing: they can
+either \emph{check} the current bet, which means they must match the
+highest bet previously made, or they can \emph{raise}, increasing the
+value of the bet. If a player feels that their hand is not strong
+enough to win, they can also \emph{fold}, or exit the game, but they
+forfeit any money that they had previously bet. Bets contribute to the
+\emph{pot}, the shared pool of money that the eventual winner will
+claim. A round of betting continues until all players have either
+\emph{checked} or \emph{folded}, i.e. the value of the bet is not
+increased for one full rotation of the circle of players.
+
+Here is a brief example of a round of betting, with hypothetical
+players Alice, Bob, Carol, and Dan:
+\begin{table}[h]
+  \centering
+  \begin{tabular}{ l || c | c | c}
+    \hline
+    Player & Bet & Terminology & Total value of Pot \\
+    \hline
+    Alice & \$2 &  & \$2 \\
+    Bob & \$2 & Check & \$4 \\
+    Carol & \$4 & Raise & \$8 \\
+    Dan & \$4 & Check & \$12 \\
+    Alice & \$4 & Check & \$14 \\
+    Bob & \$2 & Fold & \$14 \\
+    Carol & \$4 & Check & \$14 \\
+  \end{tabular}
+\end{table}
+After Carol checks, everyone has either checked or folded and the
+betting is over.
+
+The initial betting is based only on the knowledge of the players' two
+\emph{hole} cards. Then, the dealer deals the \emph{flop}, which are
+the first three \emph{community} cards. Again, another round of
+betting proceeds, with players now considering the best possible
+combinations of their two \emph{hole} cards and the three cards in the
+\emph{flop}, as well as the potential combinations achievable by the
+last two unknown cards, and the possible combinations their opponents
+may have. After the second round of betting, the dealer deals the
+fourth community card, known as the \emph{turn}. Another round of
+betting occurs, this time with players having knowledge of one more
+card. After the third round of betting, the final community card, the
+\emph{river}, is dealt. A fourth and final round of betting then takes
+place, with the remaining players trying to estimate what potential
+value their opponents may possess. Finally, if more than one player is
+left, the \emph{showdown} occurs: players reveal the best five card
+hand they can make from their \emph{hole} cards and the five
+\emph{community} cards. The winner is the player who can form the
+highest value hand, and takes the entire \emph{pot} as his
+prize. While one cannot be sure of winning an individual game, the
+goal of an intelligent poker player is to make a net profit over the
+course of many games, by using the laws of probability (and
+psychology) to ones advantage.
+
+\subsection{Poker Hands}
+In Texas Hold'em, hands consist of five cards. They fall under several
+categories, with each category in the following list being higher than
+all hands of lower categories. Within a category, hands are ordered by
+the individual ranks of the cards, so for example a \emph{Flush} whose
+highest card is the $10\clubsuit$ is higher ranked than a \emph{Flush}
+whose highest card is the $9\heartsuit$, which is in turn higher than
+any \emph{Straight}. Any leftover or unmatched cards (in the five card
+hand) may be used to break ties.
+
+\begin{enumerate}
+\item Straight flush - five cards in sequence, all of the
+  same suit, such as $Q\spadesuit J\spadesuit 10\spadesuit 9\spadesuit
+  8\spadesuit$
+
+\item Four of a kind - four cards of the same rank, eg. $8\spadesuit
+  8\clubsuit 8\heartsuit 8\diamondsuite K\clubsuit$. In this case the
+  $K\clubsuit$ would break ties.
+
+\item Full house - three cards of one rank and two cards of another,
+  eg. $6\clubsuit 6\heartsuit 6\spadesuit 9\heartsuit 9\clubsuit$.
+\item Flush - five cards of the same suit, eg. $A\spadesuit
+  J\spadesuit 10\spadesuit 6\spadesuit 4\spadesuit$.
+\item Straight - five cards in sequence, not necessarily of the same
+  suit. For example, 
+\item Three of a kind - Three cards of the same rank, plus two other
+  cards. For example, $10\spadesuit 10\clubsuit 10\heartsuit
+  6\diamondsuit 4\diamondsuit$
+\item Two pair - two pairs of cards of the same rank, plus a fifth
+  card. For example, $J\clubsuit J\diamondsuit 8\spadesuit 8\clubsuit 5\heartsuit$
+\item One pair - one pair of cards of the same rank, plus three
+  others. For example, $K\clubsuit K\heartsuit J\spadesuit
+  9\diamondsuit 4\diamondsuit$
+\item High card - any hand not matching any of the above rules
+  (i.e. no pairs, straights, or flushes). The value of the hand is
+  determined by the value of the highest card. For example,
+  $K\spadesuit J\heartsuit 8\clubsuit 7\clubsuit 4\spadesuit$
+
+\end{enumerate}
 
 You are dealt five cards at random from a deck of 52 cards. What is the chance of a flush? Of a straight flush? Of exactly one pair?
 
