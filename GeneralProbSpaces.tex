@@ -1,15 +1,35 @@
 \chapter{General Probability Spaces}
 
-We will Describe non-uniform distributions and the summation rules.
+We will describe non-uniform distributions and the summation rules.
 
-We will describe countable probability spaces, summable series,
-density distributions. All introduced through the idiom of the
+We will describe countable probability spaces, summable series, and
+density distributions; all will be introduced through the idiom of the
 rotating wheel that stops at a uniformly distributed angle.
 
 \section{Distributions over the natural numbers}
+%Akshay: I'm not sure what it means to work in the rotating wheel here, since random variables and their expectations (i.e. bets) haven't yet been considered, I believe.
 
-Some positive sequences can be normalized to form a distribution,
-others cannot. (Akshay)
+Let's consider distributions over the positive integers $\mathbb{Z}^+ = \{1, 2, 3, \dots\}$. 
+By now, we know that any valid probability distribution must have the total probability over all outcomes equal $1$. 
+For a random variable $X$ over $\mathbb{Z}^+$, this means that
+$$ \sum_{i=1}^\infty \pr(X = i) = 1 $$
+
+Notice that the series is infinite, but it evaluates to a finite value. 
+This can happen if the sum is a geometric series. 
+If $\pr(X = i) = \frac{1}{2^i} $, for example, then $ \sum_{i=1}^\infty \pr(X = i) = \sum_{i=1}^\infty \frac{1}{2^i} = 1 $. 
+
+However, other series have this property as well. 
+One that will be useful to us is the series
+$$ \sum_{i=1}^\infty \frac{1}{i^2} = \frac{\pi^2}{6} $$
+%(Determining the value of this series was a famous mathematical problem for decades, called the Basel problem.)
+Therefore, the distribution $\pr(X = i) = \frac{6}{\pi^2 i^2}$ is valid, because $ \frac{6}{\pi^2} \sum_{i=1}^\infty \frac{1}{i^2} = 1 $.
+
+Of course, infinite series can evaluate to infinity as well. 
+A well-known example we will use is the \emph{harmonic series}
+$$ \sum_{i=1}^\infty \frac{1}{i} $$
+
+
+
 
 \section{Tossing a biased coin}
 \label{sec:BaisedCoin}
