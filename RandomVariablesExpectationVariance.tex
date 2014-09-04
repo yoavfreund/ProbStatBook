@@ -105,25 +105,31 @@ Using the definition of expectation, it's
 &= \frac{6}{\pi^2} \left( \sum_{i \in \{ 1, 3, 5, \dots \}} \frac{1}{i} + \sum_{i \in \{\dots, -6, -4, -2 \}} \frac{1}{i} \right) \\
 &= 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \dots \\
 &= \left( 1 - \frac{1}{2} - \frac{1}{4} \right) + \left( \frac{1}{3} - \frac{1}{6} - \frac{1}{8} \right) + \left( \frac{1}{5} - \frac{1}{10} - \frac{1}{12} \right) + \dots \\
-&= \left( 1 - \frac{1}{2} - \frac{1}{4} \right) + \left( \frac{1}{3} - \frac{1}{6} - \frac{1}{8} \right) + \left( \frac{1}{5} - \frac{1}{10} - \frac{1}{12} \right) + \dots
+&= \left( \frac{1}{2} - \frac{1}{4} \right) + \left( \frac{1}{6} - \frac{1}{8} \right) + \left( \frac{1}{10} - \frac{1}{12} \right) + \dots \\
+&= \frac{1}{2} \left( 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \dots \right)
 \end{align*}
 
 So the sum is equal to half of itself? 
-This appears quite strange, and it turns out that through similar rearrangements of the sum, we can make it evaluate to any real number we choose. 
-This is why we don't even try to define a specific value for the sum, and instead call the expected value of $X$ \emph{undefined} in this case.
+This appears quite strange. 
+It turns out that through similar rearrangements of the sum, 
+we can make it evaluate to any real number we choose. 
+%Akshay: I can give another example of this if necessary.
+This is why we don't even try to define a specific value for the sum, 
+and instead call the expected value of $X$ \emph{undefined} in this case.
 
 What does this mean? 
 Going back to the example of the wheel and the ticket to spin it, we are saying that there is no fixed fair price for the ticket. 
-Under these circumstances, we're best advised to avoid playing the game at all.
+Under these circumstances, we're best advised to avoid playing the game at all, 
+because we can't decide on a fair price for it.
 
 Incidentally, the rearrangement trick we've played above is very dependent on there being positive and negative terms in the sequence. 
 We might ask whether it's possible to do this when there are only positive terms in the sequence. 
 The answer is no - for a random variable that doesn't take negative values, this ``undefined" strangeness cannot occur. 
 
-It turns out that if $\sum_k |a_k|$ is finite for any sequence $a_k$ (known as \emph{absolutely convergent}), then this kind of thing won't happen. 
-(Note that this isn't the case here, because $\sum_k |a_k|$ is the infinite harmonic series.)
+It turns out that if $\sum_i |i \cdot \pr(X = i)|$ is finite (known as $\{i \cdot \pr(X = i) \}_i$ being \emph{absolutely convergent}), then this kind of thing won't happen. 
+(Note that this isn't the case here, because $\sum_i \left| i \cdot \pr(X = i) \right|$ is a multiple of the harmonic series, which is infinite. )
 
-%(For those interested, there's more. Mention Riemann rearrangement theorem in English?)
+%(For those interested, there's more. Mention conditional convergence and the Riemann rearrangement theorem in English?)
 
 
 
