@@ -1,17 +1,151 @@
 \chapter{General Probability Spaces}
 
-We will describe non-uniform distributions and the summation rules.
+In the previous chapter we showed how to calculate the probabilities
+of events over finite probability spaces with discrete
+distributions. In this chapter we will broaden the scope to include
+non-uniform distributions, distributions over countable sets and
+density distributions.
 
-We will describe countable probability spaces, summable series, and
-density distributions; all will be introduced through the idiom of the
-rotating wheel that stops at a uniformly distributed angle.
+\section{non-uniform distributions over finite sample spaces}
 
-\section{Distributions over the natural numbers}
+Suppose we have an unfair die that is weighed in such a way that 1,2,3
+have twice the probability of 4,5,6. What are these probabilities?
+
+In our case $\Omega=\{1,2,3,4,5,6\}$ and the probability of each of
+4,5,6 is half of the probability of 1, we therefor get
+\[
+1=\sum_{i=1}^6 P(i)=P(1)[3+\frac{3}{2}]=P(1)\frac{9}{2}
+\]
+so the probabilities of the different outcomes are 
+\[ 
+P(1)=P(2)=P(3)=\frac{2}{9},\;\; P(4)=P(5)=P(6)=\frac{1}{9}
+\]
+
+This is our first generalization of the uniform discrete
+distributions studied in the previous chapter, the {\em non-uniform
+  discrete distributions}
+
+Consider another example, the wheel of chance depicted in
+Figure~\ref{fig:Wheel-of-chance} part (a). Assuming that the wheel spins
+smoothly the probability of each outcome is proportional to the angle
+of the section corresponding to the outcome. Assuming that we measure
+the angles in degrees, the probability of a section whose angle is
+$\alpha$ is $\alpha/360$.
+
+We can thus use the wheel to create any probability distribution over
+a finite set of size $n$. This probability is defined by $n$ real numbers:
+$p_1,p_2,\ldots,p_n$ which obey:
+
+\begin{eqnarray}
+\forall 1 \leq i \leq n: 0 \leq p_i \leq 1 \\
+\sum_{i=1}^n p_i =1
+\end{eqnarray}
+
+Given these $n$ numbers we can compute the probability of any event -
+any subset of the outcome space $\Omega=\{1,2,\ldots,n\}$. 
+Suppose $V \subseteq \Omega$ is the event of interest, the probability
+of $V$ is
+\begin{equation}
+P(V)=\sum_{i \in V} p_i
+\end{equation}
+
+\begin{figure}[th]
+\begin{center}
+\includegraphics[width=5in]{figs/WheelsOfChance.png}
+\end{center}
+\caption{Wheels of chance: the wheel is given a push and spins until
+  is comes to rest. The outcome is the label of the section of the
+  wheel pointed to by the red arrows. {\bf(a):} A wheel with four
+  sections of different sizes. {\bf(b):} A wheel with an infinite
+  number of sections, labeled with the natural numbers $1,2,3,ldots$.
+\label{fig:Wheel-of-chance}}
+\end{figure}
+
 %Akshay: I'm not sure what it means to work in the rotating wheel here, since random variables and their expectations (i.e. bets) haven't yet been considered, I believe.
 
-Let's consider distributions over the positive integers $\mathbb{Z}^+ = \{1, 2, 3, \dots\}$. 
-By now, we know that any valid probability distribution must have the total probability over all outcomes equal $1$. 
-For a random variable $X$ over $\mathbb{Z}^+$, this means that
+% Yoav: at this point the spinning wheel is just a mechanism for
+% generating outcomes (elements of \Omega). The power of this
+% mechanism is that it can be used to explain non-uniform discrete 
+% distributions, density distributions, and even mixtures of the two.
+
+We showed how the distribution over a finite sample space can be
+specified by specifying the probability of each outcome.
+
+What about infinite sets? Well, that depends on how ``infinite'' the set is.
+
+As this is not a course on set theory, we will restrict our attention
+to the two most useful ones, which we will describe on an intuitive
+level, rather than formally. The two types of infinity that we will
+consider are:
+\begin{enumerate}
+\item {\bf The natural numbers} The set of all natural numbers:
+  $1,2,3,\ldots$ is obviously infinite. However, it is a ``small''
+  type of infinite because it is {\em countable}. This means that you
+  can put all of the numbers in a list.
+\item{\bf The real numbers} Consider the set of points on a line, or
+  even just the points on a short line segment. For example, suppose 
+\[ \Omega = \left\{x | 0 \leq x \leq 1 \right\} \].
+  As it turns out, the elements of this set {\em cannot} be put
+  on a list, in other words, this set is not countable. As we will
+  see, this means that tools from calculus are needed to define
+  probability distributions on this set.
+\end{enumerate}
+
+We start with the smaller infinity, the countable infinity of the of the natural numbers.
+
+\section{Distributions over the natural numbers}
+Following the example of Figure~\ref{fig:Wheel-of-chance}(a) we
+construct a distribution over the natural numbers using the following
+iteration (depicted in part (b) of Figure~\ref{fig:Wheel-of-chance}).
+\begin{enumerate}
+\item The outcome 1 is given the probability $p_1=1/2$ by assigning it a
+  slice that occupies $360/2 = 180$ degrees.
+\item The outcome 2 is given the probability $p_2=(1/2)^2=1/4$ by
+  assigning it a slice that occupies $360/4=90$ degrees. 
+\item The outcome 3 is given the probability $p_3=(1/2)^3=1/8$ by
+  assigning it a slice that occupies $360/8=45$ degrees.
+\item ...
+\item The outcome $i$ is given probability $p_i=(1/2)^i$ by assigning to
+  it a slice that occupies $360/2^i$ degrees. 
+\end{enumerate}
+
+How do we know that this scheme works? In other words, how do we know
+that the sum of the probabilities of all of the outcomes sums to 1?
+
+Consider the fraction of the probability that remains after the first
+$n$ outcomes have been assigned. It is not hard to convince yourself
+that this remaining probability is exactly twice $p_{n+1}$ (if you
+want a formal proof, try induction!):
+\[
+1-\sum_{i=1}^n p_i = 1-\sum_{i=1}^n (1/2)^i = (1/2)^n= 2p_{n+1}
+\]
+Thus each additional element halves the remaining probability. If we
+repeat this for all $i$ in the natural numbers we converge, in the
+limit to $1$. This is written in the following way
+\[
+\sum_{i=1}^{\infty} p_i = \sum_{i=1}^{\infty} (1/2)^i = 1
+\]
+
+This is our first example of a {\em convergent series} - an infinite
+sequence of non-zero numbers whose sum is finite. We will use
+convergent sequences later in the book, when we discuss the expected
+value of a random variables. For now, we give a brief overview of
+convergent and divergent sequences.
+
+To start, the example given above is an example of an {\em geometric
+  series}. The formula for the geometric series is 
+\[
+\sum_{i=1}^{\infty} r^i = \frac{r}{1-r}
+\]
+Where $r$ is a real number between $0$ and $1$, the case described in
+the figure corresponds to $r=1/2$.
+
+To define the geometric distribution we need that the infinite sum of
+the probabilities will be $1$: $\sum_{i=1}^n p_i =1$.
+
+
+
+
 $$ \sum_{i=1}^\infty \pr(X = i) = 1 $$
 
 Notice that the series is infinite, but it evaluates to a finite value. 

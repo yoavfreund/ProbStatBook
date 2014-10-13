@@ -1,0 +1,345 @@
+\chapter{Multiple events, conditioning, and independence}
+
+\section{Two or more events on the same sample space}
+
+Frequently we end up dealing with multiple events $A,B,\ldots$ defined
+on a single sample space $\Omega$. For instance, $\Omega$ might denote
+the possible outcomes of picking a card from a deck, and the events of
+interest could include $A = \{\omega: \mbox{$\omega$ is a number}\}$,
+$B = \{\omega: \mbox{$\omega$ is a spade}\}$, and so on. Instead of
+just the single event probabilities $\pr(A)$ and $\pr(B)$, we are also
+interested in probabilities of combinations of events, such as $\pr(A
+\cap B)$ and $\pr(A \cup B)$.
+
+\subsection{Human intuition about combined event probabilities is fallible}
+
+Let's start with Exercise 1.2.25 from the textbook. The famous
+psychologists Kahneman and Tversky spent a lot of time trying to
+understand the nature of human rationality and decision making. For
+instance, do humans think probabilistically? In one experiment, they
+told subjects the following:
+\begin{quote}
+Linda is 31, single, outspoken, and very bright. She majored in philosophy in college. As a student, she was deeply concerned with racial discrimination and other social issues, and participated in anti-nuclear demonstrations.
+\end{quote}
+and then asked them to assess the likelihood of three events:
+\begin{enumerate}
+\item[(A)] Linda is active in the feminist movement.
+\item[(B)] Linda is a bank teller.
+\item[(C)] Linda is a bank teller who is active in the feminist movement.
+\end{enumerate}
+A significant majority of respondents deemed $A$ to be the most likely, followed by $C$, and lastly $B$. But $\pr(C) = \pr(A \cap B) \leq \pr(B)$! The respondents exhibited what is called a {\it conjunction fallacy}.
+
+\subsection{Joint probability tables}
+
+One way to write down the probabilities of pairs of events is in a
+table of all possible outcomes. Let's take another exercise from the
+textbook, 1.2.15. Here two students, John and Mary, are taking a math
+course in which the possible grades are $A$, $B$, and $C$. The sample
+space of possible outcomes can be written as $\Omega = \{A,B,C\}^2$,
+where the first coordinate of $\omega \in \Omega$ is John's grade and
+the second is Mary's grade. We can write down the probabilities of the
+nine possible outcomes in a $3 \times 3$ table:
+
+\begin{center}
+\begin{tabular}{|cc|ccc|} \hline
+\multicolumn{2}{|c|}{} & \multicolumn{3}{c|}{Mary} \\ 
+\multicolumn{2}{|c|}{} & $A$ & $B$ & $C$ \\ \hline
+\multirow{3}{*}{John} & $A$ & $p_{AA}$ & $p_{AB}$ & $p_{AC}$ \\ 
+                      & $B$ & $p_{BA}$ & $p_{BB}$ & $p_{BC}$ \\ 
+                      & $C$ & $p_{CA}$ & $p_{CB}$ & $p_{CC}$ \\ \hline
+\end{tabular} 
+\end{center}
+
+\noindent
+The particular problem (see book) can be solved by writing the evidence in terms of these probabilities and adding and subtracting appropriate events.
+
+\subsection{The union bound}
+
+As another example, suppose that in a city,
+\begin{quote}
+60\% of people have a car,
+
+20\% of people have a bicycle, and
+
+10\% of people have a motorcycle.
+\end{quote}
+Anybody who lacks all three ends up walking to work, and nobody walks
+unless they have to. Based on this data, what fraction of people walk
+to work?
+
+We don't have enough information to give an exact answer. This is
+because we don't know about the overlap in ownership of different
+vehicles: what fraction of the people with cars also have bicycles,
+and so on. Nonetheless, we can give upper and lower bounds. To get
+started, consider the experiment of picking a random person in the
+city, and let $\Omega$ be the space of outcomes. We then define the
+four events of interest: $C = \{\mbox{owns a car}\}$, $B =
+\{\mbox{owns a bicycle}\}$, $M = \{\mbox{owns a motorcycle}\}$, and $W
+= \{\mbox{walks}\}$. Since $W = \Omega - (C \cup B \cup M)$, we need
+to bound $\pr(C \cup B \cup M)$.
+
+The least $\pr(C \cup B \cup M)$ could possibly be is $0.6$, which occurs when everyone who has a bicycle or motorcycle also owns a car. The most $\pr(C \cup B \cup M)$ could be is $0.9$, which happens when the sets $C,B,M$ are disjoint. Therefore $0.1 \leq \pr(W) \leq 0.4$.
+ 
+Generalizing, we get the extremely useful {\bf union bound}: for any events $A_1, A_2, \ldots, A_k$,
+$$ \pr(A_1 \cup \cdots \cup A_k) \ \leq \ \pr(A_1) + \cdots + \pr(A_k) .$$
+
+
+\section{Conditional probability}
+
+You meet a stranger, a random citizen of the United States. What's the chance that he (or, equally likely, she) votes for the Democratic party? Who knows, but it's probably close to $50\%$.
+$$ \Omega = \{\mbox{citizens of the US}\}, \ \ E = \{\omega \in \Omega: \mbox{votes Dem}\}.$$
+Now what if you find out a little bit more information: this stranger likes spicy food.
+$$ F = \{\omega \in \Omega: \mbox{likes spicy food}\}.$$
+How does change the odds? What is $\pr(E|F)$ (``probability of $E$ given $F$'')? Again, it's hard to say, but for illustrative purposes here is a (definitely incorrect) set of probabilities:
+$$ \pr(E) = 0.5, \ \ \ \ \pr(F) = 0.2, \ \ \ \ \pr(E \cap F) = 0.15.$$
+The Venn diagram for this scenario is
+
+\begin{center}
+%%\resizebox{1.5in}{!}{\input{figs/spicy.pstex_t}}
+\end{center}
+
+\noindent
+If you stare at it a little bit, you will probably conclude, correctly, that $\pr(E|F)$ is the chance that a point drawn from the small blob lies inside the large blob, namely $0.15/0.2 = 0.75$. By reasoning this way, you are implicitly using {\bf the formula for conditional probability}
+$$ \pr(E|F) \ = \ \frac{\pr(E \cap F)}{\pr(F)} .$$
+We will make heavy use of this and of the equivalent
+$$ \pr(E \cap F) = \pr(E|F) \pr(F).$$
+
+\subsection{A few examples}
+
+\begin{enumerate}
+
+\item {\it Pregnancy test.} How accurate is a pregnancy test? Here we make up some numbers and compute the relevant conditional probabilities.
+
+The sample space in this case consists of women who use the test; call this $\Omega$. There are two events on this space that we care about: $P = \{\mbox{actually pregnant}\}$ and $T = \{\mbox{test says pregnant}\}$. Suppose that the following are determined (warning: these are fabricated!):
+$$ T \subset P, \ \ \ \pr(P) = 0.4, \ \ \ \pr(T) = 0.3 .$$
+There are two conditional probabilities we'd like to compute.
+\begin{itemize}
+\item What is the chance of pregnancy if the test comes out positive?
+
+Well, since $T \subset P$, we have $\pr(P|T) = 1.0$. Algebraically, $\pr(P \cap T) = \pr(T)$, so $\pr(P|T) = \pr(P \cap T)/\pr(T) = 1.0$.
+
+\item What is the chance of pregnancy if the test comes out negative?
+
+Let $T^c = \Omega - T$ be the event that the test is negative. Then $\pr(T^c) = 1 - \pr(T) = 0.7$ and $\pr(P \cap T^c) = \pr(P) - \pr(P \cap T) = 0.4 - 0.3 = 0.1$. These are the two probabilities we need.
+$$ \pr(P | T^c)  \ = \ \frac{\pr(P \cap T^c)}{\pr(T^c)} \ = \ \frac{0.1}{0.7} \ \approx \ 0.14 .$$
+\end{itemize}
+
+\item {\it Rolls of a die.} You roll a die twice. What is the probability that the sum of the two rolls is $\geq 10$ if:
+\begin{itemize}
+\item The first roll is 6?
+
+We could use the conditional probability formula, but that seems like overkill in so straightforward a situation.
+$$ \pr(\mbox{sum $\geq 10$} \ | \ \mbox{first} = 6) 
+\ = \ \pr(\mbox{second} \geq 4) \ = \ \frac{1}{2} .
+$$
+
+\item The first roll is $\geq 3$?
+
+Okay, this is not so trivial anymore. The sample space is $\Omega = \{1,2,3,4,5,6\}^2$, with each of the 36 outcomes equally likely.
+\begin{eqnarray*}
+\pr(\mbox{sum $\geq 10$} \ | \ \mbox{first} \geq 3) 
+& = & 
+\frac{\pr(\mbox{sum $\geq 10$ {\sc and} first $\geq 3$})}{\pr(\mbox{first} \geq 3)} \\
+& = &
+\frac{\pr(\{(4,6), (5,5), (5,6), (6,4), (6,5), (6,6)\})}{4/6}
+\ = \ 
+\frac{6/36}{4/6} \ = \ \frac{1}{4} .
+\end{eqnarray*}
+
+\item The first roll is $< 6$?
+\begin{eqnarray*}
+\pr(\mbox{sum $\geq 10$} \ | \ \mbox{first} < 6) 
+& = & 
+\frac{\pr(\mbox{sum $\geq 10$ {\sc and} first $< 6$})}{\pr(\mbox{first} < 6)} \\
+& = &
+\frac{\pr(\{(5,5), (5,6), (4,6)\})}{5/6}
+\ = \ 
+\frac{3/36}{5/6} \ = \ \frac{1}{10} .
+\end{eqnarray*}
+
+\end{itemize}
+
+\item {\it To be invisible or to fly?} A few years ago, the question was going round: ``which super power would you rather possess: the ability to make yourself invisible or to fly?'' It was perhaps an urban legend that men usually wanted to fly while women usually wanted to be invisible; and there was much speculation about the psychological reasons for this. But suppose the following statistics were obtained (warning: these numbers are fabricated!):
+$$ \pr(\mbox{fly} | \mbox{male}) = 0.8, \ \ \ \pr(\mbox{invisible} | \mbox{female}) = 0.6 .$$
+Then what is the overall fraction of people who would choose the ability to fly?
+
+This cannot be answered unless it is known what fraction of the population is male and what fraction is female. Suppose it is 60-40. Then
+\begin{eqnarray*}
+\pr(\mbox{fly}) 
+& = & \pr(\mbox{fly {\sc and} male}) + \pr(\mbox{fly {\sc and} female}) \\
+& = & \pr(\mbox{fly}| \mbox{male}) \pr(\mbox{male}) + \pr(\mbox{fly}| \mbox{female}) \pr(\mbox{female}) \\
+& = & (0.8)(0.6) + (0.4)(0.4) \ = \ 0.64.
+\end{eqnarray*}
+That is, $64\%$ would like to fly.
+\end{enumerate}
+
+\subsection{The summation rule}
+
+In the last example, we implicitly used a {\bf summation formula}. Suppose $A_1, \ldots, A_k \subset \Omega$ are disjoint events whose union is $\Omega$ (that is, exactly one of them will occur). Then for any event $E \subset \Omega$,
+$$ \pr(E) 
+\ = \ 
+\sum_{i=1}^k \pr(E \cap A_i) 
+\ = \ 
+\sum_{i=1}^k \pr(E | A_i) \pr(A_i).
+$$
+(If the $A_i$ are not disjoint, simply replace the first equality with a $\leq$.) We will often write $\pr(E \cap A_i)$ as $\pr(E,A_i)$.
+
+\section{Tossing a biased coin}
+
+Suppose that instead of a fair coin, you have a coin whose probability of coming up heads is $p \in [0,1]$. The sample space for a single coin toss is $\Omega_o = \{H,T\}$ and the probabilities of the possible outcomes are
+$$ \pr(H) = p, \ \ \pr(T) = 1-p.$$
+
+If you toss this coin $n$ times (sample space $\Omega = \{H,T\}^n$), what is the chance of getting exactly $k$ heads? Well, pick any sequence $\omega \in \Omega$ with $k$ heads. The probability of getting precisely the outcome $\omega$ is
+$$ \pr(\omega) = p^k (1-p)^{n-k} .$$
+Thus the probability of $k$ heads is
+$$ \mbox{(number of sequences with $k$ heads)} \cdot p^k (1-p)^{n-k} 
+\ \ = \ \ 
+{n \choose k} p^k (1-p)^{n-k} .$$
+
+Sometimes we encode heads and tails numerically:
+$$ \mbox{heads} \rightarrow 1, \ \ \ \mbox{tails} \rightarrow 0 .$$
+
+In this case, a single coin flip with bias $p$ has sample space $\{0,1\}$ and is called a Bernoulli($p$) distribution. Suppose $n$ such coins are flipped, and $X_i \in \{0,1\}$ is the outcome for the $i$th coin. Then the number of heads is simply 
+$$ X = X_1 + X_2 + \cdots + X_n. $$
+$X$ has sample space $\{0,1,\ldots,n\}$ and is said to have a Binomial($n,p$) distribution.
+
+\section{Conditional probability, continued}
+
+\subsection{Another summation rule}
+
+There is also a summation rule for conditional probabilities. Suppose $A_1, \ldots, A_k$ are disjoint events whose union is $\Omega$; and let $E,F \subset \Omega$ be any two events. Then
+$$ \pr(E | F) 
+\ = \ 
+\sum_{i=1}^k \pr(E \cap A_i | F) 
+\ = \ 
+\sum_{i=1}^k \pr(E | A_i, F) \pr(A_i|F).
+$$
+(It's just like the regular summation rule, but operating within $F$ rather than $\Omega$.)
+
+\subsection{Sex bias in graduate admissions}
+
+In 1973, the dean of graduate admissions at Berkeley noticed something alarming: a male applicant had a higher chance of being admitted than a female applicant! Specifically, 
+$$ \pr(\mbox{admitted} | \mbox{male}) = 0.44, 
+\ \  \pr(\mbox{admitted} | \mbox{female}) = 0.35.$$
+This is a significant difference given that the sample space (applicants to graduate programs at Berkeley) was very large, of size 12{,}763. The dean wondered, which departments were responsible for this bias?
+
+To determine this, data was collected for each of the departments on campus. And it was found that no department (with a few insignificant exceptions) had any bias against females! Specifically, for each department $d$,
+$$ \pr(\mbox{admitted} | \mbox{male, department $=d$}) 
+\leq \pr(\mbox{admitted} | \mbox{female, department $=d$}).$$
+How could this be?
+
+Let's go back to the summation formulas for conditional probabilities.
+\begin{eqnarray*}
+\pr(\mbox{admit} | \mbox{male}) 
+& = & 
+\sum_d \pr(\mbox{admit} | \mbox{male, dept $= d$}) \pr(\mbox{dept $=d$} | \mbox{male}) \\
+\pr(\mbox{admit} | \mbox{female}) 
+& = & 
+\sum_d \pr(\mbox{admit} | \mbox{female, dept $= d$}) \pr(\mbox{dept $=d$} | \mbox{female}) 
+\end{eqnarray*}
+The answer lies in the second term. Some departments (engineering) are easier to get into than others (humanities). Males tended to apply to the easier departments, while females on average applied to the harder departments. So while no individual department had bias, on the whole it looked like women had a lower probability of acceptance.
+
+\section{Bayes' rule}
+
+The following example is taken from {\it Probabilistic Reasoning in Intelligent Systems} by Judea Pearl:
+\begin{quote}
+You wake up in the middle of the night to the shrill sound of your burglar alarm. What is the chance that a burglary attempt has taken place?
+\end{quote}
+The relevant facts are:
+\begin{itemize}
+\item There is a 95\% chance that an attempted burglary attempt will trigger the alarm. That is,
+$$ \pr(\mbox{alarm} | \mbox{burglary}) = 0.95 .$$
+\item There is a 1\% chance of a false alarm.
+$$ \pr(\mbox{alarm} | \mbox{no burglary}) = 0.01.$$
+\item Based on local crime statistics, there is a one-in-10{,}000 chance that a house will be burglarized on a given night.
+$$ \pr(\mbox{burglary}) = 10^{-4}.$$
+\end{itemize}
+We are interested in the chance of a burglary given that the alarm has sounded. We can use the conditional probability formula for this:
+$$ \pr(\mbox{burglary} | \mbox{alarm}) 
+\ = \ \frac{\pr(\mbox{burglary, alarm})}{\pr(\mbox{alarm})}
+\ = \ \frac{\pr(\mbox{alarm} | \mbox{burglary}) \pr(\mbox{burglary})}{\pr(\mbox{alarm})}
+.$$
+The one term we don't immediately know is $\pr(\mbox{alarm})$. By the summation rule,
+$$ 
+\pr(\mbox{alarm}) 
+\ = \ 
+\pr(\mbox{alarm} | \mbox{burglary}) \pr(\mbox{burglary}) +
+\pr(\mbox{alarm} | \mbox{no burglary}) \pr(\mbox{no burglary})
+.$$
+Putting it all together,
+$$ \pr(\mbox{burglary} | \mbox{alarm}) 
+\ = \ 
+\frac{0.95 \times 10^{-4}}{0.95 \times 10^{-4} + 0.01 \times (1-10^{-4})}
+\ = \ 
+0.00941,
+$$
+about $0.94\%$. Thus our belief in a burglary has risen approximately a hundredfold from its default value of $10^{-4}$, on account of the alarm.
+
+It is frequently the case, as in this example, that we wish to update the chances of an event $H$ based on new evidence $E$. In other words, we wish to know $\pr(H | E)$. The derivation above implicitly uses the following formula, called {\bf Bayes' rule}:
+$$ \pr(H | E) 
+\ = \ 
+\frac{\pr(E|H) \pr(H)}{\pr(E)}.
+$$  
+
+As another example, let's look at the Three Prisoner's Paradox, which is actually just a reformulation of the Monty Hall problem. The story goes that there are three prisoners $A,B,C$ in a jail, and one of them is to be declared guilty and executed the following morning. As the night progresses, prisoner $A$ is racked with worry, and calls the prison guard over. He wants to know whether he is the unlucky one. The guard replies, ``I am not allowed to tell you whether you will be declared guilty. But I can say that prisoner $B$ will be declared innocent.'' Prisoner $A$ thinks about this for a little while and then starts worrying even more. Before he asked the question, it seemed like his chances of dying were one-in-three. But after his innocuous question, the chance seems to have risen to one-in-two!
+
+Actually, Prisoner $A$'s chances are still one in three. The two events of interest are
+\begin{eqnarray*}
+G_A & = & \mbox{$A$ will be declared guilty} \\
+I_B & = & \mbox{the guard, when prompted, will declare $B$ to be innocent} .
+\end{eqnarray*}
+Using the summation rule,
+$$ 
+\pr(I_B) 
+\ = \ 
+\pr(I_B | G_A) \pr(G_A) + \pr(I_B | G_A^c) \pr(G_A^c) 
+\ = \ 
+\frac{1}{2} \cdot \frac{1}{3} + \frac{1}{2} \cdot \frac{2}{3}
+\ = \ 
+\frac{1}{2}.
+$$
+Therefore, by Bayes' rule,
+$$
+\pr(G_A | I_B) 
+\ = \ 
+\frac{\pr(I_B | G_A) \pr(G_A)}{\pr(I_B)}
+\ = \ 
+\frac{\frac{1}{2} \cdot \frac{1}{3}}{\frac{1}{2}}
+\ = \ 
+\frac{1}{3}
+.$$
+
+\section{Independence}
+
+Two events are called {\it independent} if the outcome of one (that is, whether or not it occurs) does not affect the probability that the other will occur. For instance, suppose you flip two fair coins. The outcome of either coin does not influence the other; therefore the two outcomes are independent.
+
+Formally, we say events $A$ and $B$ (defined on some sample space $\Omega$) are independent if
+$$ \pr(A \cap B) 
+\ = \ 
+\pr(A) \pr(B).$$
+Can you show that this definition implies the following?
+\begin{itemize}
+\item $\pr(A | B) = \pr(A)$.
+\item $\pr(B | A) = \pr(B)$.
+\item $\pr(A | B^c) = \pr(A)$.
+\end{itemize}
+
+In the following examples, are events $A$ and $B$ independent or not?
+\begin{enumerate}
+\item You have two children. $A = \{\mbox{first child is a boy}\}$, $B = \{\mbox{second child is a girl}\}$.
+\item You throw two dice. $A = \{\mbox{first is a $6$}\}$, $B = \{\mbox{sum} > 10\}$.
+\item You get dealt two cards at random from a deck of 52. $A = \{\mbox{first is a heart}\}$, $B = \{\mbox{second is a club}\}$.
+\item Same sample space. $A = \{\mbox{first is a heart}\}$, $B = \{\mbox{second is a $10$}\}$.
+\item The three scenarios depicted in these Venn diagrams.
+\end{enumerate}
+
+\begin{center}
+%%\resizebox{1.5in}{!}{\input{figs/indep1.pstex_t}}
+\hskip.5in
+%%\resizebox{1.5in}{!}{\input{figs/indep2.pstex_t}}
+\hskip.5in
+%%\resizebox{1.5in}{!}{\input{figs/indep3.pstex_t}}
+\end{center}
+
+
+

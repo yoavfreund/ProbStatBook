@@ -1,4 +1,4 @@
-\chapter{Probability spaces}
+\chapter{Finite Uniform Probability spaces}
 
 \section{Definition}
 
@@ -18,7 +18,7 @@ This is $\Omega = \{\mbox{all possible five-card hands}\}$.
 $$ \sum_{\omega \in \Omega} \pr(\omega) = 1 .$$
 \end{enumerate}
 
-In our example, assuming the cards are dealt fairly, all outcomes are equally probable, so
+In this example, assuming the cards are dealt fairly, all outcomes are equally probable, so
 $$\pr(\omega) = 1/|\Omega| \mbox{\ \ \ \ \ for all $\omega \in \Omega$.} $$.
 
 {\bf Events} are subsets of $\Omega$, in our example, the event of
@@ -40,8 +40,20 @@ sum of the probabilities of the outcomes in that event.\footnote{If
   a bit later. Till then we will only discuss finite outcome spaces,
   also referred to as ``discrete probability spaces''.}
 
-In our example, since all outcomes are equally likely, $\pr(A) =
-|A|/|\Omega|$. We now calculate this ratio.
+Since all outcomes are equally likely, 
+\[
+\pr(A) = \frac{|A|}{|\Omega|}
+\]
+This formula is all we need in order to calculate the probability of
+events for probability spaces that are:
+\begin{enumerate}
+\item Finite - there is a finite number of elements in $\Omega$.
+\item Uniform distribution - All elements in $\Omega$ have the same
+  probability: $1/\Omega$.
+\end{enumerate}
+
+We now calculate this formula for several examples, starting with the
+one described above.
 
 The size of $\Omega$ is the number of 5 card hands is 
 $$ |\Omega| = {52 \choose 5} = 2,598,960$$
