@@ -132,7 +132,7 @@ convergent sequences later in the book, when we discuss the expected
 value of a random variables. For now, we give a brief overview of
 convergent and divergent sequences.
 
-To start, the example given above is an example of an {\em geometric
+To start, the example given above is an example of a {\em geometric
   series}. The formula for the geometric series is 
 \[
 \sum_{i=1}^{\infty} r^i = \frac{r}{1-r}
@@ -140,23 +140,14 @@ To start, the example given above is an example of an {\em geometric
 where $r$ is a real number between $0$ and $1$. 
 The scheme described in the figure corresponds to $r=1/2$.
 
-To define the geometric distribution we need that the infinite sum of
-the probabilities will be $1$: $\sum_{i=1}^n p_i =1$.
-
-
-
-
-$$ \sum_{i=1}^\infty \pr(X = i) = 1 $$
-
 Notice that the series is infinite, but it evaluates to a finite value. 
 This can happen if the sum is a geometric series. 
-If $\pr(X = i) = \frac{1}{2^i} $, for example, then $ \sum_{i=1}^\infty \pr(X = i) = \sum_{i=1}^\infty \frac{1}{2^i} = 1 $. 
 
 However, other series have this property as well. 
 One that will be useful to us is the series
 $$ \sum_{i=1}^\infty \frac{1}{i^2} = \frac{\pi^2}{6} $$
 %(Determining the value of this series was a famous mathematical problem for decades, called the Basel problem.)
-Therefore, the distribution $\pr(X = i) = \frac{6}{\pi^2 i^2}$ is valid, because $ \frac{6}{\pi^2} \sum_{i=1}^\infty \frac{1}{i^2} = 1 $.
+Therefore, the distribution $p_i = \frac{6}{\pi^2 i^2}$ is valid, because $ \frac{6}{\pi^2} \sum_{i=1}^\infty \frac{1}{i^2} = 1 $.
 
 Of course, infinite series can evaluate to infinity as well. 
 A well-known example we will use is the \emph{harmonic series}
