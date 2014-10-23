@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docbase="/home/tijmen-gentoo/Images/Graphics Tijmen/SVG" inkscape:version="0.43" sodipodi:version="0.32" sodipodi:docname="Dartboard.svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="637px" height="473px"
+	 viewBox="0 0 637 473" enable-background="new 0 0 637 473" xml:space="preserve">
+<sodipodi:namedview  showguides="true" inkscape:cy="285.14189" inkscape:cx="274.10935" inkscape:zoom="2.0856502" borderopacity="1.0" bordercolor="#666666" pagecolor="#ffffff" id="base" inkscape:guide-bbox="true" inkscape:window-y="0" inkscape:window-x="0" inkscape:window-height="947" inkscape:window-width="1273" inkscape:current-layer="svg2" inkscape:pageshadow="2" inkscape:document-units="px" inkscape:pageopacity="0.0">
+	</sodipodi:namedview>
+<g id="Board" transform="translate(236.5,236.5)">
+	<g id="BaseBoard" inkscape:label="Layer 1" inkscape:groupmode="layer">
+		<path id="path1307" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="226.5" sodipodi:ry="226.5" d="M222.5,0
+			c0,125.092-101.407,226.5-226.5,226.5c-125.092,0-226.5-101.408-226.5-226.5c0-125.093,101.408-226.5,226.5-226.5
+			C121.093-226.5,222.5-125.093,222.5,0z"/>
+	</g>
+	<g id="Inside_Spider">
+		
+			<path id="DoubleRed" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="170.55" sodipodi:ry="170.55" fill="#FF0000" stroke="#D0EDFD" stroke-width="1.1" d="
+			M166.55,0c0,94.192-76.357,170.55-170.55,170.55S-174.55,94.192-174.55,0S-98.192-170.55-4-170.55S166.55-94.192,166.55,0z"/>
+		
+			<path id="path2195" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="161.45" sodipodi:ry="161.45" stroke="#D0EDFD" stroke-width="1.1" d="
+			M157.45,0c0.004,89.166-72.277,161.453-161.443,161.457C-93.16,161.461-165.446,89.18-165.45,0.014c0-0.004,0-0.009,0-0.014
+			c-0.003-89.167,72.277-161.453,161.443-161.457C85.159-161.461,157.446-89.18,157.45-0.014C157.45-0.009,157.45-0.004,157.45,0z"
+			/>
+		
+			<path id="TrebleRed" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="107.55" sodipodi:ry="107.55" fill="#FF0000" stroke="#D0EDFD" stroke-width="1.1" d="
+			M103.55,0c0,59.398-48.151,107.55-107.55,107.55S-111.55,59.398-111.55,0S-63.398-107.55-4-107.55S103.55-59.398,103.55,0z"/>
+		
+			<path id="path2197" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="98.449997" sodipodi:ry="98.449997" stroke="#D0EDFD" stroke-width="1.1" d="
+			M94.45,0c0.012,54.373-44.057,98.459-98.429,98.471s-98.459-44.057-98.471-98.429c0-0.014,0-0.028,0-0.042
+			c-0.011-54.373,44.057-98.459,98.429-98.471S94.438-54.415,94.45-0.042C94.45-0.028,94.45-0.014,94.45,0z"/>
+		<g id="GreenDoubleSpiders">
+			
+				<path id="path4826" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="170.55" sodipodi:ry="170.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-81.428-151.961c15.946-8.125,33.072-13.689,50.749-16.489L-4,0L-81.428-151.961z"/>
+			
+				<path id="path4830" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="170.55" sodipodi:ry="170.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-155.961-77.428c8.125-15.946,18.709-30.514,31.364-43.169L-4,0L-155.961-77.428z"/>
+			
+				<path id="path4832" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="170.55" sodipodi:ry="170.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-172.45,26.68c-2.8-17.676-2.8-35.683,0-53.36L-4,0L-172.45,26.68z"/>
+			
+				<path id="path4834" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="170.55" sodipodi:ry="170.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-124.597,120.597c-12.655-12.655-23.239-27.223-31.364-43.169L-4,0L-124.597,120.597z"/>
+			
+				<path id="path4836" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="170.55" sodipodi:ry="170.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-30.68,168.45c-17.676-2.8-34.802-8.364-50.748-16.489L-4,0L-30.68,168.45z"/>
+			
+				<path id="path4838" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="170.55" sodipodi:ry="170.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M73.428,151.961c-15.946,8.125-33.071,13.689-50.748,16.489L-4,0L73.428,151.961z"/>
+			
+				<path id="path4840" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="170.55" sodipodi:ry="170.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M147.961,77.428c-8.125,15.947-18.709,30.515-31.364,43.17L-4,0L147.961,77.428z"/>
+			
+				<path id="path4842" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="170.55" sodipodi:ry="170.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M164.45-26.68c2.8,17.676,2.8,35.684,0,53.359L-4,0L164.45-26.68z"/>
+			
+				<path id="path4844" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="170.55" sodipodi:ry="170.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M116.597-120.597c12.655,12.655,23.239,27.223,31.364,43.169L-4,0L116.597-120.597z"/>
+			
+				<path id="path4846" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="170.55" sodipodi:ry="170.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M22.68-168.45c17.676,2.8,34.802,8.364,50.748,16.489L-4,0L22.68-168.45z"/>
+		</g>
+		<g id="g4876">
+			
+				<path id="path4878" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="161.45" sodipodi:ry="161.45" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-77.297-143.853c15.096-7.691,31.307-12.959,48.041-15.609L-4,0L-77.297-143.853z"/>
+			
+				<path id="path4880" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="161.45" sodipodi:ry="161.45" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-147.853-73.297c7.691-15.095,17.711-28.886,29.691-40.866L-4,0L-147.853-73.297z"/>
+			
+				<path id="path4882" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="161.45" sodipodi:ry="161.45" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-163.462,25.256c-2.65-16.732-2.65-33.779,0-50.512L-4,0L-163.462,25.256z"/>
+			
+				<path id="path4884" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="161.45" sodipodi:ry="161.45" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-118.163,114.162c-11.979-11.979-21.999-25.77-29.69-40.865L-4,0L-118.163,114.162z"/>
+			
+				<path id="path4886" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="161.45" sodipodi:ry="161.45" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-29.256,159.463c-16.733-2.65-32.945-7.918-48.041-15.609L-4,0L-29.256,159.463z"/>
+			
+				<path id="path4888" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="161.45" sodipodi:ry="161.45" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M69.297,143.854c-15.096,7.691-31.307,12.959-48.041,15.609L-4,0L69.297,143.854z"/>
+			
+				<path id="path4890" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="161.45" sodipodi:ry="161.45" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M139.853,73.297c-7.691,15.096-17.711,28.886-29.69,40.865L-4,0L139.853,73.297z"/>
+			
+				<path id="path4892" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="161.45" sodipodi:ry="161.45" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M155.462-25.256c2.65,16.733,2.65,33.78,0,50.512L-4,0L155.462-25.256z"/>
+			
+				<path id="path4894" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="161.45" sodipodi:ry="161.45" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M110.162-114.162c11.98,11.979,21.999,25.77,29.69,40.865L-4,0L110.162-114.162z"/>
+			
+				<path id="path4896" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="161.45" sodipodi:ry="161.45" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M21.256-159.462c16.733,2.65,32.945,7.918,48.041,15.609L-4,0L21.256-159.462z"/>
+		</g>
+		<g id="GreenTrebleSpiders">
+			
+				<path id="path4856" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="107.55" sodipodi:ry="107.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-52.827-95.828c10.056-5.124,20.855-8.633,32.002-10.398L-4,0L-52.827-95.828z"/>
+			
+				<path id="path4858" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="107.55" sodipodi:ry="107.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-99.828-48.827c5.124-10.056,11.798-19.243,19.778-27.223L-4,0L-99.828-48.827z"/>
+			
+				<path id="path4860" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="107.55" sodipodi:ry="107.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-110.226,16.824c-1.765-11.146-1.765-22.502,0-33.649L-4,0L-110.226,16.824z"/>
+			
+				<path id="path4862" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="107.55" sodipodi:ry="107.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-80.049,76.049c-7.98-7.98-14.655-17.166-19.778-27.223L-4,0L-80.049,76.049z"/>
+			
+				<path id="path4864" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="107.55" sodipodi:ry="107.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-20.825,106.226c-11.147-1.765-21.946-5.274-32.002-10.397L-4,0L-20.825,106.226z"/>
+			
+				<path id="path4866" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="107.55" sodipodi:ry="107.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M44.827,95.828c-10.056,5.123-20.855,8.633-32.002,10.398L-4,0L44.827,95.828z"/>
+			
+				<path id="path4868" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="107.55" sodipodi:ry="107.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M91.828,48.826c-5.124,10.057-11.799,19.243-19.779,27.223L-4,0L91.828,48.826z"/>
+			
+				<path id="path4870" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="107.55" sodipodi:ry="107.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M102.226-16.824c1.766,11.146,1.766,22.502,0,33.648L-4,0L102.226-16.824z"/>
+			
+				<path id="path4872" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="107.55" sodipodi:ry="107.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M72.05-76.049c7.979,7.98,14.654,17.167,19.778,27.223L-4,0L72.05-76.049z"/>
+			
+				<path id="path4874" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="107.55" sodipodi:ry="107.55" sodipodi:start="0" sodipodi:end="0.31415927" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+				M12.825-106.226c11.147,1.765,21.946,5.274,32.002,10.398L-4,0L12.825-106.226z"/>
+		</g>
+		<g id="g5771">
+			
+				<path id="path5773" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="98.449997" sodipodi:ry="98.449997" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-48.695-87.72c9.205-4.69,19.091-7.902,29.294-9.518L-4,0L-48.695-87.72z"/>
+			
+				<path id="path5775" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="98.449997" sodipodi:ry="98.449997" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-91.72-44.695c4.69-9.205,10.8-17.614,18.105-24.919L-4,0L-91.72-44.695z"/>
+			
+				<path id="path5777" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="98.449997" sodipodi:ry="98.449997" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-101.238,15.4c-1.616-10.203-1.616-20.598,0-30.801L-4,0L-101.238,15.4z"/>
+			
+				<path id="path5779" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="98.449997" sodipodi:ry="98.449997" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-73.615,69.615C-80.92,62.31-87.029,53.9-91.72,44.695L-4,0L-73.615,69.615z"/>
+			
+				<path id="path5781" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="98.449997" sodipodi:ry="98.449997" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M-19.401,97.238c-10.204-1.617-20.09-4.828-29.294-9.519L-4,0L-19.401,97.238z"/>
+			
+				<path id="path5783" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="98.449997" sodipodi:ry="98.449997" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M40.695,87.72c-9.205,4.69-19.091,7.902-29.294,9.519L-4,0L40.695,87.72z"/>
+			
+				<path id="path5785" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="98.449997" sodipodi:ry="98.449997" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M83.72,44.695c-4.69,9.205-10.8,17.614-18.105,24.92L-4,0L83.72,44.695z"/>
+			
+				<path id="path5787" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="98.449997" sodipodi:ry="98.449997" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M93.238-15.401c1.615,10.204,1.615,20.598,0,30.801L-4,0L93.238-15.401z"/>
+			
+				<path id="path5789" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="98.449997" sodipodi:ry="98.449997" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M65.614-69.615C72.92-62.31,79.029-53.9,83.72-44.695L-4,0L65.614-69.615z"/>
+			
+				<path id="path5791" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="98.449997" sodipodi:ry="98.449997" sodipodi:start="0" sodipodi:end="0.31415927" fill="#E7E4C7" stroke="#D0EDFD" stroke-width="1.1" d="
+				M11.401-97.238c10.204,1.616,20.09,4.828,29.294,9.518L-4,0L11.401-97.238z"/>
+		</g>
+		
+			<path id="path5939" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="16.450001" sodipodi:ry="16.450001" fill="#00A000" stroke="#D0EDFD" stroke-width="1.1" d="
+			M12.45,0c0.002,9.085-7.361,16.451-16.446,16.453c-9.085,0.003-16.452-7.36-16.454-16.446c0-0.002,0-0.005,0-0.007
+			c-0.002-9.085,7.361-16.452,16.446-16.454C5.082-16.456,12.448-9.093,12.45-0.007C12.45-0.005,12.45-0.002,12.45,0z"/>
+		
+			<path id="path5944" sodipodi:type="arc" sodipodi:cx="0" sodipodi:cy="0" sodipodi:rx="6.9000001" sodipodi:ry="6.9000001" fill="#FF0000" stroke="#D0EDFD" stroke-width="1.1" d="
+			M2.9,0c0,3.811-3.089,6.9-6.9,6.9s-6.9-3.09-6.9-6.9S-7.811-6.9-4-6.9S2.9-3.811,2.9,0z"/>
+	</g>
+	<g id="BoardNumbers">
+		<text transform="matrix(1 0 0 1 -20.9517 -187.8252)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">20</text>
+		<text transform="matrix(1 0 0 1 47.8721 -180.3662)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">1</text>
+		<text transform="matrix(1 0 0 1 96.0156 -150.5312)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">18</text>
+		<text transform="matrix(1 0 0 1 149.2441 -103.7441)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">4</text>
+		<text transform="matrix(1 0 0 1 169.9248 -45.7695)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">13</text>
+		<text transform="matrix(1 0 0 1 183.1465 9.1543)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">6</text>
+		<text transform="matrix(1 0 0 1 167.5508 67.4678)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">10</text>
+		<text transform="matrix(1 0 0 1 138.7334 127.1377)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">15</text>
+		<text transform="matrix(1 0 0 1 102.1172 169.8564)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">2</text>
+		<text transform="matrix(1 0 0 1 38.7183 196.6396)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">17</text>
+		<text transform="matrix(1 0 0 1 -10.1025 208.167)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">3</text>
+		<text transform="matrix(1 0 0 1 -78.2485 199.0127)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">19</text>
+		<text transform="matrix(1 0 0 1 -127.7476 173.2461)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">7</text>
+		<text transform="matrix(1 0 0 1 -178.9414 127.1377)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">16</text>
+		<text transform="matrix(1 0 0 1 -197.5884 72.8926)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">8</text>
+		<text transform="matrix(1 0 0 1 -218.6089 8.8145)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">11</text>
+		<text transform="matrix(1 0 0 1 -212.5059 -48.8213)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">14</text>
+		<text transform="matrix(1 0 0 1 -169.1099 -109.5078)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">9</text>
+		<text transform="matrix(1 0 0 1 -138.2573 -152.2266)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">12</text>
+		<text transform="matrix(1 0 0 1 -71.4678 -178.6709)" fill="#FFFFFF" font-family="'ArialMT'" font-size="28">5</text>
+	</g>
+</g>
+<g id="g8845" transform="translate(20.8491,-557.493)">
+	<text transform="matrix(1 0 0 1 402.772 641.4529)" font-family="'ArialMT'" font-size="32">Double ring</text>
+	<text transform="matrix(1 0 0 1 439.3882 693.6638)" font-family="'ArialMT'" font-size="32">Triple ring</text>
+	<text transform="matrix(1 0 0 1 460.4087 752.656)" enable-background="new    "><tspan x="0" y="0" font-family="'ArialMT'" font-size="32">Outer </tspan><tspan x="0" y="38.4" font-family="'ArialMT'" font-size="32">Bullseye</tspan></text>
+	<text transform="matrix(1 0 0 1 452.9497 845.5515)" enable-background="new    "><tspan x="0" y="0" font-family="'ArialMT'" font-size="32">Inner</tspan><tspan x="0" y="38.4" font-family="'ArialMT'" font-size="32">Bullseye</tspan></text>
+</g>
+<g>
+	<g>
+		
+			<line fill="none" stroke="#70E3FF" stroke-width="2" stroke-miterlimit="10" x1="330.527" y1="100.375" x2="419.646" y2="75.043"/>
+		<g>
+			<polygon fill="#70E3FF" points="335.286,102.547 331.096,100.213 333.432,96.024 330.662,96.811 328.328,101 332.517,103.334 			
+				"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#70E3FF" stroke-width="2" stroke-miterlimit="10" x1="459" y1="126.992" x2="318.722" y2="176.3"/>
+		<g>
+			<polygon fill="#70E3FF" points="321.355,171.78 319.279,176.104 323.604,178.178 320.889,179.132 316.565,177.058 
+				318.64,172.735 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		
+			<line fill="none" stroke="#70E3FF" stroke-width="2" stroke-miterlimit="10" x1="483.658" y1="201.692" x2="244.693" y2="230.692"/>
+		<g>
+			<polygon fill="#70E3FF" points="248.239,226.847 245.28,230.621 249.056,233.579 246.198,233.925 242.424,230.968 
+				245.381,227.193 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		
+			<line fill="none" stroke="#70E3FF" stroke-width="2" stroke-miterlimit="10" x1="473.799" y1="296.799" x2="234.158" y2="237.009"/>
+		<g>
+			<polygon fill="#70E3FF" points="238.844,234.683 234.732,237.151 237.203,241.263 234.409,240.565 231.94,236.455 
+				236.051,233.986 			"/>
+		</g>
+	</g>
+</g>
+</svg>

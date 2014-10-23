@@ -51,7 +51,7 @@ P(V)=\sum_{i \in V} p_i
 
 \begin{figure}[th]
 \begin{center}
-\includegraphics[width=5in]{figs/WheelsOfChance.png}
+\includegraphics[width=5in]{figs/WheelsOfChanceFiniteCoutable.png}
 \end{center}
 \caption{Wheels of chance: the wheel is given a push and spins until
   is comes to rest. The outcome is the label of the section of the
@@ -153,9 +153,6 @@ Of course, infinite series can evaluate to infinity as well.
 A well-known example we will use is the \emph{harmonic series}
 $$ \sum_{i=1}^\infty \frac{1}{i} $$
 
-
-
-
 \section{Tossing a biased coin}
 \label{sec:BaisedCoin}
 
@@ -177,19 +174,35 @@ $$ X = X_1 + X_2 + \cdots + X_n. $$
 $X$ has sample space $\{0,1,\ldots,n\}$ and is said to have a Binomial($n,p$) distribution.
 
 
-\section{Throw a dart at a dartboard} 
+\section{Density distributions}
 
-Suppose for convenience that your dartboard has radius 1, and is
-centered at the origin. Its bullseye has radius 0.1. You throw a dart
-at it, which lands at a random location (all positions on the board
-are equally likely). What is the chance that it lands exactly at the
-origin? What is the chance that it lands in the bullseye?
+\begin{figure}[th]
+\begin{center}
+\includegraphics[width=5in]{figs/WheelsOfChanceUncountable.png}
+\end{center}
+\caption{{\bf Todo:} write a caption for the figure.
+\label{fig:Wheel-of-chance-uncountable}}
+\end{figure}
 
-This differs from earlier examples in that the sample space is infinite and continuous. It is the set of all possible locations of the dart: any point in the circle. We can represent any such point by its $(x,y)$ coordinates: $\Omega = \{(x,y): x^2 + y^2 \leq 1\}$.
+{\bf Todo: } 
+\begin{itemize}
+\item Kolmogorov's axioms of probability
+\item Why a uniform distribution over the integers is impossible.
+\item Why a uniform distribution over $[0,1]$ is possible: because
+  Kolmogorov considers only countable unions.
+\end{itemize}
 
-The chance of landing exactly at the origin is 0, since there are infinitely many places the dart could land. It makes more sense to talk about landing in {\it regions} $A \subset \Omega$ rather than specific points $\omega \in \Omega$. In general
-$$ \pr(A) = \frac{\mbox{area of $A$}}{\mbox{area of $\Omega$}} $$
-and therefore $\pr(\mbox{bullseye}) = (0.1)^2 = 0.01$.
+
+\section{Mixture distributions}
+
+{\bf Todo:} Describe.
+\section{The limitations of histograms}
+
+{\bf Todo:}Use figures to demonstrate the problems:
+\begin{itemize}
+\item Choosing the right width for the bins.
+\item visualizing a distribution that is a mixture of a density and a point-mass.
+\end{itemize}
 
 \section{Cumulative Distribution Functions}
 
@@ -310,4 +323,25 @@ calculate the probability of the segment $[a,b]$ using the integral:
 \[
 P(a < x \leq b)=\CDF(b)-\CDF(a)=\int_a^b p(x) dx
 \]
+
+\section{Throwing a dart at a dartboard} 
+
+{\bf todo:} Add an image of a dartboard.
+
+Suppose for convenience that your dartboard has radius 1, and is
+centered at the origin. Its bullseye has radius 0.1. You throw a dart
+at it, which lands at a random location (all positions on the board
+are equally likely). What is the chance that it lands exactly at the
+origin? What is the chance that it lands in the bullseye?
+
+This differs from earlier examples in that the sample space is infinite and continuous. It is the set of all possible locations of the dart: any point in the circle. We can represent any such point by its $(x,y)$ coordinates: $\Omega = \{(x,y): x^2 + y^2 \leq 1\}$.
+
+The chance of landing exactly at the origin is 0, since there are infinitely many places the dart could land. It makes more sense to talk about landing in {\it regions} $A \subset \Omega$ rather than specific points $\omega \in \Omega$. In general
+$$ \pr(A) = \frac{\mbox{area of $A$}}{\mbox{area of $\Omega$}} $$
+and therefore $\pr(\mbox{bullseye}) = (0.1)^2 = 0.01$.
+
+{\bf Todo:} Use $x,y$ and $r$-the distance from the bullseye, 
+as examples of random variables.
+
+
 

@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2007.5.18)  5 OCT 2014 13:21
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2007.5.18)  23 OCT 2014 16:35
 entering extended mode
  %&-line parsing enabled.
 **ProbabilityStatistics.tex
@@ -398,13 +398,17 @@ r cards. For ex-am-ple, $10\OMS/cmsy/m/n/10 ^^?\OT1/cmr/m/n/10 10\OMS/cmsy/m/n/
 
 ) (./GeneralProbSpaces.tex [30]
 Chapter 5.
-<figs/WheelsOfChance.png, id=124, 635.37375pt x 403.5075pt>
-File: figs/WheelsOfChance.png Graphic file (type png)
+<figs/WheelsOfChanceFiniteCoutable.png, id=124, 622.9674pt x 388.3308pt>
+File: figs/WheelsOfChanceFiniteCoutable.png Graphic file (type png)
 
-<use figs/WheelsOfChance.png> [31
+<use figs/WheelsOfChanceFiniteCoutable.png> [31
 
-] [32 <./figs/WheelsOfChance.png>] [33]
-[34] <figs/CDFmapping.png, id=142, 672.5125pt x 249.93375pt>
+] [32 <./figs/WheelsOfChanceFiniteCoutable.png>] [33]
+<figs/WheelsOfChanceUncountable.png, id=137, 897.8343pt x 650.06865pt>
+File: figs/WheelsOfChanceUncountable.png Graphic file (type png)
+
+<use figs/WheelsOfChanceUncountable.png> [34 <./figs/WheelsOfChanceUncountable.
+png>] <figs/CDFmapping.png, id=142, 672.5125pt x 249.93375pt>
 File: figs/CDFmapping.png Graphic file (type png)
 
 <use figs/CDFmapping.png> <figs/CDFs.png, id=143, 1149.29375pt x 678.535pt>
@@ -432,21 +436,21 @@ File: figs/Uniform.jpg Graphic file (type jpg)
 <use figs/Uniform.jpg> <figs/unifMixture2CDF.jpg, id=149, 562.1pt x 421.575pt>
 File: figs/unifMixture2CDF.jpg Graphic file (type jpg)
 
-<use figs/unifMixture2CDF.jpg>)
-(./MultipleEventsConditioningandIndependence.tex [35 <./figs/CDFmapping.png (PN
-G copy)>] [36 <./figs/CDFs.png (PNG copy)> <./figs/Discrete1.jpg> <./figs/4Poin
-tMass.jpg>] [37 <./figs/Discrete2.jpg> <./figs/Normal.jpg> <./figs/Uniform.jpg>
- <./figs/unifMixture2CDF.jpg>] [38
-
-]
+<use figs/unifMixture2CDF.jpg> [35])
+(./MultipleEventsConditioningandIndependence.tex [36 <./figs/CDFmapping.png (PN
+G copy)>] [37 <./figs/CDFs.png (PNG copy)> <./figs/Discrete1.jpg> <./figs/4Poin
+tMass.jpg>] [38 <./figs/Discrete2.jpg> <./figs/Normal.jpg> <./figs/Uniform.jpg>
+ <./figs/unifMixture2CDF.jpg>]
 Chapter 6.
-[39] [40] [41] [42] [43] [44] [45] [46])
+[39
+
+] [40] [41] [42] [43] [44] [45] [46])
 (./RandomVariablesExpectationVariance.tex [47] [48
 
 ]
 Chapter 7.
 [49]
-Overfull \hbox (32.87021pt too wide) in paragraph at lines 92--94
+Overfull \hbox (32.87021pt too wide) in paragraph at lines 93--95
 []\OT1/cmr/m/n/10 To give an ex-am-ple, con-sider a ran-dom vari-able $\OML/cmm
 /m/it/10 X$ \OT1/cmr/m/n/10 over the nonzero in-te-gers $\U/msb/m/n/10 Z \OMS/c
 msy/m/n/10 n f\OT1/cmr/m/n/10 0\OMS/cmsy/m/n/10 g \OT1/cmr/m/n/10 = \OMS/cmsy/m
@@ -458,14 +462,14 @@ y/m/n/10 g$\OT1/cmr/m/n/10 ,
  []
 
 [50] [51]
-Underfull \hbox (badness 10000) in paragraph at lines 161--163
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
-[52] [53] [54] [55] <figs/spread2.pdf, id=220, 144.54pt x 63.23625pt>
+[52] [53] [54] [55] <figs/spread2.pdf, id=221, 144.54pt x 63.23625pt>
 File: figs/spread2.pdf Graphic file (type pdf)
 
-<use figs/spread2.pdf> <figs/spread1.pdf, id=221, 144.54pt x 30.1125pt>
+<use figs/spread2.pdf> <figs/spread1.pdf, id=222, 144.54pt x 30.1125pt>
 File: figs/spread1.pdf Graphic file (type pdf)
 
 <use figs/spread1.pdf> [56 <./figs/spread2.pdf> <./figs/spread1.pdf>] [57]
@@ -473,7 +477,7 @@ File: figs/spread1.pdf Graphic file (type pdf)
 
 ]
 Chapter 8.
-[61] <figs/correlationCoefficients.png, id=249, 1267.73625pt x 549.05125pt>
+[61] <figs/correlationCoefficients.png, id=250, 1267.73625pt x 549.05125pt>
 File: figs/correlationCoefficients.png Graphic file (type png)
 
 <use figs/correlationCoefficients.png> [62 <./figs/correlationCoefficients.png 
@@ -481,14 +485,14 @@ File: figs/correlationCoefficients.png Graphic file (type png)
 
 ]
 Chapter 9.
-<figs/bin(100,06).pdf, id=259, 485.07242pt x 433.85547pt>
+<figs/bin(100,06).pdf, id=260, 485.07242pt x 433.85547pt>
 File: figs/bin(100,06).pdf Graphic file (type pdf)
 
 <use figs/bin(100,06).pdf> [65 <./figs/bin(100,06).pdf>] [66] [67]
-<figs/bell.pdf, id=288, 526.96875pt x 485.815pt>
+<figs/bell.pdf, id=289, 526.96875pt x 485.815pt>
 File: figs/bell.pdf Graphic file (type pdf)
  <use figs/bell.pdf>
-<figs/three-norm.pdf, id=289, 526.96875pt x 485.815pt>
+<figs/three-norm.pdf, id=290, 526.96875pt x 485.815pt>
 File: figs/three-norm.pdf Graphic file (type pdf)
 
 <use figs/three-norm.pdf> [68 <./figs/bell.pdf> <./figs/three-norm.pdf>]
@@ -496,31 +500,31 @@ File: figs/three-norm.pdf Graphic file (type pdf)
 Chapter 10.
 [73
 
-] [74] [75] <figs/SortingLowerBound.png, id=323, 890.32625pt x 460.72125pt>
+] [74] [75] <figs/SortingLowerBound.png, id=324, 890.32625pt x 460.72125pt>
 File: figs/SortingLowerBound.png Graphic file (type png)
 
 <use figs/SortingLowerBound.png> [76] [77 <./figs/SortingLowerBound.png>]
-[78] <figs/mincut.pdf, id=335, 109.40875pt x 61.22874pt>
+[78] <figs/mincut.pdf, id=337, 109.40875pt x 61.22874pt>
 File: figs/mincut.pdf Graphic file (type pdf)
  <use figs/mincut.pdf>
 File: figs/mincut.pdf Graphic file (type pdf)
 
-<use figs/mincut.pdf> <figs/cut1.pdf, id=336, 109.40875pt x 61.22874pt>
+<use figs/mincut.pdf> <figs/cut1.pdf, id=338, 109.40875pt x 61.22874pt>
 File: figs/cut1.pdf Graphic file (type pdf)
 
-<use figs/cut1.pdf> <figs/cut2.pdf, id=337, 109.40875pt x 61.22874pt>
+<use figs/cut1.pdf> <figs/cut2.pdf, id=339, 109.40875pt x 61.22874pt>
 File: figs/cut2.pdf Graphic file (type pdf)
 
-<use figs/cut2.pdf> <figs/cut3.pdf, id=338, 81.30376pt x 60.225pt>
+<use figs/cut2.pdf> <figs/cut3.pdf, id=340, 81.30376pt x 60.225pt>
 File: figs/cut3.pdf Graphic file (type pdf)
 
-<use figs/cut3.pdf> <figs/cut4.pdf, id=339, 92.345pt x 60.225pt>
+<use figs/cut3.pdf> <figs/cut4.pdf, id=341, 92.345pt x 60.225pt>
 File: figs/cut4.pdf Graphic file (type pdf)
 
-<use figs/cut4.pdf> <figs/cut5.pdf, id=340, 66.2475pt x 60.225pt>
+<use figs/cut4.pdf> <figs/cut5.pdf, id=342, 66.2475pt x 60.225pt>
 File: figs/cut5.pdf Graphic file (type pdf)
 
-<use figs/cut5.pdf> <figs/cut6.pdf, id=341, 83.31125pt x 12.045pt>
+<use figs/cut5.pdf> <figs/cut6.pdf, id=343, 83.31125pt x 12.045pt>
 File: figs/cut6.pdf Graphic file (type pdf)
 
 <use figs/cut6.pdf> [79 <./figs/mincut.pdf>] [80 <./figs/cut1.pdf> <./figs/cut2
@@ -529,7 +533,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 537--540
 
  []
 
-[81] [82] [83] <figs/postings.pdf, id=386, 292.09125pt x 135.50626pt>
+[81] [82] [83] <figs/postings.pdf, id=388, 292.09125pt x 135.50626pt>
 File: figs/postings.pdf Graphic file (type pdf)
 
 <use figs/postings.pdf> [84 <./figs/postings.pdf>] [85]
@@ -549,74 +553,77 @@ Chapter 12.
 
 ]
 Chapter 13.
-<figs/mnist.pdf, id=445, 563.10374pt x 113.42375pt>
+<figs/mnist.pdf, id=447, 563.10374pt x 113.42375pt>
 File: figs/mnist.pdf Graphic file (type pdf)
  <use figs/mnist.pdf>
 [101 <./figs/mnist.pdf>] [102] [103]
-<figs/decision.pdf, id=460, 186.6975pt x 172.645pt>
+<figs/decision.pdf, id=462, 186.6975pt x 172.645pt>
 File: figs/decision.pdf Graphic file (type pdf)
  <use figs/decision.pdf>
-<figs/decision1.pdf, id=461, 19.07124pt x 19.07124pt>
+<figs/decision1.pdf, id=463, 19.07124pt x 19.07124pt>
 File: figs/decision1.pdf Graphic file (type pdf)
  <use figs/decision1.pdf>
-<figs/decision2.pdf, id=462, 127.47626pt x 77.28876pt>
+<figs/decision2.pdf, id=464, 127.47626pt x 77.28876pt>
 File: figs/decision2.pdf Graphic file (type pdf)
 
 <use figs/decision2.pdf> [104 <./figs/decision.pdf> <./figs/decision1.pdf>]
-<figs/decision3.pdf, id=475, 110.4125pt x 70.2625pt>
+<figs/decision3.pdf, id=477, 110.4125pt x 70.2625pt>
 File: figs/decision3.pdf Graphic file (type pdf)
  <use figs/decision3.pdf>
 [105 <./figs/decision2.pdf> <./figs/decision3.pdf>]
-<figs/linear1.pdf, id=489, 101.37875pt x 63.23625pt>
+<figs/linear1.pdf, id=491, 101.37875pt x 63.23625pt>
 File: figs/linear1.pdf Graphic file (type pdf)
  <use figs/linear1.pdf>
-<figs/linear2.pdf, id=490, 101.37875pt x 72.27pt>
+<figs/linear2.pdf, id=492, 101.37875pt x 72.27pt>
 File: figs/linear2.pdf Graphic file (type pdf)
  <use figs/linear2.pdf>
 [106 <./figs/linear1.pdf> <./figs/linear2.pdf>]
-<figs/linear3.pdf, id=504, 101.37875pt x 91.34125pt>
+<figs/linear3.pdf, id=506, 101.37875pt x 91.34125pt>
 File: figs/linear3.pdf Graphic file (type pdf)
  <use figs/linear3.pdf>
-<figs/linear4.pdf, id=505, 104.39pt x 63.23625pt>
+<figs/linear4.pdf, id=507, 104.39pt x 63.23625pt>
 File: figs/linear4.pdf Graphic file (type pdf)
  <use figs/linear4.pdf>)
-[107 <./figs/linear3.pdf> <./figs/linear4.pdf>] (./ProbabilityStatistics.aux) )
- 
+[107 <./figs/linear3.pdf> <./figs/linear4.pdf>] (./ProbabilityStatistics.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3622 strings out of 94073
- 45892 string characters out of 1162984
- 117709 words of memory out of 1500000
- 6773 multiletter control sequences out of 10000+50000
+ 3628 strings out of 94073
+ 46179 string characters out of 1162984
+ 117719 words of memory out of 1500000
+ 6778 multiletter control sequences out of 10000+50000
  15444 words of font info for 60 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  30i,14n,37p,958b,324s stack positions out of 5000i,500n,6000p,200000b,5000s
-</usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/loc
-al/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texliv
-e/2007/texmf-dist/fonts/type1/bluesky/cm/cmbxti10.pfb></usr/local/texlive/2007/
-texmf-dist/fonts/type1/bluesky/cm/cmcsc10.pfb></usr/local/texlive/2007/texmf-di
-st/fonts/type1/bluesky/cm/cmex10.pfb></usr/local/texlive/2007/texmf-dist/fonts/
-type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blu
-esky/cm/cmmi12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/c
-mmi5.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi7.pfb><
-/usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local
-/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2
-007/texmf-dist/fonts/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2007/texmf-
-dist/fonts/type1/bluesky/cm/cmr17.pfb></usr/local/texlive/2007/texmf-dist/fonts
-/type1/bluesky/cm/cmr5.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blue
-sky/cm/cmr6.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr7
-.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/
-local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/local/tex
-live/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2007
-/texmf-dist/fonts/type1/bluesky/cm/cmsy5.pfb></usr/local/texlive/2007/texmf-dis
-t/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/2007/texmf-dist/fonts/ty
-pe1/bluesky/cm/cmti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blues
-ky/cm/cmti8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmtt
-10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmtt8.pfb></u
-sr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb></usr/local
-/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msbm7.pfb>
-Output written on ProbabilityStatistics.pdf (107 pages, 2983448 bytes).
+</usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/l
+ocal/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texl
+ive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbxti10.pfb></usr/local/texlive/200
+7/texmf-dist/fonts/type1/bluesky/cm/cmcsc10.pfb></usr/local/texlive/2007/texmf-
+dist/fonts/type1/bluesky/cm/cmex10.pfb></usr/local/texlive/2007/texmf-dist/font
+s/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/b
+luesky/cm/cmmi12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm
+/cmmi5.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi7.pfb
+></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi8.pfb></usr/loc
+al/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive
+/2007/texmf-dist/fonts/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2007/texm
+f-dist/fonts/type1/bluesky/cm/cmr17.pfb></usr/local/texlive/2007/texmf-dist/fon
+ts/type1/bluesky/cm/cmr5.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bl
+uesky/cm/cmr6.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cm
+r7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></us
+r/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/local/t
+exlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/20
+07/texmf-dist/fonts/type1/bluesky/cm/cmsy5.pfb></usr/local/texlive/2007/texmf-d
+ist/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/2007/texmf-dist/fonts/
+type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blu
+esky/cm/cmti8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cm
+tt10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmtt8.pfb><
+/usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb></usr/loc
+al/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msbm7.pfb>
+Output written on ProbabilityStatistics.pdf (107 pages, 4315486 bytes).
 PDF statistics:
- 605 PDF objects out of 1000 (max. 8388607)
+ 607 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 196 words of extra memory for PDF output out of 10000 (max. 10000000)
 
