@@ -39,115 +39,115 @@
 \contentsline {section}{\numberline {5.5}Mixture distributions}{35}
 \contentsline {section}{\numberline {5.6}The limitations of histograms}{35}
 \contentsline {section}{\numberline {5.7}Cumulative Distribution Functions}{35}
-\contentsline {section}{\numberline {5.8}Examples of distributions on the real line}{35}
-\contentsline {section}{\numberline {5.9}Throwing a dart at a dartboard}{36}
-\contentsline {chapter}{\numberline {6}Multiple events, conditioning, and independence}{39}
-\contentsline {section}{\numberline {6.1}Two or more events on the same sample space}{39}
-\contentsline {subsection}{\numberline {6.1.1}Human intuition about combined event probabilities is fallible}{39}
-\contentsline {subsection}{\numberline {6.1.2}Joint probability tables}{39}
-\contentsline {subsection}{\numberline {6.1.3}The union bound}{40}
-\contentsline {section}{\numberline {6.2}Balls in bins, or urn problems}{40}
-\contentsline {section}{\numberline {6.3}Conditional probability}{42}
-\contentsline {subsection}{\numberline {6.3.1}A few examples}{43}
-\contentsline {subsection}{\numberline {6.3.2}The summation rule}{44}
-\contentsline {subsection}{\numberline {6.3.3}The Monty Hall problem}{44}
-\contentsline {subsection}{\numberline {6.3.4}Another summation rule}{44}
-\contentsline {subsection}{\numberline {6.3.5}Sex bias in graduate admissions}{45}
-\contentsline {section}{\numberline {6.4}Bayes' rule}{45}
-\contentsline {section}{\numberline {6.5}Independence}{46}
-\contentsline {chapter}{\numberline {7}Random variables, expectation, and variance}{49}
-\contentsline {section}{\numberline {7.1}Random variables}{49}
-\contentsline {section}{\numberline {7.2}Finite, Infinite, and Undefined Expectations}{50}
-\contentsline {subsection}{\numberline {7.2.1}Finite Expectation}{50}
-\contentsline {subsection}{\numberline {7.2.2}Infinite Expectation}{50}
-\contentsline {subsection}{\numberline {7.2.3}Undefined Expectation}{50}
-\contentsline {section}{\numberline {7.3}Arithmetic and Geometric Series}{51}
-\contentsline {section}{\numberline {7.4}The mean, or expected value}{52}
-\contentsline {subsection}{\numberline {7.4.1}An application to sampling}{54}
-\contentsline {section}{\numberline {7.5}Linearity of expectation}{54}
-\contentsline {subsection}{\numberline {7.5.1}Fixed points of a permutation}{55}
-\contentsline {subsection}{\numberline {7.5.2}Coupon collector, again}{55}
-\contentsline {subsection}{\numberline {7.5.3}Balls in bins, again}{55}
-\contentsline {section}{\numberline {7.6}Independent random variables}{56}
-\contentsline {section}{\numberline {7.7}Variance}{56}
-\contentsline {subsection}{\numberline {7.7.1}Properties of the variance}{57}
-\contentsline {subsection}{\numberline {7.7.2}Examples}{57}
-\contentsline {subsection}{\numberline {7.7.3}Another property of the variance}{59}
-\contentsline {subsection}{\numberline {7.7.4}Linearity of variance}{59}
-\contentsline {chapter}{\numberline {8}Covariance, correlation and dependence}{61}
-\contentsline {chapter}{\numberline {9}Sampling, hypothesis testing, and the central limit theorem}{65}
-\contentsline {section}{\numberline {9.1}The binomial distribution}{65}
-\contentsline {section}{\numberline {9.2}Hypothesis testing}{66}
-\contentsline {subsection}{\numberline {9.2.1}Testing a vaccine}{66}
-\contentsline {subsection}{\numberline {9.2.2}A blood pressure drug}{66}
-\contentsline {section}{\numberline {9.3}Sampling}{67}
-\contentsline {section}{\numberline {9.4}The normal distribution}{68}
-\contentsline {subsection}{\numberline {9.4.1}Sums of independent random variables}{69}
-\contentsline {subsection}{\numberline {9.4.2}Tails of the normal}{69}
-\contentsline {section}{\numberline {9.5}Sampling revisited}{69}
-\contentsline {subsection}{\numberline {9.5.1}Polls with yes/no answers}{69}
-\contentsline {subsection}{\numberline {9.5.2}Polls with numeric answers}{70}
-\contentsline {section}{\numberline {9.6}The Bonferroni correction}{71}
-\contentsline {section}{\numberline {9.7}Estimating the size of large populations}{71}
-\contentsline {chapter}{\numberline {10}Randomized algorithms}{73}
-\contentsline {section}{\numberline {10.1}Finding percentiles}{73}
-\contentsline {subsection}{\numberline {10.1.1}The mean as a summary statistic}{73}
-\contentsline {subsection}{\numberline {10.1.2}Selection}{74}
-\contentsline {subsection}{\numberline {10.1.3}A randomized algorithm}{74}
-\contentsline {subsection}{\numberline {10.1.4}Running time analysis}{75}
-\contentsline {subsection}{\numberline {10.1.5}A randomized sorting algorithm}{75}
-\contentsline {subsection}{\numberline {10.1.6}Two types of randomized algorithms}{76}
-\contentsline {section}{\numberline {10.2}Sorting in expected linear time}{76}
-\contentsline {subsection}{\numberline {10.2.1}Worst-case lower bound on sorting}{76}
-\contentsline {subsection}{\numberline {10.2.2}Sorting in expected linear time}{77}
-\contentsline {subsection}{\numberline {10.2.3}Sorting in linear time when the distribution is known}{78}
-\contentsline {section}{\numberline {10.3}Karger's minimum cut algorithm}{78}
-\contentsline {subsection}{\numberline {10.3.1}Clustering via graph cuts}{78}
-\contentsline {subsection}{\numberline {10.3.2}Karger's algorithm}{79}
-\contentsline {subsection}{\numberline {10.3.3}Analysis}{79}
-\contentsline {section}{\numberline {10.4}Hashing}{81}
-\contentsline {subsection}{\numberline {10.4.1}The hashing framework}{81}
-\contentsline {subsection}{\numberline {10.4.2}A simple solution using randomization}{82}
-\contentsline {subsection}{\numberline {10.4.3}Average query time}{82}
-\contentsline {subsection}{\numberline {10.4.4}Worst case query time, and a balls-in-bins problem}{82}
-\contentsline {subsection}{\numberline {10.4.5}The power of two choices}{83}
-\contentsline {section}{\numberline {10.5}Information retrieval}{83}
-\contentsline {subsection}{\numberline {10.5.1}Preprocessing}{84}
-\contentsline {subsection}{\numberline {10.5.2}Answering a query}{84}
-\contentsline {section}{\numberline {10.6}Detecting near-duplicates}{85}
-\contentsline {subsection}{\numberline {10.6.1}The similarity between two documents}{85}
-\contentsline {subsection}{\numberline {10.6.2}An algorithm based on random permutations}{86}
-\contentsline {section}{\numberline {10.7}Bloom Filters}{87}
-\contentsline {chapter}{\numberline {11}Pseudo-randomness}{91}
-\contentsline {section}{\numberline {11.1}Randomness and predictability}{91}
-\contentsline {section}{\numberline {11.2}Pseudo-Randomness}{91}
-\contentsline {subsection}{\numberline {11.2.1}Predicting a pseudo-random generator}{92}
-\contentsline {subsection}{\numberline {11.2.2}Computationally bounded randomness}{92}
-\contentsline {subsection}{\numberline {11.2.3}Using pseudo-random number generators inside a random algorithm}{93}
-\contentsline {chapter}{\numberline {12}Random generation}{95}
-\contentsline {section}{\numberline {12.1}Simulating simple discrete distributions with a fair coin}{95}
-\contentsline {subsection}{\numberline {12.1.1}Uniform distribution over $b$-bit integers}{95}
-\contentsline {subsection}{\numberline {12.1.2}Uniform distribution over $\{1,2,\ldots , n\}$}{95}
-\contentsline {subsection}{\numberline {12.1.3}Uniform distribution over $[0,1]$}{96}
-\contentsline {subsection}{\numberline {12.1.4}Generating flips of a biased coin}{96}
-\contentsline {subsection}{\numberline {12.1.5}Arbitrary discrete distribution with finite sample space}{97}
-\contentsline {section}{\numberline {12.2}From biased coin to fair coin}{97}
-\contentsline {section}{\numberline {12.3}Random permutations}{98}
-\contentsline {subsection}{\numberline {12.3.1}Implications}{99}
-\contentsline {chapter}{\numberline {13}Machine learning}{101}
-\contentsline {section}{\numberline {13.1}Nearest neighbor classification}{101}
-\contentsline {subsection}{\numberline {13.1.1}Digit recognition}{101}
-\contentsline {subsection}{\numberline {13.1.2}The input space and the label space}{101}
-\contentsline {subsection}{\numberline {13.1.3}A nearest neighbor classifier}{102}
-\contentsline {subsection}{\numberline {13.1.4}Two improvements}{102}
-\contentsline {subsection}{\numberline {13.1.5}The computational complexity of finding the nearest neighbor}{102}
-\contentsline {section}{\numberline {13.2}Decision trees}{103}
-\contentsline {subsection}{\numberline {13.2.1}Credit card fraud detection}{103}
-\contentsline {subsection}{\numberline {13.2.2}The input space and the label space}{103}
-\contentsline {subsection}{\numberline {13.2.3}Classification by decision tree}{104}
-\contentsline {subsection}{\numberline {13.2.4}Learning a decision tree}{104}
-\contentsline {section}{\numberline {13.3}Linear classifiers}{105}
-\contentsline {subsection}{\numberline {13.3.1}Document classification}{105}
-\contentsline {subsection}{\numberline {13.3.2}The input space ${\cal X}$ and label space ${\cal Y}$}{106}
-\contentsline {subsection}{\numberline {13.3.3}Linear classifiers}{106}
-\contentsline {subsection}{\numberline {13.3.4}Learning a linear classifier}{107}
+\contentsline {section}{\numberline {5.8}Examples of distributions on the real line}{36}
+\contentsline {section}{\numberline {5.9}Throwing a dart at a dartboard}{37}
+\contentsline {chapter}{\numberline {6}Multiple events, conditioning, and independence}{41}
+\contentsline {section}{\numberline {6.1}Two or more events on the same sample space}{41}
+\contentsline {subsection}{\numberline {6.1.1}Human intuition about combined event probabilities is fallible}{41}
+\contentsline {subsection}{\numberline {6.1.2}Joint probability tables}{41}
+\contentsline {subsection}{\numberline {6.1.3}The union bound}{42}
+\contentsline {section}{\numberline {6.2}Balls in bins, or urn problems}{42}
+\contentsline {section}{\numberline {6.3}Conditional probability}{44}
+\contentsline {subsection}{\numberline {6.3.1}A few examples}{45}
+\contentsline {subsection}{\numberline {6.3.2}The summation rule}{46}
+\contentsline {subsection}{\numberline {6.3.3}The Monty Hall problem}{46}
+\contentsline {subsection}{\numberline {6.3.4}Another summation rule}{46}
+\contentsline {subsection}{\numberline {6.3.5}Sex bias in graduate admissions}{47}
+\contentsline {section}{\numberline {6.4}Bayes' rule}{47}
+\contentsline {section}{\numberline {6.5}Independence}{48}
+\contentsline {chapter}{\numberline {7}Random variables, expectation, and variance}{51}
+\contentsline {section}{\numberline {7.1}Random variables}{51}
+\contentsline {section}{\numberline {7.2}Finite, Infinite, and Undefined Expectations}{52}
+\contentsline {subsection}{\numberline {7.2.1}Finite Expectation}{52}
+\contentsline {subsection}{\numberline {7.2.2}Infinite Expectation}{52}
+\contentsline {subsection}{\numberline {7.2.3}Undefined Expectation}{52}
+\contentsline {section}{\numberline {7.3}Arithmetic and Geometric Series}{53}
+\contentsline {section}{\numberline {7.4}The mean, or expected value}{54}
+\contentsline {subsection}{\numberline {7.4.1}An application to sampling}{56}
+\contentsline {section}{\numberline {7.5}Linearity of expectation}{56}
+\contentsline {subsection}{\numberline {7.5.1}Fixed points of a permutation}{57}
+\contentsline {subsection}{\numberline {7.5.2}Coupon collector, again}{57}
+\contentsline {subsection}{\numberline {7.5.3}Balls in bins, again}{57}
+\contentsline {section}{\numberline {7.6}Independent random variables}{58}
+\contentsline {section}{\numberline {7.7}Variance}{58}
+\contentsline {subsection}{\numberline {7.7.1}Properties of the variance}{59}
+\contentsline {subsection}{\numberline {7.7.2}Examples}{59}
+\contentsline {subsection}{\numberline {7.7.3}Another property of the variance}{61}
+\contentsline {subsection}{\numberline {7.7.4}Linearity of variance}{61}
+\contentsline {chapter}{\numberline {8}Covariance, correlation and dependence}{63}
+\contentsline {chapter}{\numberline {9}Sampling, hypothesis testing, and the central limit theorem}{67}
+\contentsline {section}{\numberline {9.1}The binomial distribution}{67}
+\contentsline {section}{\numberline {9.2}Hypothesis testing}{68}
+\contentsline {subsection}{\numberline {9.2.1}Testing a vaccine}{68}
+\contentsline {subsection}{\numberline {9.2.2}A blood pressure drug}{68}
+\contentsline {section}{\numberline {9.3}Sampling}{69}
+\contentsline {section}{\numberline {9.4}The normal distribution}{70}
+\contentsline {subsection}{\numberline {9.4.1}Sums of independent random variables}{71}
+\contentsline {subsection}{\numberline {9.4.2}Tails of the normal}{71}
+\contentsline {section}{\numberline {9.5}Sampling revisited}{71}
+\contentsline {subsection}{\numberline {9.5.1}Polls with yes/no answers}{71}
+\contentsline {subsection}{\numberline {9.5.2}Polls with numeric answers}{72}
+\contentsline {section}{\numberline {9.6}The Bonferroni correction}{73}
+\contentsline {section}{\numberline {9.7}Estimating the size of large populations}{73}
+\contentsline {chapter}{\numberline {10}Randomized algorithms}{75}
+\contentsline {section}{\numberline {10.1}Finding percentiles}{75}
+\contentsline {subsection}{\numberline {10.1.1}The mean as a summary statistic}{75}
+\contentsline {subsection}{\numberline {10.1.2}Selection}{76}
+\contentsline {subsection}{\numberline {10.1.3}A randomized algorithm}{76}
+\contentsline {subsection}{\numberline {10.1.4}Running time analysis}{77}
+\contentsline {subsection}{\numberline {10.1.5}A randomized sorting algorithm}{77}
+\contentsline {subsection}{\numberline {10.1.6}Two types of randomized algorithms}{78}
+\contentsline {section}{\numberline {10.2}Sorting in expected linear time}{78}
+\contentsline {subsection}{\numberline {10.2.1}Worst-case lower bound on sorting}{78}
+\contentsline {subsection}{\numberline {10.2.2}Sorting in expected linear time}{79}
+\contentsline {subsection}{\numberline {10.2.3}Sorting in linear time when the distribution is known}{80}
+\contentsline {section}{\numberline {10.3}Karger's minimum cut algorithm}{80}
+\contentsline {subsection}{\numberline {10.3.1}Clustering via graph cuts}{80}
+\contentsline {subsection}{\numberline {10.3.2}Karger's algorithm}{81}
+\contentsline {subsection}{\numberline {10.3.3}Analysis}{81}
+\contentsline {section}{\numberline {10.4}Hashing}{83}
+\contentsline {subsection}{\numberline {10.4.1}The hashing framework}{83}
+\contentsline {subsection}{\numberline {10.4.2}A simple solution using randomization}{84}
+\contentsline {subsection}{\numberline {10.4.3}Average query time}{84}
+\contentsline {subsection}{\numberline {10.4.4}Worst case query time, and a balls-in-bins problem}{84}
+\contentsline {subsection}{\numberline {10.4.5}The power of two choices}{85}
+\contentsline {section}{\numberline {10.5}Information retrieval}{85}
+\contentsline {subsection}{\numberline {10.5.1}Preprocessing}{86}
+\contentsline {subsection}{\numberline {10.5.2}Answering a query}{86}
+\contentsline {section}{\numberline {10.6}Detecting near-duplicates}{87}
+\contentsline {subsection}{\numberline {10.6.1}The similarity between two documents}{87}
+\contentsline {subsection}{\numberline {10.6.2}An algorithm based on random permutations}{88}
+\contentsline {section}{\numberline {10.7}Bloom Filters}{89}
+\contentsline {chapter}{\numberline {11}Pseudo-randomness}{93}
+\contentsline {section}{\numberline {11.1}Randomness and predictability}{93}
+\contentsline {section}{\numberline {11.2}Pseudo-Randomness}{93}
+\contentsline {subsection}{\numberline {11.2.1}Predicting a pseudo-random generator}{94}
+\contentsline {subsection}{\numberline {11.2.2}Computationally bounded randomness}{94}
+\contentsline {subsection}{\numberline {11.2.3}Using pseudo-random number generators inside a random algorithm}{95}
+\contentsline {chapter}{\numberline {12}Random generation}{97}
+\contentsline {section}{\numberline {12.1}Simulating simple discrete distributions with a fair coin}{97}
+\contentsline {subsection}{\numberline {12.1.1}Uniform distribution over $b$-bit integers}{97}
+\contentsline {subsection}{\numberline {12.1.2}Uniform distribution over $\{1,2,\ldots , n\}$}{97}
+\contentsline {subsection}{\numberline {12.1.3}Uniform distribution over $[0,1]$}{98}
+\contentsline {subsection}{\numberline {12.1.4}Generating flips of a biased coin}{98}
+\contentsline {subsection}{\numberline {12.1.5}Arbitrary discrete distribution with finite sample space}{99}
+\contentsline {section}{\numberline {12.2}From biased coin to fair coin}{99}
+\contentsline {section}{\numberline {12.3}Random permutations}{100}
+\contentsline {subsection}{\numberline {12.3.1}Implications}{101}
+\contentsline {chapter}{\numberline {13}Machine learning}{103}
+\contentsline {section}{\numberline {13.1}Nearest neighbor classification}{103}
+\contentsline {subsection}{\numberline {13.1.1}Digit recognition}{103}
+\contentsline {subsection}{\numberline {13.1.2}The input space and the label space}{103}
+\contentsline {subsection}{\numberline {13.1.3}A nearest neighbor classifier}{104}
+\contentsline {subsection}{\numberline {13.1.4}Two improvements}{104}
+\contentsline {subsection}{\numberline {13.1.5}The computational complexity of finding the nearest neighbor}{104}
+\contentsline {section}{\numberline {13.2}Decision trees}{105}
+\contentsline {subsection}{\numberline {13.2.1}Credit card fraud detection}{105}
+\contentsline {subsection}{\numberline {13.2.2}The input space and the label space}{105}
+\contentsline {subsection}{\numberline {13.2.3}Classification by decision tree}{106}
+\contentsline {subsection}{\numberline {13.2.4}Learning a decision tree}{106}
+\contentsline {section}{\numberline {13.3}Linear classifiers}{107}
+\contentsline {subsection}{\numberline {13.3.1}Document classification}{107}
+\contentsline {subsection}{\numberline {13.3.2}The input space ${\cal X}$ and label space ${\cal Y}$}{108}
+\contentsline {subsection}{\numberline {13.3.3}Linear classifiers}{108}
+\contentsline {subsection}{\numberline {13.3.4}Learning a linear classifier}{109}
