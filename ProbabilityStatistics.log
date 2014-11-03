@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  30 OCT 2014 00:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  2 NOV 2014 19:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -382,38 +382,46 @@ File: pst-plot.tex 2014/05/12 1.62 `pst-plot' (tvz,hv)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen173
 )
-(./macros.tex
-\c@lemma=\count136
-\c@problem=\count137
-) (./ProbabilityStatistics.aux)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count136
+\float@exts=\toks43
+\float@box=\box32
+\@float@everytoks=\toks44
+\@floatcapt=\box33
+) (./macros.tex
+\c@lemma=\count137
+\c@problem=\count138
+)
+(./ProbabilityStatistics.aux)
 \openout1 = `ProbabilityStatistics.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count138
+\scratchcounter=\count139
 \scratchdimen=\dimen174
-\scratchbox=\box32
-\nofMPsegments=\count139
-\nofMParguments=\count140
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count141
+\scratchbox=\box34
+\nofMPsegments=\count140
+\nofMParguments=\count141
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count142
 \MPscratchDim=\dimen175
-\MPnumerator=\count142
-\makeMPintoPDFobject=\count143
-\everyMPtoPDFconversion=\toks44
+\MPnumerator=\count143
+\makeMPintoPDFobject=\count144
+\everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -458,12 +466,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -654,63 +662,69 @@ Package pdftex.def Info: figs/HistogramsVsCDF_PM+D.jpg used on input line 210.
 File: figs/CDFmapping.png Graphic file (type png)
 
 <use figs/CDFmapping.png>
-Package pdftex.def Info: figs/CDFmapping.png used on input line 249.
+Package pdftex.def Info: figs/CDFmapping.png used on input line 250.
 (pdftex.def)             Requested size: 361.34999pt x 134.29482pt.
- <figs/CDFs.png, id=150, 1149.29375pt x 678.535pt>
+ [36 <./figs/HistogramsVsCDF_PM+D.jpg>]
+<figs/CDFs.png, id=154, 1149.29375pt x 678.535pt>
 File: figs/CDFs.png Graphic file (type png)
-
-<use figs/CDFs.png>
-Package pdftex.def Info: figs/CDFs.png used on input line 260.
+ <use figs/CDFs.png>
+Package pdftex.def Info: figs/CDFs.png used on input line 261.
 (pdftex.def)             Requested size: 361.34999pt x 213.33586pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figs/Discrete1.jpg, id=151, 727.71875pt x 564.1075pt>
+<figs/Discrete1.jpg, id=155, 727.71875pt x 564.1075pt>
 File: figs/Discrete1.jpg Graphic file (type jpg)
 
 <use figs/Discrete1.jpg>
-Package pdftex.def Info: figs/Discrete1.jpg used on input line 291.
+Package pdftex.def Info: figs/Discrete1.jpg used on input line 292.
 (pdftex.def)             Requested size: 216.81pt x 168.06291pt.
- <figs/4PointMass.jpg, id=152, 562.1pt x 421.575pt>
+ <figs/4PointMass.jpg, id=156, 562.1pt x 421.575pt>
 File: figs/4PointMass.jpg Graphic file (type jpg)
 
 <use figs/4PointMass.jpg>
-Package pdftex.def Info: figs/4PointMass.jpg used on input line 292.
+Package pdftex.def Info: figs/4PointMass.jpg used on input line 293.
 (pdftex.def)             Requested size: 216.81pt x 162.60599pt.
- <figs/Discrete2.jpg, id=153, 562.1pt x 421.575pt>
+ <figs/Discrete2.jpg, id=157, 562.1pt x 421.575pt>
 File: figs/Discrete2.jpg Graphic file (type jpg)
 
 <use figs/Discrete2.jpg>
-Package pdftex.def Info: figs/Discrete2.jpg used on input line 302.
+Package pdftex.def Info: figs/Discrete2.jpg used on input line 303.
 (pdftex.def)             Requested size: 216.81pt x 162.60599pt.
- <figs/Normal.jpg, id=154, 968.61874pt x 578.16pt>
+ <figs/Normal.jpg, id=158, 968.61874pt x 578.16pt>
 File: figs/Normal.jpg Graphic file (type jpg)
 
 <use figs/Normal.jpg>
-Package pdftex.def Info: figs/Normal.jpg used on input line 303.
+Package pdftex.def Info: figs/Normal.jpg used on input line 304.
 (pdftex.def)             Requested size: 216.81pt x 129.40991pt.
- <figs/Uniform.jpg, id=155, 562.1pt x 421.575pt>
+ <figs/Uniform.jpg, id=159, 562.1pt x 421.575pt>
 File: figs/Uniform.jpg Graphic file (type jpg)
 
 <use figs/Uniform.jpg>
-Package pdftex.def Info: figs/Uniform.jpg used on input line 315.
+Package pdftex.def Info: figs/Uniform.jpg used on input line 316.
 (pdftex.def)             Requested size: 216.81pt x 162.60599pt.
- <figs/unifMixture2CDF.jpg, id=156, 562.1pt x 421.575pt>
+ <figs/unifMixture2CDF.jpg, id=160, 562.1pt x 421.575pt>
 File: figs/unifMixture2CDF.jpg Graphic file (type jpg)
 
 <use figs/unifMixture2CDF.jpg>
-Package pdftex.def Info: figs/unifMixture2CDF.jpg used on input line 316.
+Package pdftex.def Info: figs/unifMixture2CDF.jpg used on input line 317.
 (pdftex.def)             Requested size: 216.81pt x 162.60599pt.
- [36 <./figs/HistogramsVsCDF_PM+D.jpg>])
-(./MultipleEventsConditioningandIndependence.tex [37 <./figs/CDFmapping.png>]
-[38 <./figs/CDFs.png> <./figs/Discrete1.jpg> <./figs/4PointMass.jpg>] [39 <./fi
-gs/Discrete2.jpg> <./figs/Normal.jpg> <./figs/Uniform.jpg> <./figs/unifMixture2
-CDF.jpg>] [40
 
-]
+<figs/dartboard.jpg, id=161, 226.8475pt x 224.84pt>
+File: figs/dartboard.jpg Graphic file (type jpg)
+ <use figs/dartboard.jpg>
+Package pdftex.def Info: figs/dartboard.jpg used on input line 346.
+(pdftex.def)             Requested size: 72.26999pt x 71.6312pt.
+
+[37 <./figs/CDFmapping.png> <./figs/dartboard.jpg>])
+(./MultipleEventsConditioningandIndependence.tex [38 <./figs/CDFs.png>]
+[39 <./figs/Discrete1.jpg> <./figs/4PointMass.jpg> <./figs/Discrete2.jpg> <./fi
+gs/Normal.jpg>] [40 <./figs/Uniform.jpg> <./figs/unifMixture2CDF.jpg>]
 Chapter 6.
-[41] [42] [43] [44] [45] [46] [47] [48])
+[41
+
+] [42] [43] [44] [45] [46] [47] [48])
 (./RandomVariablesExpectationVariance.tex [49] [50
 
 ]
@@ -732,13 +746,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
-[54] [55] [56] [57] <figs/spread2.pdf, id=232, 144.54pt x 63.23625pt>
+[54] [55] [56] [57] <figs/spread2.pdf, id=233, 144.54pt x 63.23625pt>
 File: figs/spread2.pdf Graphic file (type pdf)
 
 <use figs/spread2.pdf>
 Package pdftex.def Info: figs/spread2.pdf used on input line 483.
 (pdftex.def)             Requested size: 144.54pt x 63.23897pt.
- <figs/spread1.pdf, id=233, 144.54pt x 30.1125pt>
+ <figs/spread1.pdf, id=234, 144.54pt x 30.1125pt>
 File: figs/spread1.pdf Graphic file (type pdf)
 
 <use figs/spread1.pdf>
@@ -749,7 +763,7 @@ Package pdftex.def Info: figs/spread1.pdf used on input line 485.
 
 ]
 Chapter 8.
-[63] <figs/correlationCoefficients.png, id=259, 1267.73625pt x 549.05125pt>
+[63] <figs/correlationCoefficients.png, id=260, 1267.73625pt x 549.05125pt>
 File: figs/correlationCoefficients.png Graphic file (type png)
 
 <use figs/correlationCoefficients.png>
@@ -761,20 +775,20 @@ Package pdftex.def Info: figs/correlationCoefficients.png used on input line 90
 
 ]
 Chapter 9.
-<figs/bin(100,06).pdf, id=269, 485.07242pt x 433.85547pt>
+<figs/bin(100,06).pdf, id=270, 485.07242pt x 433.85547pt>
 File: figs/bin(100,06).pdf Graphic file (type pdf)
 
 <use figs/bin(100,06).pdf>
 Package pdftex.def Info: figs/bin(100,06).pdf used on input line 16.
 (pdftex.def)             Requested size: 216.81pt x 193.91576pt.
  [67 <./figs/bin(100,06).pdf>] [68] [69]
-<figs/bell.pdf, id=297, 526.96875pt x 485.815pt>
+<figs/bell.pdf, id=298, 526.96875pt x 485.815pt>
 File: figs/bell.pdf Graphic file (type pdf)
  <use figs/bell.pdf>
 Package pdftex.def Info: figs/bell.pdf used on input line 164.
 (pdftex.def)             Requested size: 216.81442pt x 108.39928pt.
 
-<figs/three-norm.pdf, id=298, 526.96875pt x 485.815pt>
+<figs/three-norm.pdf, id=299, 526.96875pt x 485.815pt>
 File: figs/three-norm.pdf Graphic file (type pdf)
 
 <use figs/three-norm.pdf>
@@ -785,14 +799,14 @@ Package pdftex.def Info: figs/three-norm.pdf used on input line 182.
 Chapter 10.
 [75
 
-] [76] [77] <figs/SortingLowerBound.png, id=330, 890.32625pt x 460.72125pt>
+] [76] [77] <figs/SortingLowerBound.png, id=331, 890.32625pt x 460.72125pt>
 File: figs/SortingLowerBound.png Graphic file (type png)
 
 <use figs/SortingLowerBound.png>
 Package pdftex.def Info: figs/SortingLowerBound.png used on input line 267.
 (pdftex.def)             Requested size: 289.07999pt x 149.59203pt.
  [78] [79 <./figs/SortingLowerBound.png>]
-[80] <figs/mincut.pdf, id=344, 109.40875pt x 61.22874pt>
+[80] <figs/mincut.pdf, id=345, 109.40875pt x 61.22874pt>
 File: figs/mincut.pdf Graphic file (type pdf)
  <use figs/mincut.pdf>
 Package pdftex.def Info: figs/mincut.pdf used on input line 396.
@@ -802,37 +816,37 @@ File: figs/mincut.pdf Graphic file (type pdf)
 <use figs/mincut.pdf>
 Package pdftex.def Info: figs/mincut.pdf used on input line 419.
 (pdftex.def)             Requested size: 108.405pt x 60.668pt.
- <figs/cut1.pdf, id=345, 109.40875pt x 61.22874pt>
+ <figs/cut1.pdf, id=346, 109.40875pt x 61.22874pt>
 File: figs/cut1.pdf Graphic file (type pdf)
 
 <use figs/cut1.pdf>
 Package pdftex.def Info: figs/cut1.pdf used on input line 429.
 (pdftex.def)             Requested size: 108.405pt x 60.668pt.
- <figs/cut2.pdf, id=346, 109.40875pt x 61.22874pt>
+ <figs/cut2.pdf, id=347, 109.40875pt x 61.22874pt>
 File: figs/cut2.pdf Graphic file (type pdf)
 
 <use figs/cut2.pdf>
 Package pdftex.def Info: figs/cut2.pdf used on input line 438.
 (pdftex.def)             Requested size: 108.405pt x 60.668pt.
- <figs/cut3.pdf, id=347, 81.30376pt x 60.225pt>
+ <figs/cut3.pdf, id=348, 81.30376pt x 60.225pt>
 File: figs/cut3.pdf Graphic file (type pdf)
 
 <use figs/cut3.pdf>
 Package pdftex.def Info: figs/cut3.pdf used on input line 448.
 (pdftex.def)             Requested size: 90.3375pt x 66.92128pt.
- <figs/cut4.pdf, id=348, 92.345pt x 60.225pt>
+ <figs/cut4.pdf, id=349, 92.345pt x 60.225pt>
 File: figs/cut4.pdf Graphic file (type pdf)
 
 <use figs/cut4.pdf>
 Package pdftex.def Info: figs/cut4.pdf used on input line 458.
 (pdftex.def)             Requested size: 97.56493pt x 63.62958pt.
- <figs/cut5.pdf, id=349, 66.2475pt x 60.225pt>
+ <figs/cut5.pdf, id=350, 66.2475pt x 60.225pt>
 File: figs/cut5.pdf Graphic file (type pdf)
 
 <use figs/cut5.pdf>
 Package pdftex.def Info: figs/cut5.pdf used on input line 468.
 (pdftex.def)             Requested size: 72.26999pt x 65.70457pt.
- <figs/cut6.pdf, id=350, 83.31125pt x 12.045pt>
+ <figs/cut6.pdf, id=351, 83.31125pt x 12.045pt>
 File: figs/cut6.pdf Graphic file (type pdf)
 
 <use figs/cut6.pdf>
@@ -844,7 +858,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 537--540
 
  []
 
-[83] [84] [85] <figs/postings.pdf, id=389, 292.09125pt x 135.50626pt>
+[83] [84] [85] <figs/postings.pdf, id=390, 292.09125pt x 135.50626pt>
 File: figs/postings.pdf Graphic file (type pdf)
 
 <use figs/postings.pdf>
@@ -867,59 +881,59 @@ Chapter 12.
 
 ]
 Chapter 13.
-<figs/mnist.pdf, id=446, 563.10374pt x 113.42375pt>
+<figs/mnist.pdf, id=447, 563.10374pt x 113.42375pt>
 File: figs/mnist.pdf Graphic file (type pdf)
  <use figs/mnist.pdf>
 Package pdftex.def Info: figs/mnist.pdf used on input line 13.
 (pdftex.def)             Requested size: 433.62pt x 87.34346pt.
 
 [103 <./figs/mnist.pdf>] [104] [105]
-<figs/decision.pdf, id=460, 186.6975pt x 172.645pt>
+<figs/decision.pdf, id=461, 186.6975pt x 172.645pt>
 File: figs/decision.pdf Graphic file (type pdf)
  <use figs/decision.pdf>
 Package pdftex.def Info: figs/decision.pdf used on input line 168.
 (pdftex.def)             Requested size: 252.94499pt x 233.91682pt.
 
-<figs/decision1.pdf, id=461, 19.07124pt x 19.07124pt>
+<figs/decision1.pdf, id=462, 19.07124pt x 19.07124pt>
 File: figs/decision1.pdf Graphic file (type pdf)
  <use figs/decision1.pdf>
 Package pdftex.def Info: figs/decision1.pdf used on input line 188.
 (pdftex.def)             Requested size: 21.68121pt x 21.68205pt.
 
-<figs/decision2.pdf, id=462, 127.47626pt x 77.28876pt>
+<figs/decision2.pdf, id=463, 127.47626pt x 77.28876pt>
 File: figs/decision2.pdf Graphic file (type pdf)
 
 <use figs/decision2.pdf>
 Package pdftex.def Info: figs/decision2.pdf used on input line 200.
 (pdftex.def)             Requested size: 180.67499pt x 109.54912pt.
  [106 <./figs/decision.pdf> <./figs/decision1.pdf>]
-<figs/decision3.pdf, id=473, 110.4125pt x 70.2625pt>
+<figs/decision3.pdf, id=474, 110.4125pt x 70.2625pt>
 File: figs/decision3.pdf Graphic file (type pdf)
  <use figs/decision3.pdf>
 Package pdftex.def Info: figs/decision3.pdf used on input line 208.
 (pdftex.def)             Requested size: 162.6075pt x 103.48296pt.
 
 [107 <./figs/decision2.pdf> <./figs/decision3.pdf>]
-<figs/linear1.pdf, id=485, 101.37875pt x 63.23625pt>
+<figs/linear1.pdf, id=486, 101.37875pt x 63.23625pt>
 File: figs/linear1.pdf Graphic file (type pdf)
  <use figs/linear1.pdf>
 Package pdftex.def Info: figs/linear1.pdf used on input line 281.
 (pdftex.def)             Requested size: 144.54pt x 90.16081pt.
 
-<figs/linear2.pdf, id=486, 101.37875pt x 72.27pt>
+<figs/linear2.pdf, id=487, 101.37875pt x 72.27pt>
 File: figs/linear2.pdf Graphic file (type pdf)
  <use figs/linear2.pdf>
 Package pdftex.def Info: figs/linear2.pdf used on input line 289.
 (pdftex.def)             Requested size: 144.54pt x 103.04092pt.
 
 [108 <./figs/linear1.pdf> <./figs/linear2.pdf>]
-<figs/linear3.pdf, id=498, 101.37875pt x 91.34125pt>
+<figs/linear3.pdf, id=499, 101.37875pt x 91.34125pt>
 File: figs/linear3.pdf Graphic file (type pdf)
  <use figs/linear3.pdf>
 Package pdftex.def Info: figs/linear3.pdf used on input line 309.
 (pdftex.def)             Requested size: 144.54pt x 130.2323pt.
 
-<figs/linear4.pdf, id=499, 104.39pt x 63.23625pt>
+<figs/linear4.pdf, id=500, 104.39pt x 63.23625pt>
 File: figs/linear4.pdf Graphic file (type pdf)
  <use figs/linear4.pdf>
 Package pdftex.def Info: figs/linear4.pdf used on input line 316.
@@ -928,13 +942,13 @@ Package pdftex.def Info: figs/linear4.pdf used on input line 316.
 [109 <./figs/linear3.pdf> <./figs/linear4.pdf>] (./ProbabilityStatistics.aux) )
  
 Here is how much of TeX's memory you used:
- 10413 strings out of 493117
- 181734 string characters out of 6135433
- 259836 words of memory out of 5000000
- 13618 multiletter control sequences out of 15000+600000
+ 10478 strings out of 493117
+ 182637 string characters out of 6135433
+ 261227 words of memory out of 5000000
+ 13678 multiletter control sequences out of 15000+600000
  15435 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,14n,51p,958b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,14n,51p,958b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
 /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
 usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><
@@ -962,10 +976,10 @@ onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2014/texmf-dist/font
 s/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2014/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on ProbabilityStatistics.pdf (109 pages, 5032779 bytes).
+Output written on ProbabilityStatistics.pdf (109 pages, 5056509 bytes).
 PDF statistics:
- 602 PDF objects out of 1000 (max. 8388607)
+ 603 PDF objects out of 1000 (max. 8388607)
  408 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
 

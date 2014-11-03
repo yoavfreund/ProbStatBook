@@ -38,8 +38,8 @@
 \contentsline {section}{\numberline {5.4}Density distributions}{34}
 \contentsline {section}{\numberline {5.5}Mixture distributions}{35}
 \contentsline {section}{\numberline {5.6}The limitations of histograms}{35}
-\contentsline {section}{\numberline {5.7}Cumulative Distribution Functions}{35}
-\contentsline {section}{\numberline {5.8}Examples of distributions on the real line}{36}
+\contentsline {section}{\numberline {5.7}Cumulative Distribution Functions}{36}
+\contentsline {section}{\numberline {5.8}Examples of distributions on the real line}{37}
 \contentsline {section}{\numberline {5.9}Throwing a dart at a dartboard}{37}
 \contentsline {chapter}{\numberline {6}Multiple events, conditioning, and independence}{41}
 \contentsline {section}{\numberline {6.1}Two or more events on the same sample space}{41}
