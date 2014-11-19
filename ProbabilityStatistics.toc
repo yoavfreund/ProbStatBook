@@ -124,6 +124,7 @@
 \contentsline {subsection}{\numberline {11.2.1}Predicting a pseudo-random generator}{94}
 \contentsline {subsection}{\numberline {11.2.2}Computationally bounded randomness}{94}
 \contentsline {subsection}{\numberline {11.2.3}Using pseudo-random number generators inside a random algorithm}{95}
+\contentsline {subsection}{\numberline {11.2.4}Pseudo-Randomness and hash functions}{95}
 \contentsline {chapter}{\numberline {12}Random generation}{97}
 \contentsline {section}{\numberline {12.1}Simulating simple discrete distributions with a fair coin}{97}
 \contentsline {subsection}{\numberline {12.1.1}Uniform distribution over $b$-bit integers}{97}

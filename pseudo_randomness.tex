@@ -145,6 +145,7 @@ To summarize, pseudo-random number generators generate sequences of
 bits that cannot be distinguished from truly random sequences by any
 computationally efficient tests.
 
+
 \subsection{Using pseudo-random number generators inside a random algorithm}
 Randomized algorithms are algorithms that are allowed to flip
 coins. Based on the assumption that the coins are IID RVs we can
@@ -171,5 +172,46 @@ running time of our algorithm must be indistinguishable from the
 running time when using a truly random sequence.
 
 
+\subsection{Pseudo-Randomness and hash functions}
+One of the most useful constructs in algorithm is the {\em hash
+  function}. A hash function has two inputs: an {\em index} and a {\em
+  key} and one output: the hash value. We denote the index by $i$, the
+key by $k$ and the value of the hash function by $h_i(k)$.  Lets
+assume that all three of these are binary vectors of length $n$,
+i.e. elements of $\{0,1\}^n$
+
+In order to use a hash function we randomly (or pseudo-randomly)
+choose a value for the index. For this fixed index, we get a function
+that maps keys to hash values. Obviously, if 
+
+The main property that good hash functions need to have is that for
+any fixed set of keys, if we choose the index at random, the values of
+the hash function is random. Stated more precisely, the desired property is
+the following:
+\begin{itemize}
+\item {\bf Singletons:} Considering any single key $k$ and any value
+  $v$, the probability that $h_i(k)=v$, when $i$ is chosen uniformly
+  at random, should be $2^{-n}$.
+\item {\bf Pairs:} Considering any two different keys $k_1 \neq k_2$
+  and any two values $v_1,v_2$. The probability that $h_i(k_1)=v_1$
+  and $h_i(k_2)=v_2$ is $2^{-2n}$
+\item {\bf General:} Considering any $l$ keys $k_1,\ldots,k_l$, all
+  different, and $l$ values, the probability that $h_i(k_j)=v_j$ for
+  all $1\leq j \leq l$ is $2^{-ln}$.
+\end{itemize}
+
+Hash functions are intimately connects to pseudo-random
+generators. If we have a good pseudo-random generator we can use it to
+construct a good hash function as follows.
+\begin{enumerate}
+\item Conatanate the index $i$ and the key $k$ to create a $2n$ bit
+  number. Using this number as the seed of the generator.
+\item Run the generator $n$ times to generate an $n$ bit
+  number. Output this number as the value of the hash function $h_i(k)$.
+\end{enumerate}
+
+It is easy to verify that if the outputs of the hash function deviates from the
+uniform distributions listed above then we have a way to detect that the
+pseudo-random generator generates bits that are not distributed IID (1/2,1/2).
 
 
